@@ -1,9 +1,11 @@
 /* ==========================================================================
    GOTA PATTI HERITAGE ARCHIVE — SCROLL ANIMATION SUITE
-   Aesthetics: Royal Rajasthani Luxury, Bodoni Moda & Plus Jakarta Sans
+   Typography: Inter (Regular 400, Medium 500, SemiBold 600, Bold 700)
+   Aesthetics: Royal Rajasthani Luxury, Clean Modern Editorial
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
   --color-primary: #3d020d;
@@ -13,8 +15,8 @@
   --color-gold-glow: rgba(212, 175, 55, 0.35);
   --color-surface-dark: #0a0607;
   --color-cream: #fff9ef;
-  --font-serif: 'Bodoni Moda', serif;
-  --font-sans: 'Plus Jakarta Sans', sans-serif;
+  --font-serif: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 *, *::before, *::after {
@@ -25,9 +27,10 @@
 
 html {
   scroll-behavior: auto;
-  background-color: var(--color-surface-dark);
-  color: #ffffff;
+  background-color: var(--color-cream);
+  color: #1d1b16;
   font-family: var(--font-sans);
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
   overscroll-behavior-y: none;
 }
 
@@ -35,16 +38,20 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background-color: var(--color-surface-dark);
-  user-select: none;
+  background-color: var(--color-cream);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Luxury Serif Typography */
+/* Editorial Heading Typography (Inter SemiBold/Bold) */
 .font-serif-luxury {
-  font-family: var(--font-serif);
-  line-height: 1.25;
-  letter-spacing: 0.04em;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
 }
 
 /* Canvas Display */
@@ -75,18 +82,18 @@ canvas#canvas {
 
 /* Glassmorphism Panels */
 .glass-panel {
-  background: rgba(18, 10, 12, 0.72);
+  background: rgba(18, 10, 12, 0.78);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(212, 175, 55, 0.22);
+  border: 1px solid rgba(212, 175, 55, 0.28);
   box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.6), 0 0 20px -5px var(--color-gold-glow);
 }
 
 .glass-pill {
-  background: rgba(22, 12, 14, 0.65);
+  background: rgba(22, 12, 14, 0.72);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(212, 175, 55, 0.25);
+  border: 1px solid rgba(212, 175, 55, 0.3);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -98,11 +105,12 @@ canvas#canvas {
 
 /* Story Cards Transitions */
 .story-card {
+  position: absolute;
   opacity: 0;
   transform: translateY(28px) scale(0.98);
   pointer-events: none;
-  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   will-change: opacity, transform;
 }
 
@@ -204,27 +212,12 @@ canvas#canvas {
   width: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0607;
+  background: #f3ede4;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(212, 175, 55, 0.4);
+  background: rgba(61, 2, 13, 0.35);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(212, 175, 55, 0.8);
-}
-
-/* Accessibility: Reduced Motion Support & Static Fallback */
-@media (prefers-reduced-motion: reduce) {
-  #scroll-atelier {
-    display: none !important;
-  }
-  #reduced-motion-hero {
-    display: block !important;
-  }
-  * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+  background: rgba(61, 2, 13, 0.65);
 }

@@ -1,0 +1,540 @@
+/* =========================================================
+   UNIFIED GLOBAL HEADER, INTER TYPOGRAPHY & ARCHIVAL FOOTER
+   ========================================================= */
+@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --font-inter: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Global Inter Typography Enforcement & Readability */
+html, body {
+  font-family: var(--font-inter) !important;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #1f1b13;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+/* Headings: Inter SemiBold (600) & Bold (700) */
+h1, h2, h3, h4, h5, h6,
+.font-headline {
+  font-family: var(--font-inter) !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  letter-spacing: -0.02em !important;
+  line-height: 1.2 !important;
+}
+
+h1 {
+  font-weight: 700 !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.12 !important;
+}
+
+/* Labels, Badges & Navigation: Inter Medium (500) */
+.font-label,
+label,
+button,
+nav a {
+  font-family: var(--font-inter) !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+}
+
+/* Body Text: Inter Regular (400) with improved contrast and line-height */
+p, li, .font-body {
+  font-family: var(--font-inter) !important;
+  font-weight: 400 !important;
+  line-height: 1.7 !important;
+}
+
+/* Remove hard-to-read decorative italics inside headings/display text */
+h1 em, h2 em, h3 em, h4 em,
+h1 .italic, h2 .italic, h3 .italic, h4 .italic,
+.font-headline.italic, .font-headline .italic {
+  font-style: normal !important;
+  font-weight: 600 !important;
+}
+
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 76px;
+  z-index: 100;
+  background-color: rgba(255, 249, 239, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(197, 160, 89, 0.28);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: var(--font-inter);
+}
+
+.site-header-inner {
+  max-width: 1536px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* Brand Logo (Left) */
+.site-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.site-brand-title {
+  font-family: var(--font-inter);
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: #3d020d;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* Center Navigation Links */
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.25rem;
+}
+
+.site-nav-link {
+  position: relative;
+  font-family: var(--font-inter);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #46423a;
+  text-decoration: none;
+  padding: 0.45rem 0;
+  white-space: nowrap;
+  transition: color 0.25s ease;
+}
+
+.site-nav-link:hover {
+  color: #3d020d;
+}
+
+.site-nav-link.active {
+  color: #3d020d;
+  font-weight: 600;
+}
+
+.site-nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #9e6c00;
+}
+
+/* Right Actions (Search, Bag, Account, Mobile Menu) */
+.site-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  flex-shrink: 0;
+}
+
+/* Search Box */
+.site-search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #f4eee3;
+  border: 1px solid rgba(197, 160, 89, 0.35);
+  padding: 0.42rem 0.9rem;
+  border-radius: 2px;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.site-search:focus-within {
+  border-color: #9e6c00;
+  background-color: #fff9ef;
+}
+
+.site-search .material-symbols-outlined {
+  font-size: 18px;
+  color: #5e5548;
+}
+
+.site-search input {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: var(--font-inter);
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: #1f1b13;
+  width: 145px;
+}
+
+.site-search input::placeholder {
+  color: #766c5e;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+}
+
+/* Action Icon Buttons */
+.site-action-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: transparent;
+  border: none;
+  color: #3d020d;
+  cursor: pointer;
+  padding: 0.35rem;
+  transition: color 0.25s ease, transform 0.2s ease;
+}
+
+.site-action-btn:hover {
+  color: #9e6c00;
+}
+
+.site-action-btn .material-symbols-outlined {
+  font-size: 22px;
+}
+
+.site-cart-badge {
+  position: absolute;
+  top: -2px;
+  right: -5px;
+  background-color: #3d020d;
+  color: #fff9ef;
+  font-family: var(--font-inter);
+  font-size: 9px;
+  font-weight: 600;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.site-auth-label {
+  font-family: var(--font-inter);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #3d020d;
+}
+
+/* Mobile Menu Toggle Button */
+.site-mobile-toggle {
+  display: none;
+  background: transparent;
+  border: 1px solid rgba(197, 160, 89, 0.4);
+  color: #3d020d;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Mobile Drawer */
+.site-mobile-drawer {
+  display: none;
+  background-color: #fff9ef;
+  border-bottom: 1px solid rgba(197, 160, 89, 0.35);
+  padding: 1.25rem 2rem 1.75rem;
+}
+
+.site-mobile-drawer.open {
+  display: block;
+}
+
+.site-mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.site-mobile-nav .site-nav-link {
+  font-size: 0.85rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(197, 160, 89, 0.15);
+}
+
+/* =========================================================
+   REDESIGNED DEEP MAROON & ANTIQUE GOLD FOOTER
+   ========================================================= */
+.site-footer {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(180deg, #2d050c 0%, #1c0207 100%);
+  color: #f7efe2;
+  font-family: var(--font-inter);
+  margin-top: 5rem;
+  border-top: 3px solid #c5a059;
+  box-shadow: 0 -16px 40px rgba(28, 2, 7, 0.16);
+  overflow: hidden;
+}
+
+/* Subtle ornamental antique-gold inner trim line */
+.site-footer::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(212, 175, 55, 0.55) 20%, rgba(255, 223, 148, 0.85) 50%, rgba(212, 175, 55, 0.55) 80%, transparent 100%);
+  margin-top: 5px;
+}
+
+.site-footer-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 4.75rem 3rem 3.25rem;
+}
+
+.site-footer-top {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1.3fr;
+  gap: 3.5rem;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+}
+
+.site-footer-brand-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #d4af37;
+  margin-bottom: 0.85rem;
+}
+
+.site-footer-brand-badge::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background-color: #d4af37;
+}
+
+.site-footer-logo {
+  display: block;
+  font-family: var(--font-inter);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fff9ef;
+  text-decoration: none;
+  margin-bottom: 1.1rem;
+}
+
+.site-footer-desc {
+  font-size: 0.92rem;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #e2d5c4;
+  max-width: 360px;
+  margin-bottom: 1.5rem;
+}
+
+.site-footer-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: #d4af37;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid rgba(212, 175, 55, 0.32);
+  background-color: rgba(212, 175, 55, 0.07);
+}
+
+.site-footer-heading {
+  font-family: var(--font-inter);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #d4af37;
+  margin-bottom: 1.35rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.site-footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.site-footer-link {
+  font-family: var(--font-inter);
+  font-size: 0.88rem;
+  font-weight: 400;
+  color: #f3e9da;
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.site-footer-link:hover {
+  color: #ffd778;
+  transform: translateX(3px);
+}
+
+.site-footer-newsletter-text {
+  font-size: 0.88rem;
+  font-weight: 400;
+  line-height: 1.65;
+  color: #e2d5c4;
+  margin-bottom: 1.15rem;
+}
+
+.site-footer-form {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  background-color: rgba(255, 249, 239, 0.06);
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+.site-footer-form:focus-within {
+  border-color: #ffd778;
+  background-color: rgba(255, 249, 239, 0.1);
+}
+
+.site-footer-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-inter);
+  font-size: 0.84rem;
+  font-weight: 400;
+  color: #fff9ef;
+}
+
+.site-footer-input::placeholder {
+  color: rgba(226, 213, 196, 0.6);
+}
+
+.site-footer-submit {
+  background-color: #c5a059;
+  color: #1c0207;
+  border: none;
+  padding: 0 1.25rem;
+  font-family: var(--font-inter);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.site-footer-submit:hover {
+  background-color: #dfbc74;
+}
+
+.site-footer-bottom {
+  padding-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-footer-copy {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #cbbba6;
+  letter-spacing: 0.03em;
+}
+
+.site-footer-meta {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.site-footer-meta-item {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #d4af37;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1180px) {
+  .site-header-inner {
+    padding: 0 1.5rem;
+  }
+  .site-nav {
+    gap: 1.35rem;
+  }
+  .site-search input {
+    width: 105px;
+  }
+  .site-footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .site-nav {
+    display: none;
+  }
+  .site-search {
+    display: none;
+  }
+  .site-mobile-toggle {
+    display: inline-flex;
+  }
+}
+
+@media (max-width: 640px) {
+  .site-footer-inner {
+    padding: 3.5rem 1.5rem 2.5rem;
+  }
+  .site-footer-top {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+  .site-footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

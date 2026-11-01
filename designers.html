@@ -1,70 +1,240 @@
 <!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GOTA PATTI — The Designers &amp; Revivalist Directory</title>
+<link href="https://rsms.me/" rel="preconnect"/>
+<link href="https://rsms.me/inter/inter.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+  @layer base {
+    html, body { margin: 0; padding: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+    body { overscroll-behavior: none; }
+    main > :first-child { margin-top: 0 !important; }
+    main > :last-child { margin-bottom: 0 !important; }
+  }
+</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "outline-variant": "#d9c1c1",
+          "on-secondary-container": "#775f28",
+          "inverse-primary": "#ffb3b6",
+          "secondary": "#735b25",
+          "on-secondary-fixed-variant": "#59440f",
+          "on-tertiary-container": "#a4948e",
+          "surface-bright": "#fff9ef",
+          "on-secondary-fixed": "#261a00",
+          "error-container": "#ffdad6",
+          "on-tertiary-fixed": "#231915",
+          "on-primary": "#ffffff",
+          "primary": "#3d020d",
+          "primary-fixed": "#ffdada",
+          "secondary-container": "#fddc99",
+          "on-tertiary-fixed-variant": "#51443f",
+          "tertiary-container": "#382d28",
+          "on-tertiary": "#ffffff",
+          "on-primary-fixed": "#3f030e",
+          "on-error-container": "#93000a",
+          "surface-tint": "#96454c",
+          "outline": "#877273",
+          "on-primary-fixed-variant": "#782e36",
+          "primary-fixed-dim": "#ffb3b6",
+          "on-secondary": "#ffffff",
+          "on-background": "#1d1b16",
+          "tertiary-fixed-dim": "#d5c3bc",
+          "surface-container-lowest": "#ffffff",
+          "error": "#ba1a1a",
+          "secondary-fixed": "#ffdf9e",
+          "on-surface": "#1d1b16",
+          "on-error": "#ffffff",
+          "tertiary-fixed": "#f2ded8",
+          "background": "#fff9ef",
+          "on-primary-container": "#da7c82",
+          "surface-container-low": "#f9f3ea",
+          "surface-variant": "#e7e2d9",
+          "surface-container-highest": "#e7e2d9",
+          "surface-container-high": "#ede7df",
+          "on-surface-variant": "#4a3c3d",
+          "surface": "#fff9ef",
+          "surface-container": "#f3ede4",
+          "inverse-on-surface": "#f6f0e7",
+          "inverse-surface": "#32302a",
+          "secondary-fixed-dim": "#e2c382",
+          "surface-dim": "#dfd9d1",
+          "primary-container": "#5a1720",
+          "tertiary": "#221814"
+        },
+        borderRadius: {
+          "DEFAULT": "0.25rem",
+          "lg": "0.5rem",
+          "xl": "0.75rem",
+          "full": "9999px"
+        },
+        spacing: {
+          "space-xs": "0.375rem",
+          "space-lg": "2.25rem",
+          "space-sm": "0.75rem",
+          "margin": "4rem",
+          "gutter": "2.5rem",
+          "margin-mobile": "1.25rem",
+          "space-xl": "3.75rem",
+          "space-md": "1.25rem",
+          "gutter-mobile": "1rem"
+        },
+        fontFamily: {
+          "headline": ["Inter", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+          "body": ["Inter", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+          "label": ["Inter", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+          "display-md-mobile": ["Inter", "sans-serif"],
+          "label-md": ["Inter", "sans-serif"],
+          "headline-lg": ["Inter", "sans-serif"],
+          "display-lg-mobile": ["Inter", "sans-serif"],
+          "body-sm": ["Inter", "sans-serif"],
+          "display-md": ["Inter", "sans-serif"],
+          "label-lg": ["Inter", "sans-serif"],
+          "display-lg": ["Inter", "sans-serif"],
+          "body-lg": ["Inter", "sans-serif"],
+          "label-sm": ["Inter", "sans-serif"],
+          "body-md": ["Inter", "sans-serif"],
+          "headline-md": ["Inter", "sans-serif"],
+          "headline-sm": ["Inter", "sans-serif"]
+        },
+        fontSize: {
+          "display-md-mobile": ["2.15rem", { "lineHeight": "2.65rem", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+          "label-md": ["0.78rem", { "lineHeight": "1.1rem", "letterSpacing": "0.1em", "fontWeight": "500" }],
+          "headline-lg": ["2.35rem", { "lineHeight": "2.85rem", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+          "display-lg-mobile": ["2.65rem", { "lineHeight": "3.15rem", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+          "body-sm": ["0.875rem", { "lineHeight": "1.55rem", "fontWeight": "400" }],
+          "display-md": ["2.75rem", { "lineHeight": "3.25rem", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+          "label-lg": ["0.95rem", { "lineHeight": "1.35rem", "letterSpacing": "0.06em", "fontWeight": "600" }],
+          "display-lg": ["3.75rem", { "lineHeight": "4.25rem", "letterSpacing": "-0.03em", "fontWeight": "700" }],
+          "body-lg": ["1.08rem", { "lineHeight": "1.8rem", "letterSpacing": "0em", "fontWeight": "400" }],
+          "label-sm": ["0.72rem", { "lineHeight": "1rem", "letterSpacing": "0.12em", "fontWeight": "500" }],
+          "body-md": ["0.96rem", { "lineHeight": "1.68rem", "fontWeight": "400" }],
+          "headline-md": ["1.55rem", { "lineHeight": "2.05rem", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+          "headline-sm": ["1.2rem", { "lineHeight": "1.7rem", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+        }
+      }
+    }
+  };
+</script>
+<link rel="stylesheet" href="./header.css"/>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-primary">
 
-<html class="scroll-smooth" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"outline-variant":"#d9c1c1","on-secondary-container":"#775f28","inverse-primary":"#ffb3b6","secondary":"#735b25","on-secondary-fixed-variant":"#59440f","on-tertiary-container":"#a4948e","surface-bright":"#fff9ef","on-secondary-fixed":"#261a00","error-container":"#ffdad6","on-tertiary-fixed":"#231915","on-primary":"#ffffff","primary":"#3d020d","primary-fixed":"#ffdada","secondary-container":"#fddc99","on-tertiary-fixed-variant":"#51443f","tertiary-container":"#382d28","on-tertiary":"#ffffff","on-primary-fixed":"#3f030e","on-error-container":"#93000a","surface-tint":"#96454c","outline":"#877273","on-primary-fixed-variant":"#782e36","primary-fixed-dim":"#ffb3b6","on-secondary":"#ffffff","on-background":"#1d1b16","tertiary-fixed-dim":"#d5c3bc","surface-container-lowest":"#ffffff","error":"#ba1a1a","secondary-fixed":"#ffdf9e","on-surface":"#1d1b16","on-error":"#ffffff","tertiary-fixed":"#f2ded8","background":"#fff9ef","on-primary-container":"#da7c82","surface-container-low":"#f9f3ea","surface-variant":"#e7e2d9","surface-container-highest":"#e7e2d9","surface-container-high":"#ede7df","on-surface-variant":"#544243","surface":"#fff9ef","surface-container":"#f3ede4","inverse-on-surface":"#f6f0e7","inverse-surface":"#32302a","secondary-fixed-dim":"#e2c382","surface-dim":"#dfd9d1","primary-container":"#5a1720","tertiary":"#221814"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.375rem","space-lg":"2.25rem","space-sm":"0.75rem","margin":"4rem","gutter":"2.5rem","margin-mobile":"1.25rem","space-xl":"3.75rem","space-md":"1.25rem","gutter-mobile":"1rem"},"fontFamily":{"display-md-mobile":["Bodoni Moda"],"label-md":["Plus Jakarta Sans"],"headline-lg":["Bodoni Moda"],"display-lg-mobile":["Bodoni Moda"],"body-sm":["Plus Jakarta Sans"],"display-md":["Bodoni Moda"],"label-lg":["Plus Jakarta Sans"],"display-lg":["Bodoni Moda"],"body-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-md":["Bodoni Moda"],"headline-sm":["Bodoni Moda"]},"fontSize":{"display-md-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"0em","fontWeight":"400"}],"label-md":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.12em","fontWeight":"500"}],"headline-lg":["2.25rem",{"lineHeight":"2.75rem","fontWeight":"500"}],"display-lg-mobile":["2.75rem",{"lineHeight":"3.25rem","letterSpacing":"-0.01em","fontWeight":"400"}],"body-sm":["0.8125rem",{"lineHeight":"1.35rem","fontWeight":"400"}],"display-md":["3.25rem",{"lineHeight":"3.75rem","letterSpacing":"-0.015em","fontWeight":"400"}],"label-lg":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.08em","fontWeight":"600"}],"display-lg":["4.5rem",{"lineHeight":"5rem","letterSpacing":"-0.02em","fontWeight":"400"}],"body-lg":["1.125rem",{"lineHeight":"1.85rem","letterSpacing":"0.01em","fontWeight":"300"}],"label-sm":["0.6875rem",{"lineHeight":"0.9rem","letterSpacing":"0.15em","fontWeight":"600"}],"body-md":["0.9375rem",{"lineHeight":"1.6rem","fontWeight":"400"}],"headline-md":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"400"}],"headline-sm":["1.35rem",{"lineHeight":"1.85rem","fontWeight":"500"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(36,26,22,0.04)]"><div class="h-20 max-w-[1440px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between"><div class="flex items-center gap-4"><img alt="Gota Patti Heritage Emblem" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNQ0IaLDFggAZGvZupRgPCpFRrQbK22CbSGTAEgT84dJV_Ir48QdG9gCvsor2TS2h-HfQbMrh1DvBKwXSLEIYLssQGYsb_n9HJBfZoerflUobp2r25lE-GFlIm9u5YywIcIZRPYstStQYjUffacV7CnZYTPQWjhHEopMnUp7ltmtUn7lvc0r7PMycdTiSPdC9j3WfhGGHM6LpQpW9i6TGAmDjOCN7UPcy-HXOgSuxETIwzJGnoyojmsg"/><a class="flex flex-col group text-left" data-path="home" href="index.html"><span class="font-headline-sm text-headline-sm uppercase tracking-[0.2em] text-primary group-hover:text-primary-container transition-colors">GOTA PATTI</span><span class="font-label-sm text-label-sm tracking-[0.25em] text-secondary uppercase -mt-1">Archive &amp; Atelier</span></a></div><nav class="hidden lg:flex items-center gap-8">
-  <a class="font-label-md text-label-md tracking-[0.18em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="index.html">HOME</a>
-  <a class="font-label-md text-label-md tracking-[0.18em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="about.html">ABOUT CRAFT</a>
-  <a class="font-label-md text-label-md tracking-[0.18em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="process.html">PROCESS &amp; MATERIALS</a>
-  <a class="font-label-md text-label-md tracking-[0.18em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="products.html">PRODUCT ARCHIVE</a>
-  <a class="font-label-md text-label-md tracking-[0.18em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="resources.html">RESOURCES</a>
-  <a class="font-label-md text-label-md tracking-[0.18em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="contact.html">CONTACT</a>
-</nav><div class="flex items-center gap-4"><button aria-label="Search Archive" class="hidden sm:flex items-center gap-2 px-3 py-1.5 bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors cursor-pointer" type="button"><span class="material-symbols-outlined text-[18px]">search</span><span class="font-label-sm text-label-sm text-on-surface-variant">⌘K</span></button><button aria-label="Shopping Bag" class="relative p-2 text-on-surface-variant hover:text-primary transition-colors cursor-pointer" type="button"><span class="material-symbols-outlined text-[20px]">shopping_bag</span><span class="absolute top-1 right-0 w-4 h-4 bg-primary text-on-primary font-label-sm text-[9px] flex items-center justify-center leading-none">2</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><button aria-label="Open Craft Index Menu" class="flex items-center gap-2 p-2 text-on-surface-variant hover:text-primary transition-colors cursor-pointer" type="button"><span class="material-symbols-outlined text-[22px]">menu</span></button></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full">
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="index.html" class="site-brand">
+      <span class="site-brand-title">GOTA PATTI</span>
+    </a>
+    <nav class="site-nav" aria-label="Main Navigation">
+      <a href="index.html" class="site-nav-link">HOME</a>
+      <a href="designers.html" class="site-nav-link active" aria-current="page">DESIGNERS</a>
+      <a href="process.html" class="site-nav-link">PROCESS &amp; MATERIALS</a>
+      <a href="products.html" class="site-nav-link">PRODUCTS</a>
+      <a href="about.html" class="site-nav-link">ABOUT</a>
+    </nav>
+    <div class="site-actions">
+      <div class="site-search">
+        <span class="material-symbols-outlined">search</span>
+        <input type="text" placeholder="Search Archive..." aria-label="Search Archive"/>
+      </div>
+      <button type="button" onclick="openCartModal()" class="site-action-btn" title="Archive Bag">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        <span class="gp-cart-badge site-cart-badge" style="display:none">0</span>
+      </button>
+      <button type="button" onclick="openAuthModal('signin')" class="site-action-btn" title="Patron Account">
+        <span class="material-symbols-outlined">person</span>
+        <span class="gp-auth-label site-auth-label"></span>
+      </button>
+      <button type="button" class="site-mobile-toggle" onclick="document.getElementById('mobile-menu').classList.toggle('open')" aria-label="Toggle Menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="site-mobile-drawer">
+    <nav class="site-mobile-nav">
+      <a href="index.html" class="site-nav-link">HOME</a>
+      <a href="designers.html" class="site-nav-link active">DESIGNERS</a>
+      <a href="process.html" class="site-nav-link">PROCESS &amp; MATERIALS</a>
+      <a href="products.html" class="site-nav-link">PRODUCTS</a>
+      <a href="about.html" class="site-nav-link">ABOUT</a>
+    </nav>
+  </div>
+</header>
+
+<main class="w-full pt-20 bg-surface min-h-[calc(100vh-20rem)]">
+<div class="flex flex-col w-full">
 <!-- SECTION 1: HEADER & DIRECTORY NAVIGATION -->
 <section class="w-full bg-surface py-space-xl">
 <div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
 <!-- Monograph Top Index Indicator -->
 <div class="flex items-center gap-3 mb-space-sm">
-<span class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-secondary">Vol. IV / Codicil No. 12</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-secondary">Vol. IV / Codicil No. 12</span>
 <span class="w-8 h-[1px] bg-secondary-container"></span>
-<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-on-surface-variant font-mono">26.9124° N • Guild Curations</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.16em] text-on-surface-variant">26.9124° N • Guild Curations</span>
 </div>
 <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-space-lg">
 <div class="max-w-2xl">
 <h1 class="font-display-lg text-display-lg uppercase tracking-tight text-primary">THE DESIGNERS</h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant mt-3">
-            Meet the creative minds carrying traditional craft into contemporary design. A peerless registry of ateliers reinterpreting beaten gold ribbon metallurgy into modernist silhouette.
-          </p>
+  Meet the creative minds carrying traditional craft into contemporary design. A peerless registry of ateliers reinterpreting beaten gold ribbon metallurgy into modernist silhouette.
+</p>
 </div>
 <!-- Filter Taxonomy -->
 <div class="flex flex-wrap items-center gap-2" id="filter-container">
-<button class="filter-btn px-4 py-2.5 bg-primary text-on-primary font-label-sm text-label-sm tracking-[0.14em] uppercase transition-all shadow-sm flex items-center gap-2" data-filter="all" type="button">
+<button class="filter-btn px-4 py-2.5 bg-primary text-on-primary font-label-sm text-label-sm tracking-[0.12em] uppercase transition-all shadow-sm flex items-center gap-2" data-filter="all" type="button">
 <span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
-            ALL (18)
-          </button>
-<button class="filter-btn px-4 py-2.5 bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-sm text-label-sm tracking-[0.14em] uppercase transition-all flex items-center gap-2" data-filter="fashion" type="button">
-            FASHION (8)
-          </button>
-<button class="filter-btn px-4 py-2.5 bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-sm text-label-sm tracking-[0.14em] uppercase transition-all flex items-center gap-2" data-filter="textile" type="button">
-            TEXTILE (5)
-          </button>
-<button class="filter-btn px-4 py-2.5 bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-sm text-label-sm tracking-[0.14em] uppercase transition-all flex items-center gap-2" data-filter="guild" type="button">
-            CRAFT &amp; GUILD (3)
-          </button>
-<button class="filter-btn px-4 py-2.5 bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-sm text-label-sm tracking-[0.14em] uppercase transition-all flex items-center gap-2" data-filter="experimental" type="button">
-            CONTEMPORARY EXPERIMENTAL (2)
-          </button>
+  ALL (6)
+</button>
+<button class="filter-btn px-4 py-2.5 bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-sm text-label-sm tracking-[0.12em] uppercase transition-all flex items-center gap-2" data-filter="fashion" type="button">
+  FASHION (2)
+</button>
+<button class="filter-btn px-4 py-2.5 bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-sm text-label-sm tracking-[0.12em] uppercase transition-all flex items-center gap-2" data-filter="textile" type="button">
+  TEXTILE (2)
+</button>
+<button class="filter-btn px-4 py-2.5 bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-sm text-label-sm tracking-[0.12em] uppercase transition-all flex items-center gap-2" data-filter="guild" type="button">
+  CRAFT &amp; GUILD (1)
+</button>
+<button class="filter-btn px-4 py-2.5 bg-surface-container-low text-on-surface-variant hover:text-primary hover:bg-surface-container font-label-sm text-label-sm tracking-[0.12em] uppercase transition-all flex items-center gap-2" data-filter="experimental" type="button">
+  CONTEMPORARY EXPERIMENTAL (1)
+</button>
 </div>
 </div>
 </div>
 </section>
-<!-- SECTION 2: EDITORIAL MASTER SPOTLIGHT (Radhika Singhal // Atelier Nayla) -->
+
+<!-- SECTION 2: EDITORIAL MASTER SPOTLIGHT (Radhika Singhal // Atelier Nayla — Clearly Labelled Archival Persona) -->
 <section class="w-full bg-surface-container-low py-space-xl">
 <div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
 <!-- Visual Column (7 Cols) -->
 <div class="lg:col-span-7 relative group">
 <div class="relative overflow-hidden bg-surface-container shadow-xl">
-<img alt="Radhika Singhal in her Jaipur atelier" class="w-full h-[520px] lg:h-[620px] object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsPxsm6dLlB639aIjff4YRWen8jY_RG6E_lAjr5A08vfT0hPHDBPS2YSOD3vFX5JwcCKNPDKP0D03r5NTh7tEqpGagjbBkiioDn_6s121rzyu7GOBmQRQ3IYFYsNklMvTEGxK9aYImT3FbPIILShd-j77mhJCEzoLS9wdD3LPtzxMAfMsCMU0qS0N_ujeBBy41n0IihVsLh0GIjdV_gUrQQXtOwiIitElNCZYrN8xO9PPVQroMwc2wZg"/>
+<img alt="Archival Representation — Atelier Nayla Courtyard Study" class="w-full h-[520px] lg:h-[620px] object-cover object-top transition-transform duration-700 ease-out group-hover:scale-[1.02]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsPxsm6dLlB639aIjff4YRWen8jY_RG6E_lAjr5A08vfT0hPHDBPS2YSOD3vFX5JwcCKNPDKP0D03r5NTh7tEqpGagjbBkiioDn_6s121rzyu7GOBmQRQ3IYFYsNklMvTEGxK9aYImT3FbPIILShd-j77mhJCEzoLS9wdD3LPtzxMAfMsCMU0qS0N_ujeBBy41n0IihVsLh0GIjdV_gUrQQXtOwiIitElNCZYrN8xO9PPVQroMwc2wZg"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60"></div>
+<!-- Clearly Labelled Placeholder Badge for Unverified / Editorial Persona -->
+<div class="absolute top-5 left-5 bg-primary/95 text-surface-bright px-3.5 py-1.5 border border-secondary-container/40 shadow-md">
+<span class="font-label-sm text-[11px] tracking-[0.14em] uppercase block">Archival Placeholder — Illustrative Atelier Persona</span>
+</div>
 <!-- Metadata Stamp Floating -->
 <div class="absolute bottom-6 left-6 right-6 p-6 bg-surface/95 backdrop-blur-md shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4">
 <div>
-<span class="font-label-sm text-label-sm tracking-[0.2em] uppercase text-secondary block">Atelier Coordinates</span>
+<span class="font-label-sm text-label-sm tracking-[0.16em] uppercase text-secondary block">Atelier Coordinates</span>
 <span class="font-body-md text-body-md text-primary font-medium">Kukas Courtyard Atelier, Jaipur &amp; Colaba, Mumbai</span>
 </div>
 <div class="flex items-center gap-2">
 <span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
-<span class="font-label-sm text-label-sm uppercase tracking-[0.14em] text-on-surface-variant">Master Guild Patron</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.12em] text-on-surface-variant">Editorial Composite Study</span>
 </div>
 </div>
 </div>
@@ -73,82 +243,84 @@
 <div class="lg:col-span-5 flex flex-col justify-between space-y-6">
 <div class="space-y-4">
 <div class="flex items-center gap-3">
-<span class="font-label-sm text-label-sm tracking-[0.2em] uppercase text-secondary">EDITORIAL SPOTLIGHT</span>
+<span class="font-label-sm text-label-sm tracking-[0.18em] uppercase text-secondary">EDITORIAL SPOTLIGHT</span>
 <span class="w-6 h-[1px] bg-secondary"></span>
-<span class="font-label-sm text-label-sm uppercase tracking-[0.15em] text-on-surface-variant">ISSUE NO. 24</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.14em] text-on-surface-variant">ISSUE NO. 24</span>
 </div>
 <h2 class="font-headline-lg text-headline-lg uppercase text-primary tracking-tight leading-snug">
-              IN CONVERSATION: Radhika Singhal
-            </h2>
-<span class="font-label-lg text-label-lg uppercase tracking-[0.2em] text-secondary block -mt-2">
-              Atelier Nayla
-            </span>
-<p class="font-body-lg text-body-lg text-on-surface-variant font-light leading-relaxed">
-              Translating 18th-century Marwari wedding regalia into unlined mulberry silk separates. Radhika champions the architectural precision of <em class="font-display-md text-primary not-italic">Lappe ka Kaam</em>, sourcing authentic beaten pure silver ribbons hand-burnished with agate stone.
-            </p>
+  IN CONVERSATION: Radhika Singhal
+</h2>
+<span class="font-label-lg text-label-lg uppercase tracking-[0.16em] text-secondary block -mt-2">
+  Atelier Nayla (Editorial Study)
+</span>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+  Translating 18th-century Marwari wedding regalia into unlined mulberry silk separates. This curatorial study examines the architectural precision of <strong>Lappe ka Kaam</strong>, sourcing authentic beaten pure silver ribbons hand-burnished with agate stone.
+</p>
 <!-- Curatorial Quote Callout -->
 <div class="p-6 bg-surface shadow-sm relative">
-<span class="font-display-lg text-display-lg text-secondary-container absolute top-2 right-4 select-none pointer-events-none opacity-40">“</span>
-<p class="font-headline-sm text-headline-sm italic text-tertiary leading-relaxed relative z-10">
-                Gota is not just sparkle; it is an origami of metallic light, catching every subtle movement of the human form.
-              </p>
+<p class="font-headline-sm text-headline-sm text-tertiary leading-relaxed relative z-10">
+  “Gota is not just sparkle; it is an origami of metallic light, catching every subtle movement of the human form.”
+</p>
 <div class="mt-4 flex items-center justify-between">
-<span class="font-label-sm text-label-sm uppercase tracking-[0.15em] text-secondary">— Radhika Singhal, Monograph Folio</span>
-<span class="font-label-sm text-label-sm font-mono text-outline">18.52% pure chandi</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.14em] text-secondary">— Radhika Singhal, Monograph Folio</span>
+<span class="font-label-sm text-label-sm text-outline">98.5% pure chandi</span>
 </div>
 </div>
 </div>
 <!-- Interaction Actions -->
 <div class="pt-4 flex flex-wrap items-center gap-4">
-<button class="px-8 py-4 bg-primary text-on-primary font-label-md text-label-md tracking-[0.16em] uppercase hover:bg-primary-container transition-colors shadow-md flex items-center gap-3 cursor-pointer" onclick="openProfileDrawer('Radhika Singhal', 'Atelier Nayla', 'Resort 2025: The Golden Mirage')" type="button">
+<button class="px-8 py-4 bg-primary text-on-primary font-label-md text-label-md tracking-[0.14em] uppercase hover:bg-primary-container transition-colors shadow-md flex items-center gap-3 cursor-pointer" onclick="openProfileDrawer('Radhika Singhal', 'Atelier Nayla', 'Resort 2025: The Golden Mirage')" type="button">
 <span>Explore In-Depth Profile</span>
 <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
 </button>
-<a class="px-6 py-4 bg-surface-container text-on-surface-variant hover:text-primary font-label-md text-label-md tracking-[0.14em] uppercase transition-colors" href="#designer-grid">
-              View Full Guild (18)
-            </a>
+<a class="px-6 py-4 bg-surface-container text-on-surface-variant hover:text-primary font-label-md text-label-md tracking-[0.12em] uppercase transition-colors" href="#designer-grid">
+  View Verified Directory (6)
+</a>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- SECTION 3: DESIGNER DIRECTORY GRID -->
+
+<!-- SECTION 3: DESIGNER DIRECTORY GRID (Verified Original Designer Photographs) -->
 <section class="w-full bg-surface py-space-xl" id="designer-grid">
 <div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
 <!-- Section Header -->
 <div class="flex flex-col md:flex-row md:items-end justify-between pb-space-lg mb-space-md">
 <div>
-<span class="font-label-sm text-label-sm tracking-[0.25em] uppercase text-secondary block mb-1">CURATED ROSTER</span>
+<span class="font-label-sm text-label-sm tracking-[0.2em] uppercase text-secondary block mb-1">CURATED ROSTER — AUTHENTIC PORTRAITS</span>
 <h2 class="font-display-md text-display-md uppercase text-primary tracking-tight">THE REGISTER OF ATELIERS</h2>
 </div>
 <p class="font-body-sm text-body-sm text-on-surface-variant max-w-md mt-4 md:mt-0">
-          Each listed atelier maintains certified provenance records with our archival guild, guaranteeing authentic metallurgical purity and fair artisan compensation.
-        </p>
+  Each listed designer is featured with their verified archival portrait and provenance record, celebrating India's foremost revivalists of Gota Patti and handloom zari craft.
+</p>
 </div>
+
 <!-- Grid Cards -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+
 <!-- CARD 1: Sanjay Garg // Raw Mango -->
 <article class="designer-card group bg-surface-container-lowest p-6 shadow-sm flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-category="textile">
 <div>
 <div class="relative overflow-hidden bg-surface-container aspect-[4/5] mb-6">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Editorial portrait of designer Sanjay Garg of Raw Mango in an airy New Delhi studio with textiles, minimalist lighting, handloom Chanderi with refined gold thread work, rich editorial warm tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJt4nEN3FmmLRoJF6_ESkaS_MpiU2t7_jVOFZz22NjzVadpgcq9LAPpCNNO1MHtGoMtyweg3lK6crcO1bPljxwRLikU94ilcZTt8JEv2cAACi5GXHS8eoY0vzbkS7PTiFEvADwGJJ14qZQzsu-eP8AbSlgIsO72nUxfpurDWT2aWehaoEcTvcalIkAZcC7A4MXNXfj_RfnfyEvth5NzLpoXMCugPFs0IC2bzrsHX7t3ciAECfxfAFXqA"/>
-<div class="absolute top-4 left-4 bg-surface/90 backdrop-blur-sm px-3 py-1 text-on-surface">
-<span class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-secondary">Textile &amp; Handloom</span>
+<img alt="Authentic photograph of designer Sanjay Garg, founder of Raw Mango" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" src="./images/designers/sanjay-garg.jpg"/>
+<div class="absolute top-4 left-4 bg-surface/95 backdrop-blur-sm px-3 py-1 text-on-surface">
+<span class="font-label-sm text-label-sm tracking-[0.12em] uppercase text-secondary">Textile &amp; Handloom</span>
 </div>
-<div class="absolute bottom-4 right-4 bg-primary text-on-primary px-3 py-1 font-mono text-[11px] tracking-widest">
-                EST. 2008
-              </div>
+<div class="absolute bottom-4 right-4 bg-primary text-on-primary px-3 py-1 text-[11px] font-medium tracking-widest">
+  EST. 2008
+</div>
 </div>
 <div class="space-y-2">
 <div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm uppercase tracking-[0.16em] text-secondary">New Delhi &amp; Varanasi</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Archive #RM-01</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.14em] text-secondary">New Delhi &amp; Rajasthan</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Archive #RM-01</span>
 </div>
 <h3 class="font-headline-md text-headline-md text-primary tracking-tight">Sanjay Garg</h3>
-<p class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant">Raw Mango</p>
+<p class="font-label-md text-label-md uppercase tracking-[0.14em] text-on-surface-variant">Raw Mango</p>
 <p class="font-body-md text-body-md text-on-surface-variant pt-2 leading-relaxed">
-                Exploring architectural Gota Patti motifs on handloom Chanderi and Varanasi tissue. Re-imagining Indian festive attire through minimalist spatial geometries.
-              </p>
+  Raised in Mubarikpur, Rajasthan, Sanjay Garg explores architectural Gota Patti motifs on handloom Chanderi and Mashru silk, re-imagining Indian festive attire through restrained spatial geometries.
+</p>
 </div>
 </div>
 <div class="pt-6 mt-6 bg-surface-container-low p-4 flex items-center justify-between">
@@ -156,33 +328,34 @@
 <span class="font-label-sm text-label-sm tracking-[0.1em] uppercase text-outline block">Signature Stitch</span>
 <span class="font-body-sm text-body-sm text-primary font-medium">Bakhandi &amp; Phool Patti</span>
 </div>
-<button aria-label="View Sanjay Garg Profile" class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors shadow-sm cursor-pointer" onclick="openProfileDrawer('Sanjay Garg', 'Raw Mango', 'Chanderi Gold Epics')" type="button">
+<button aria-label="View Sanjay Garg Profile" class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors shadow-sm cursor-pointer" onclick="openProfileDrawer('Sanjay Garg', 'Raw Mango', 'Moomal &amp; Chanderi Gold Epics')" type="button">
 <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
 </button>
 </div>
 </article>
+
 <!-- CARD 2: Anamika Khanna -->
 <article class="designer-card group bg-surface-container-lowest p-6 shadow-sm flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-category="fashion">
 <div>
 <div class="relative overflow-hidden bg-surface-container aspect-[4/5] mb-6">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Editorial portrait of fashion designer Anamika Khanna surrounded by avant-garde embroidered capes, deep burgundy and antique gold zardozi swatches, luxury studio setting with architectural soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABLclhLB7UtvEaVSgqAK08WoYfsDTfPqFOLPpZZveIdd9AkCARDzq3JZrH-IeJIvxQvdKTxCuO9sILSKpS7ZvHfuMZxK7_qSBtRB2sHl0v0tZDm8JQF1s4YN7zP-gC0RBOB4zlidyV_93xjIR8CeMsF--ApUdGKavf3dWDAFDHOs06EN3fK7WxpAe9pUFz7aj4wWFgP4ay678wxeqT716wiP3-M8H27cxG1EXfe-nIFBp-lIkGixhBvw"/>
-<div class="absolute top-4 left-4 bg-surface/90 backdrop-blur-sm px-3 py-1 text-on-surface">
-<span class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-secondary">Haute Couture</span>
+<img alt="Authentic photograph of couturier Anamika Khanna" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" src="./images/designers/anamika-khanna.jpg"/>
+<div class="absolute top-4 left-4 bg-surface/95 backdrop-blur-sm px-3 py-1 text-on-surface">
+<span class="font-label-sm text-label-sm tracking-[0.12em] uppercase text-secondary">Haute Couture</span>
 </div>
-<div class="absolute bottom-4 right-4 bg-primary text-on-primary px-3 py-1 font-mono text-[11px] tracking-widest">
-                EST. 1998
-              </div>
+<div class="absolute bottom-4 right-4 bg-primary text-on-primary px-3 py-1 text-[11px] font-medium tracking-widest">
+  EST. 1998
+</div>
 </div>
 <div class="space-y-2">
 <div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm uppercase tracking-[0.16em] text-secondary">Kolkata</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Archive #AK-04</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.14em] text-secondary">Kolkata</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Archive #AK-04</span>
 </div>
 <h3 class="font-headline-md text-headline-md text-primary tracking-tight">Anamika Khanna</h3>
-<p class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant">Atelier Kolkata</p>
+<p class="font-label-md text-label-md uppercase tracking-[0.14em] text-on-surface-variant">Atelier Kolkata</p>
 <p class="font-body-md text-body-md text-on-surface-variant pt-2 leading-relaxed">
-                Deconstructing traditional bridal Zardozi and Gota into tailored capes and draped skirts. Radical silhouette reinvention anchored by centuries-old couching work.
-              </p>
+  Deconstructing traditional bridal Zardozi and Gota into tailored capes and draped silhouettes. Radical modernist reinvention anchored by centuries-old metallic couching work.
+</p>
 </div>
 </div>
 <div class="pt-6 mt-6 bg-surface-container-low p-4 flex items-center justify-between">
@@ -190,33 +363,34 @@
 <span class="font-label-sm text-label-sm tracking-[0.1em] uppercase text-outline block">Signature Stitch</span>
 <span class="font-body-sm text-body-sm text-primary font-medium">Deconstructed Zari Lappe</span>
 </div>
-<button aria-label="View Anamika Khanna Profile" class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors shadow-sm cursor-pointer" onclick="openProfileDrawer('Anamika Khanna', 'Atelier Kolkata', 'Deconstructed Couture 2024')" type="button">
+<button aria-label="View Anamika Khanna Profile" class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors shadow-sm cursor-pointer" onclick="openProfileDrawer('Anamika Khanna', 'Atelier Kolkata', 'Deconstructed Couture Archive')" type="button">
 <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
 </button>
 </div>
 </article>
+
 <!-- CARD 3: Anavila Misra -->
 <article class="designer-card group bg-surface-container-lowest p-6 shadow-sm flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-category="textile">
 <div>
 <div class="relative overflow-hidden bg-surface-container aspect-[4/5] mb-6">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Designer Anavila Misra working with raw beige linen and wild tussar silk textiles, natural daylight filtering through large atelier windows, muted ivory and sand tones, mindful slow craft aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsy6Kt_V27OIcptY0H8tzbh06qBPjeBZAU8ELUV1U_iusAaeGLh-B9DLdhBbWqsoXG-pWMU44xwYJ46bZn80i0q3Z3VSHcZ4ypNY7kruGcl7AofAzGRhyRvx-lfXM-BENOL030BwvsHGHlrHret2Pkw_MUqIpSKnsVLSfj7NufJToewQ8e0e41mKgHwYedVd-JQvFDpGGdEm-t4NXmAVPBlL1kBScgLN0Kka0DJCl30WxW831QKucLLQ"/>
-<div class="absolute top-4 left-4 bg-surface/90 backdrop-blur-sm px-3 py-1 text-on-surface">
-<span class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-secondary">Linen &amp; Wild Silk</span>
+<img alt="Authentic FDCI portrait photograph of designer Anavila Misra" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" src="./images/designers/anavila-misra.jpg"/>
+<div class="absolute top-4 left-4 bg-surface/95 backdrop-blur-sm px-3 py-1 text-on-surface">
+<span class="font-label-sm text-label-sm tracking-[0.12em] uppercase text-secondary">Linen &amp; Wild Silk</span>
 </div>
-<div class="absolute bottom-4 right-4 bg-primary text-on-primary px-3 py-1 font-mono text-[11px] tracking-widest">
-                EST. 2011
-              </div>
+<div class="absolute bottom-4 right-4 bg-primary text-on-primary px-3 py-1 text-[11px] font-medium tracking-widest">
+  EST. 2011
+</div>
 </div>
 <div class="space-y-2">
 <div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm uppercase tracking-[0.16em] text-secondary">Gurugram &amp; Mumbai</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Archive #AV-09</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.14em] text-secondary">Gurugram &amp; Mumbai</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Archive #AV-09</span>
 </div>
 <h3 class="font-headline-md text-headline-md text-primary tracking-tight">Anavila Misra</h3>
-<p class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant">Anavila</p>
+<p class="font-label-md text-label-md uppercase tracking-[0.14em] text-on-surface-variant">Anavila</p>
 <p class="font-body-md text-body-md text-on-surface-variant pt-2 leading-relaxed">
-                Quiet luxury: Minimalist gold ribbon borders on raw tussar and wild silk sarees. Restrained metallic lines creating meditative everyday drapes.
-              </p>
+  Quiet luxury: Minimalist gold and silver zari borders on handwoven linen and wild tussar silk sarees, where restrained metallic lines create meditative everyday drapes.
+</p>
 </div>
 </div>
 <div class="pt-6 mt-6 bg-surface-container-low p-4 flex items-center justify-between">
@@ -224,33 +398,34 @@
 <span class="font-label-sm text-label-sm tracking-[0.1em] uppercase text-outline block">Signature Stitch</span>
 <span class="font-body-sm text-body-sm text-primary font-medium">Fine Gota Kinari Borders</span>
 </div>
-<button aria-label="View Anavila Misra Profile" class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors shadow-sm cursor-pointer" onclick="openProfileDrawer('Anavila Misra', 'Anavila', 'Sand &amp; Raw Gold Silk')" type="button">
+<button aria-label="View Anavila Misra Profile" class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors shadow-sm cursor-pointer" onclick="openProfileDrawer('Anavila Misra', 'Anavila', 'Sand &amp; Raw Gold Linen')" type="button">
 <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
 </button>
 </div>
 </article>
+
 <!-- CARD 4: Abraham & Thakore -->
 <article class="designer-card group bg-surface-container-lowest p-6 shadow-sm flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-category="experimental">
 <div>
 <div class="relative overflow-hidden bg-surface-container aspect-[4/5] mb-6">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Editorial portrait of design duo David Abraham and Rakesh Thakore in an architectural black and white design space, bold geometric textile designs with metallic appliqué, high contrast and editorial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBq4yT9zIrWPOvJ50nsYsqTSsZ7LlIPmml4lnLUfJ4PvOLeZiDHvVC4tZrxU7MrGOpnlYJlqGrw15djzpsZ7PLYDn81BirLO5pQ3jTJKd-3GSRJR6tklXaxuK4rFl1s1qr9q07A_CKtZGhEMaBnBhGdldffu5TEshz9HJQEiQ9pZbBtld-z7yABAplaEAiRqSOczyLV8zacFKLYBNp0HrYXxgUwMkFhpBhleqE5bVaV6sJcxC1JNqa4Mw"/>
-<div class="absolute top-4 left-4 bg-surface/90 backdrop-blur-sm px-3 py-1 text-on-surface">
-<span class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-secondary">Experimental Modern</span>
+<img alt="Authentic photograph of design duo David Abraham and Rakesh Thakore" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" src="./images/designers/abraham-thakore.jpg"/>
+<div class="absolute top-4 left-4 bg-surface/95 backdrop-blur-sm px-3 py-1 text-on-surface">
+<span class="font-label-sm text-label-sm tracking-[0.12em] uppercase text-secondary">Experimental Modern</span>
 </div>
-<div class="absolute bottom-4 right-4 bg-primary text-on-primary px-3 py-1 font-mono text-[11px] tracking-widest">
-                EST. 1992
-              </div>
+<div class="absolute bottom-4 right-4 bg-primary text-on-primary px-3 py-1 text-[11px] font-medium tracking-widest">
+  EST. 1992
+</div>
 </div>
 <div class="space-y-2">
 <div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm uppercase tracking-[0.16em] text-secondary">Noida &amp; New Delhi</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Archive #AT-07</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.14em] text-secondary">Noida &amp; New Delhi</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Archive #AT-07</span>
 </div>
 <h3 class="font-headline-md text-headline-md text-primary tracking-tight">Abraham &amp; Thakore</h3>
-<p class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant">A&amp;T Studio</p>
+<p class="font-label-md text-label-md uppercase tracking-[0.14em] text-on-surface-variant">David Abraham &amp; Rakesh Thakore</p>
 <p class="font-body-md text-body-md text-on-surface-variant pt-2 leading-relaxed">
-                Monochromatic black and gold graphic Gota interventions. Transforming royal Rajasthani court crafts into stark modernist checkerboards and graphic tessellations.
-              </p>
+  Monochromatic black and gold graphic Gota interventions. Transforming royal Rajasthani court crafts into stark modernist checkerboards and graphic tessellations.
+</p>
 </div>
 </div>
 <div class="pt-6 mt-6 bg-surface-container-low p-4 flex items-center justify-between">
@@ -258,33 +433,34 @@
 <span class="font-label-sm text-label-sm tracking-[0.1em] uppercase text-outline block">Signature Stitch</span>
 <span class="font-body-sm text-body-sm text-primary font-medium">Geometric Chaukhadi Patti</span>
 </div>
-<button aria-label="View Abraham &amp; Thakore Profile" class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors shadow-sm cursor-pointer" onclick="openProfileDrawer('David Abraham &amp; Rakesh Thakore', 'Abraham &amp; Thakore', 'Monochrome Metalli')" type="button">
+<button aria-label="View Abraham &amp; Thakore Profile" class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors shadow-sm cursor-pointer" onclick="openProfileDrawer('David Abraham &amp; Rakesh Thakore', 'Abraham &amp; Thakore', 'Monochrome Metallic Tessellations')" type="button">
 <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
 </button>
 </div>
 </article>
-<!-- CARD 5: House of Anita Dongre (Grassroot) -->
+
+<!-- CARD 5: Anita Dongre Grassroot -->
 <article class="designer-card group bg-surface-container-lowest p-6 shadow-sm flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-category="guild">
 <div>
 <div class="relative overflow-hidden bg-surface-container aspect-[4/5] mb-6">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Artisanal portrait of female master crafters in a sunlit Rajasthani village cluster working on large wooden frames with gold ribbon embroidery, community craft atmosphere, warm ivory tones and heritage architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPjIuy5RozoqRYv296Mtf0ny4Pdi3oWUOXqqlTWEkDITDzLi0M8pnvKZ2MhsCos0a_vBg8Y0YmeFg3yIvF-7Y_54n0OWDf20gKxI3nEfUDmCiH7dae0ZP0qNRq9-6bkxqtPj0Fnor1nekdlUlZkkg334h61AtIWiq_gJn0za26skv_OxelzYaaCVskKxxsk_ZJc8pyCgdWa89IqECJHVZQie8iiEEBHlfi4Fp1fxos2v-nUkpgzjbcyg"/>
-<div class="absolute top-4 left-4 bg-surface/90 backdrop-blur-sm px-3 py-1 text-on-surface">
-<span class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-secondary">Artisan Guild</span>
+<img alt="Authentic photograph of designer Anita Dongre" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" src="./images/designers/anita-dongre.jpg"/>
+<div class="absolute top-4 left-4 bg-surface/95 backdrop-blur-sm px-3 py-1 text-on-surface">
+<span class="font-label-sm text-label-sm tracking-[0.12em] uppercase text-secondary">Artisan Guild</span>
 </div>
-<div class="absolute bottom-4 right-4 bg-primary text-on-primary px-3 py-1 font-mono text-[11px] tracking-widest">
-                EST. 2015
-              </div>
+<div class="absolute bottom-4 right-4 bg-primary text-on-primary px-3 py-1 text-[11px] font-medium tracking-widest">
+  EST. 2015
+</div>
 </div>
 <div class="space-y-2">
 <div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm uppercase tracking-[0.16em] text-secondary">Navalgadh &amp; Mumbai</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Archive #AD-15</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.14em] text-secondary">Jaipur &amp; Mumbai</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Archive #AD-15</span>
 </div>
-<h3 class="font-headline-md text-headline-md text-primary tracking-tight">Anita Dongre Grassroot</h3>
-<p class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant">House of Anita Dongre</p>
+<h3 class="font-headline-md text-headline-md text-primary tracking-tight">Anita Dongre</h3>
+<p class="font-label-md text-label-md uppercase tracking-[0.14em] text-on-surface-variant">House of Anita Dongre • Grassroot</p>
 <p class="font-body-md text-body-md text-on-surface-variant pt-2 leading-relaxed">
-                Empowering over 300 women craftswomen in Rajasthan through sustained Gota patronship. Revitalizing rural micro-clusters with contemporary slow-fashion cycles.
-              </p>
+  Empowering rural women craftswomen in Rajasthan through sustained Gota Patti patronage, revitalizing village micro-clusters with contemporary heirloom bridal and festive couture.
+</p>
 </div>
 </div>
 <div class="pt-6 mt-6 bg-surface-container-low p-4 flex items-center justify-between">
@@ -292,33 +468,34 @@
 <span class="font-label-sm text-label-sm tracking-[0.1em] uppercase text-outline block">Guild Collective</span>
 <span class="font-body-sm text-body-sm text-primary font-medium">320+ Artisans • SEWA Partner</span>
 </div>
-<button aria-label="View Anita Dongre Grassroot Profile" class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors shadow-sm cursor-pointer" onclick="openProfileDrawer('Anita Dongre', 'Grassroot Foundation', 'Shekhawati Heritage Guild')" type="button">
+<button aria-label="View Anita Dongre Profile" class="w-10 h-10 bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors shadow-sm cursor-pointer" onclick="openProfileDrawer('Anita Dongre', 'House of Anita Dongre', 'Shekhawati Heritage Guild')" type="button">
 <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
 </button>
 </div>
 </article>
+
 <!-- CARD 6: Sabyasachi Mukherjee -->
 <article class="designer-card group bg-surface-container-lowest p-6 shadow-sm flex flex-col justify-between transition-all duration-300 hover:shadow-xl hover:-translate-y-1" data-category="fashion">
 <div>
 <div class="relative overflow-hidden bg-surface-container aspect-[4/5] mb-6">
-<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Editorial close up portrait of Sabyasachi Mukherjee in a luxurious antique Calcutta salon filled with vintage carpets, framed miniature paintings, rich deep umber shadows, and antique gold jewelry cases" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7LBlATntoNybZqBvEyoz39ste3kpmJtxjyHqCS-ajjeU_3Udevp2N2a_3qIObwWmdkprPtwTN8IaCE_uNMKGfEe6S9zzn8C2Bbge4U9O0hfF34Asn-hLgbaSGzY13tQqWR9gqGLFN2d1VdHkg6nyNouWOYAAInrQQ5jSaqdali2XI5A2szSkRG4lng-y8OW4mtKrxsWYqD9TrrS8PdEAFMtEWt1mC8aa_PGGl57z1qfTuYllOOHvQRg"/>
-<div class="absolute top-4 left-4 bg-surface/90 backdrop-blur-sm px-3 py-1 text-on-surface">
-<span class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-secondary">Royal Heritage Revival</span>
+<img alt="Authentic portrait photograph of couturier Sabyasachi Mukherjee" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" src="./images/designers/sabyasachi-mukherjee.jpg"/>
+<div class="absolute top-4 left-4 bg-surface/95 backdrop-blur-sm px-3 py-1 text-on-surface">
+<span class="font-label-sm text-label-sm tracking-[0.12em] uppercase text-secondary">Royal Heritage Revival</span>
 </div>
-<div class="absolute bottom-4 right-4 bg-primary text-on-primary px-3 py-1 font-mono text-[11px] tracking-widest">
-                EST. 2002
-              </div>
+<div class="absolute bottom-4 right-4 bg-primary text-on-primary px-3 py-1 text-[11px] font-medium tracking-widest">
+  EST. 1999
+</div>
 </div>
 <div class="space-y-2">
 <div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm uppercase tracking-[0.16em] text-secondary">Kolkata &amp; New York</span>
-<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Archive #SB-02</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.14em] text-secondary">Kolkata &amp; Mumbai</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Archive #SB-02</span>
 </div>
 <h3 class="font-headline-md text-headline-md text-primary tracking-tight">Sabyasachi Mukherjee</h3>
-<p class="font-label-md text-label-md uppercase tracking-[0.18em] text-on-surface-variant">Sabyasachi Heritage</p>
+<p class="font-label-md text-label-md uppercase tracking-[0.14em] text-on-surface-variant">Sabyasachi Heritage</p>
 <p class="font-body-md text-body-md text-on-surface-variant pt-2 leading-relaxed">
-                Heritage revival of royal Mewari Gota Tukdi and antique beaten silver ribbons. Sourcing archival metal alloy wires to reproduce princely wedding crests and royal poshak.
-              </p>
+  Heritage revival of royal Mewari Gota Tukdi and antique beaten silver ribbons, sourcing archival metal alloy wires to craft museum-grade bridal lehengas and royal poshak.
+</p>
 </div>
 </div>
 <div class="pt-6 mt-6 bg-surface-container-low p-4 flex items-center justify-between">
@@ -331,64 +508,63 @@
 </button>
 </div>
 </article>
+
 </div>
+
 <!-- Guild Statistics Strip -->
 <div class="mt-space-lg p-8 bg-surface-container-low shadow-sm">
 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center divide-y md:divide-y-0 md:divide-x divide-secondary-container">
 <div class="py-2">
 <span class="font-display-md text-display-md text-primary block leading-none">18</span>
-<span class="font-label-sm text-label-sm uppercase tracking-[0.16em] text-on-surface-variant mt-2 block">Chartered Ateliers</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.14em] text-on-surface-variant mt-2 block">Chartered Ateliers</span>
 </div>
 <div class="py-2">
 <span class="font-display-md text-display-md text-primary block leading-none">1,420+</span>
-<span class="font-label-sm text-label-sm uppercase tracking-[0.16em] text-on-surface-variant mt-2 block">Artisans Employed</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.14em] text-on-surface-variant mt-2 block">Artisans Employed</span>
 </div>
 <div class="py-2">
 <span class="font-display-md text-display-md text-primary block leading-none">99.4%</span>
-<span class="font-label-sm text-label-sm uppercase tracking-[0.16em] text-on-surface-variant mt-2 block">Pure Metal Provenance</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.14em] text-on-surface-variant mt-2 block">Pure Metal Provenance</span>
 </div>
 <div class="py-2">
 <span class="font-display-md text-display-md text-primary block leading-none">64 yrs</span>
-<span class="font-label-sm text-label-sm uppercase tracking-[0.16em] text-on-surface-variant mt-2 block">Oldest Master Guild</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.14em] text-on-surface-variant mt-2 block">Oldest Master Guild</span>
 </div>
 </div>
 </div>
 </div>
 </section>
-<!-- SECTION 4: INTERACTIVE PROFILE DRAWER / EMBEDDED MODAL MODULE -->
+
+<!-- SECTION 4: INTERACTIVE PROFILE DRAWER -->
 <aside aria-hidden="true" class="fixed inset-y-0 right-0 z-[60] w-full max-w-2xl bg-surface shadow-2xl translate-x-full transition-transform duration-500 ease-in-out flex flex-col overflow-hidden" id="profile-drawer">
-<!-- Drawer Header -->
 <div class="p-6 bg-surface-container flex items-center justify-between shadow-sm">
 <div class="flex items-center gap-3">
-<span class="font-label-sm text-label-sm tracking-[0.2em] uppercase text-secondary">ARCHIVAL DOSSIER</span>
+<span class="font-label-sm text-label-sm tracking-[0.16em] uppercase text-secondary">ARCHIVAL DOSSIER</span>
 <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-<span class="font-label-sm text-label-sm uppercase tracking-[0.14em] text-on-surface-variant font-mono" id="drawer-reg-number">REG-2025-014</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.12em] text-on-surface-variant" id="drawer-reg-number">REG-2025-014</span>
 </div>
 <button aria-label="Close Profile Drawer" class="w-10 h-10 flex items-center justify-center bg-surface hover:bg-surface-container-highest text-on-surface transition-colors cursor-pointer" onclick="closeProfileDrawer()" type="button">
 <span class="material-symbols-outlined text-[20px]">close</span>
 </button>
 </div>
-<!-- Drawer Content Scrollable Area -->
 <div class="flex-1 overflow-y-auto p-6 md:p-10 space-y-8">
-<!-- Title & Label Identification -->
 <div>
-<span class="font-label-md text-label-md tracking-[0.2em] uppercase text-secondary block mb-1" id="drawer-atelier-label">ATELIER NAYLA</span>
+<span class="font-label-md text-label-md tracking-[0.16em] uppercase text-secondary block mb-1" id="drawer-atelier-label">ATELIER NAYLA</span>
 <h3 class="font-headline-lg text-headline-lg uppercase text-primary tracking-tight" id="drawer-designer-name">Radhika Singhal</h3>
 <p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Specializing in Chandi Ki Gota (Pure Beaten Silver Ribbons) &amp; Khadi Tissue Silk Appliqué.</p>
 </div>
-<!-- Craft Approach Analysis Module -->
 <div class="p-6 bg-surface-container-low space-y-3">
 <div class="flex items-center justify-between">
-<span class="font-label-sm text-label-sm uppercase tracking-[0.18em] text-primary font-semibold">Craft Approach &amp; Metallurgy</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.14em] text-primary font-semibold">Craft Approach &amp; Metallurgy</span>
 <span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span>
 </div>
 <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-          Rejecting synthetic aluminum and plastic-backed lurex foils, the atelier commissions bespoke ribbons drawn from 99.2% pure silver ingots hammered into gossamer strips (<em class="italic">badla</em>), woven on traditional hand-cranked wooden pit looms in the Johari Bazaar guild.
-        </p>
+  Rejecting synthetic aluminum and plastic-backed lurex foils, the atelier commissions bespoke ribbons drawn from 99.2% pure silver ingots hammered into gossamer strips (badla), woven on traditional hand-cranked wooden pit looms in the Johari Bazaar guild.
+</p>
 <div class="grid grid-cols-2 gap-3 pt-2">
 <div class="bg-surface p-3">
 <span class="font-label-sm text-label-sm uppercase text-outline block text-[10px]">Alloy Ratio</span>
-<span class="font-body-md text-body-md text-primary font-mono">92.5% Ag / 7.5% Cu</span>
+<span class="font-body-md text-body-md text-primary">92.5% Ag / 7.5% Cu</span>
 </div>
 <div class="bg-surface p-3">
 <span class="font-label-sm text-label-sm uppercase text-outline block text-[10px]">Artisan Guilds</span>
@@ -396,68 +572,55 @@
 </div>
 </div>
 </div>
-<!-- Featured Collection Showcase -->
 <div class="space-y-4">
 <div class="flex items-center justify-between">
 <h4 class="font-headline-sm text-headline-sm uppercase text-primary">FEATURED COLLECTION</h4>
-<span class="font-label-sm text-label-sm uppercase tracking-[0.14em] text-secondary" id="drawer-collection-title">The Golden Mirage: Resort 2025</span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.12em] text-secondary" id="drawer-collection-title">The Golden Mirage: Resort 2025</span>
 </div>
-<!-- 3 Curated Looks Grid -->
 <div class="grid grid-cols-3 gap-3">
 <div class="group relative overflow-hidden bg-surface-container aspect-[3/4]">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Look 01 of luxury resort collection: Gossamer ivory silk cape with fine beaten gold ribbon scallop borders, minimalist studio background, elegant high-fashion editorial styling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9YUGM3pgnnRCgRniaUjwLsR-14B9IZIqJkpFHjK_qCHCrgduRlvx9OVtE2a8f04byzLyxN4HJEdn3ij-ww6DVIQpBiS-gQrjndJ_osSDHwlIrQp-prUNlzOWAI30qIcbhMB8K5SaO6YaqVcf8ZX6Y-Ld6UAdqM1Ot-G7K3JzoxqVcfZoPMtmJ9cK805HC_61wnrkN2Mh63NSbD68pdzJ0iE7h1B026Cl910blpkfjX184wB2ys2VOOw"/>
+<img alt="Look 01" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="./images/products/odhni-tree-of-life.jpg"/>
 <div class="absolute bottom-0 inset-x-0 p-2 bg-gradient-to-t from-primary/90 to-transparent text-on-primary">
 <span class="font-label-sm text-[10px] tracking-wider uppercase block">Look 01</span>
-<span class="font-body-sm text-[11px] truncate block">Mulberry Cape</span>
+<span class="font-body-sm text-[11px] truncate block">Mulberry Odhni</span>
 </div>
 </div>
 <div class="group relative overflow-hidden bg-surface-container aspect-[3/4]">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Look 02 of luxury collection: Draped asymmetric sand-toned tunic with geometric Gota Patti neckline and cuffs, museum lighting, tactile craft textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEn7jQ5SLEPAo7R0Ik2_4m7nOkXqniw44MLI-pJZV4SUWm4u_8QUmFWIC_dVmJGBQOPUzqux3tN-nqteuMVJlkI5ajaICYRAWm6XXpeDyNU5XpiIP8JZGhoUnPbEmeYe-FGGAYzRDDx1ms66l1KQTcdFeQJmHyTIKZinMNGA2kMWxDCf7hfba2CGpjyJWNVb3iTOZEzOrFMypk43-2KsYe4Z57YEwLZ-40W0NR5pv25w8CuYoo2bb56w"/>
+<img alt="Look 02" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="./images/products/kurta-chevron-lappa.jpg"/>
 <div class="absolute bottom-0 inset-x-0 p-2 bg-gradient-to-t from-primary/90 to-transparent text-on-primary">
 <span class="font-label-sm text-[10px] tracking-wider uppercase block">Look 02</span>
-<span class="font-body-sm text-[11px] truncate block">Tussar Kurti</span>
+<span class="font-body-sm text-[11px] truncate block">Chanderi Kurta</span>
 </div>
 </div>
 <div class="group relative overflow-hidden bg-surface-container aspect-[3/4]">
-<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Look 03 of luxury collection: Floor-length pleated champagne skirt with antique Mewari petal motifs in hand-pressed silver foil, dramatic editorial lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFWrNexZE6B2ac2fiMfN9m3ckK6Hsk01IrspsW-8h4s4Z2R7c_MJqwiLtkaqejqFO0seLvsuZhIiESEeSVTGGV_Lru0zMnF9Q6HJiNi4lO9jDnSsvGqGIySb7uwclfi_1Xc3SBZfRqB9smvZN3i3dxjV5T5B9nfXuQFUKQXBHfewSp4nGPTDkBD4JnWQCcOHrBX8cjCtrJW_WOhCiMCpd8aVBCXEmeZPhF4U3cGkmekNGKRK3sL8JT5Q"/>
+<img alt="Look 03" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="./images/products/lehenga-keri-motif.jpg"/>
 <div class="absolute bottom-0 inset-x-0 p-2 bg-gradient-to-t from-primary/90 to-transparent text-on-primary">
 <span class="font-label-sm text-[10px] tracking-wider uppercase block">Look 03</span>
-<span class="font-body-sm text-[11px] truncate block">Fluted Ghagra</span>
+<span class="font-body-sm text-[11px] truncate block">Keri Lehenga</span>
 </div>
 </div>
 </div>
 </div>
-<!-- Master Artisan Linkage Card -->
-<div class="p-5 bg-surface-container flex items-center gap-4">
-<div class="w-14 h-14 bg-surface flex-shrink-0 overflow-hidden shadow-inner">
-<img class="w-full h-full object-cover" data-alt="Close up of a senior Rajasthani master embroiderer holding fine golden foil ribbon with steady hands, detailed portrait lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNUCmPmlRScgeC3U1BPEeiKumsYJ6ZIVbjHvcBKbpl7vmm0W_5CiOG_CUMc9QLybYdx93JkzIPRX2bVlLCFF6rmP7bsJANVpatrpkl70gtPEUFoBY5bmhSc1MQGXq7wXhgPrYGIcUZyvnb08I5xhVlXdwZE3PKAn536Ydk-GJaLAHGi6BZl1-OoJnkqjwelrTzddxhAn3FERdRo7HhFCy3C3SvASB_ZMabcbzs9wJm-ISr_pXQpJC-6Q"/>
-</div>
-<div class="flex-1 min-w-0">
-<span class="font-label-sm text-label-sm uppercase tracking-[0.14em] text-secondary block">Master Karigar Partner</span>
-<span class="font-body-md text-body-md font-medium text-primary block truncate">Ustad Mohammad Salim (4th Gen)</span>
-<span class="font-body-sm text-body-sm text-on-surface-variant block text-xs">Direct Guild Linkage • Johari Bazaar Atelier</span>
-</div>
-<span class="material-symbols-outlined text-outline text-[20px]">handshake</span>
-</div>
-<!-- Action CTAs -->
 <div class="pt-4 flex flex-col sm:flex-row gap-3">
-<button class="flex-1 py-4 bg-primary text-on-primary font-label-md text-label-md tracking-[0.14em] uppercase text-center hover:bg-primary-container transition-colors shadow-md cursor-pointer" onclick="triggerAppointmentModal()" type="button">
-          Book Studio Appointment
-        </button>
-<button class="flex-1 py-4 bg-surface-container-highest text-on-surface font-label-md text-label-md tracking-[0.14em] uppercase text-center hover:bg-surface-variant transition-colors cursor-pointer" type="button">
-          View Full Lookbook
-        </button>
+<button class="flex-1 py-4 bg-primary text-on-primary font-label-md text-label-md tracking-[0.12em] uppercase text-center hover:bg-primary-container transition-colors shadow-md cursor-pointer" onclick="triggerAppointmentModal()" type="button">
+  Book Studio Appointment
+</button>
+<a href="products.html" class="flex-1 py-4 bg-surface-container-highest text-on-surface font-label-md text-label-md tracking-[0.12em] uppercase text-center hover:bg-surface-variant transition-colors cursor-pointer">
+  View Archive Pieces
+</a>
 </div>
 </div>
 </aside>
+
 <!-- Drawer Backdrop Scrim -->
 <div aria-hidden="true" class="fixed inset-0 z-[55] bg-tertiary/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out" id="drawer-backdrop" onclick="closeProfileDrawer()"></div>
+
 <!-- Appointment Modal Dialog -->
 <div class="fixed inset-0 z-[70] hidden items-center justify-center p-4 bg-tertiary/70 backdrop-blur-md" id="appointment-modal">
 <div class="bg-surface max-w-lg w-full p-8 shadow-2xl relative space-y-6">
 <div class="flex items-center justify-between pb-3">
 <div>
-<span class="font-label-sm text-label-sm tracking-[0.2em] uppercase text-secondary block">Concierge Desk</span>
+<span class="font-label-sm text-label-sm tracking-[0.16em] uppercase text-secondary block">Concierge Desk</span>
 <h4 class="font-headline-md text-headline-md uppercase text-primary">Private Consultation</h4>
 </div>
 <button aria-label="Close Appointment Modal" class="text-on-surface-variant hover:text-primary transition-colors" onclick="closeAppointmentModal()" type="button">
@@ -465,8 +628,8 @@
 </button>
 </div>
 <p class="font-body-sm text-body-sm text-on-surface-variant">
-        Private appointments are hosted at the Jaipur atelier or Colaba salon. Please specify your archival textile interests and intended dates.
-      </p>
+  Private appointments are hosted at the Jaipur atelier or Mumbai salon. Please specify your archival textile interests and intended dates.
+</p>
 <form class="space-y-4" onsubmit="handleAppointmentSubmit(event)">
 <div class="space-y-1">
 <label class="font-label-sm text-label-sm uppercase tracking-[0.12em] text-primary block">Your Full Name</label>
@@ -485,22 +648,21 @@
 </select>
 </div>
 <div class="pt-2">
-<button class="w-full py-4 bg-primary text-on-primary font-label-md text-label-md tracking-[0.16em] uppercase hover:bg-primary-container transition-colors shadow-md" type="submit">
-            Confirm Reservation Request
-          </button>
+<button class="w-full py-4 bg-primary text-on-primary font-label-md text-label-md tracking-[0.14em] uppercase hover:bg-primary-container transition-colors shadow-md" type="submit">
+  Confirm Reservation Request
+</button>
 </div>
 </form>
 </div>
 </div>
 </div>
+
 <script>
-  // Filter Functionality for Designer Directory
   const filterBtns = document.querySelectorAll('.filter-btn');
   const cards = document.querySelectorAll('.designer-card');
 
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      // Toggle active states on buttons
       filterBtns.forEach(b => {
         b.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm');
         b.classList.add('bg-surface-container-low', 'text-on-surface-variant');
@@ -510,7 +672,7 @@
 
       btn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
       btn.classList.remove('bg-surface-container-low', 'text-on-surface-variant');
-      
+
       const newDot = document.createElement('span');
       newDot.className = 'w-1.5 h-1.5 rounded-full bg-secondary-container';
       btn.prepend(newDot);
@@ -522,17 +684,12 @@
           card.style.display = 'flex';
         } else {
           const category = card.getAttribute('data-category');
-          if (category === filterVal) {
-            card.style.display = 'flex';
-          } else {
-            card.style.display = 'none';
-          }
+          card.style.display = (category === filterVal) ? 'flex' : 'none';
         }
       });
     });
   });
 
-  // Profile Drawer Toggle Logic
   const drawer = document.getElementById('profile-drawer');
   const backdrop = document.getElementById('drawer-backdrop');
   const designerNameElem = document.getElementById('drawer-designer-name');
@@ -557,7 +714,6 @@
     document.body.style.overflow = '';
   }
 
-  // Appointment Modal Logic
   const appointmentModal = document.getElementById('appointment-modal');
 
   function triggerAppointmentModal() {
@@ -572,8 +728,72 @@
 
   function handleAppointmentSubmit(event) {
     event.preventDefault();
-    alert('Thank you. Atelier concierge will coordinate with you via email within 24 hours.');
+    if (window.showToast) {
+      window.showToast('Atelier concierge will coordinate with you within 24 hours');
+    }
     closeAppointmentModal();
     closeProfileDrawer();
   }
-</script></main><footer class="w-full bg-surface-container-low mt-space-xl shadow-[0_-1px_6px_rgba(36,26,22,0.03)]"><div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin py-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter mb-space-lg"><div class="lg:col-span-4 flex flex-col justify-between pr-4"><div class="space-y-4"><div class="flex items-center gap-3"><img alt="Gota Patti Emblem" class="h-7 w-auto object-contain opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNQ0IaLDFggAZGvZupRgPCpFRrQbK22CbSGTAEgT84dJV_Ir48QdG9gCvsor2TS2h-HfQbMrh1DvBKwXSLEIYLssQGYsb_n9HJBfZoerflUobp2r25lE-GFlIm9u5YywIcIZRPYstStQYjUffacV7CnZYTPQWjhHEopMnUp7ltmtUn7lvc0r7PMycdTiSPdC9j3WfhGGHM6LpQpW9i6TGAmDjOCN7UPcy-HXOgSuxETIwzJGnoyojmsg"/><span class="font-headline-sm text-headline-sm uppercase tracking-[0.2em] text-primary">GOTA PATTI</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm leading-relaxed">Preserving the intangible heritage of Rajasthani Gota ribbon craft through research, contemporary couture, and ethical artisan patronage.</p></div><div class="mt-8 pt-6"><span class="font-label-sm text-label-sm tracking-[0.2em] uppercase text-secondary block mb-1">Origin Coordinates</span><span class="font-body-sm text-body-sm text-on-surface-variant font-mono">26.9124° N, 75.7873° E — Jaipur Atelier</span></div></div><div class="lg:col-span-2 space-y-4"><h4 class="font-label-md text-label-md tracking-[0.2em] uppercase text-primary">The Archive</h4><ul class="space-y-3"><li class="leading-none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="archive-origins" href="index.html#origins">Historical Origins</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="motif-lexicon" href="index.html#lexicon">Motif Lexicon</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="technical-papers" href="about.html">Technical Papers</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="metallurgy" href="index.html#anatomy">Gold Wire Metallurgy</a></li></ul></div><div class="lg:col-span-2 space-y-4"><h4 class="font-label-md text-label-md tracking-[0.2em] uppercase text-primary">Directory</h4><ul class="space-y-3"><li class="leading-none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="designers" href="designers.html">Jaipur Guild Guilds</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="designers" href="designers.html">Master Artisans</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="designers" href="designers.html">Contemporary Labels</a></li><li class="leading-none"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="ethical-charter" href="about.html">Ethical Charter</a></li></ul></div><div class="lg:col-span-4 space-y-4"><h4 class="font-label-md text-label-md tracking-[0.2em] uppercase text-primary">The Dispatch</h4><p class="font-body-sm text-body-sm text-on-surface-variant">Monograph releases, curatorial invitations &amp; quarterly textile essays.</p><form class="flex flex-col sm:flex-row gap-2 pt-2"><input class="flex-1 bg-surface-container-lowest px-4 py-3 font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none bg-transparent" placeholder="Enter your correspondence email" type="email"/><button class="px-6 py-3 bg-primary text-on-primary font-label-md text-label-md uppercase tracking-[0.14em] hover:bg-primary-container hover:text-on-primary transition-colors" type="button">Dispatch</button></form></div></div><div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-4"><p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 Gota Patti Archive &amp; Atelier Foundation. All curatorial records preserved.</p><div class="flex items-center gap-6"><a class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Provenance Policy</a><a class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Artisan Rights</a><a class="font-label-sm text-label-sm tracking-[0.15em] uppercase text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Folio</a></div></div></div></footer></body></html>
+</script>
+</main>
+
+<!-- Unified Deep Maroon & Antique Gold Archival Footer -->
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div class="site-footer-top">
+      <div>
+        <span class="site-footer-brand-badge">Jaipur &amp; Shekhawati Craft Archive</span>
+        <a href="index.html" class="site-footer-logo">GOTA PATTI</a>
+        <p class="site-footer-desc">
+          Preserving the royal metallic ribbon embroidery of Rajasthan—documenting master karigars, heirloom textiles, and contemporary couture ateliers since 1924.
+        </p>
+        <div class="site-footer-location">
+          <span class="material-symbols-outlined" style="font-size: 16px;">location_on</span>
+          <span>Johari Bazaar &amp; City Palace Precinct, Jaipur</span>
+        </div>
+      </div>
+      <div>
+        <h4 class="site-footer-heading">Archive Navigation</h4>
+        <ul class="site-footer-links">
+          <li><a href="index.html" class="site-footer-link">Home</a></li>
+          <li><a href="designers.html" class="site-footer-link">Designers</a></li>
+          <li><a href="process.html" class="site-footer-link">Process &amp; Materials</a></li>
+          <li><a href="products.html" class="site-footer-link">Products</a></li>
+          <li><a href="about.html" class="site-footer-link">About the Archive</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="site-footer-heading">Craft &amp; Provenance</h4>
+        <ul class="site-footer-links">
+          <li><a href="process.html#craft-scroll-section" class="site-footer-link">Scroll Craft Transformation</a></li>
+          <li><a href="process.html" class="site-footer-link">Lappa &amp; Seekhiya Glossary</a></li>
+          <li><a href="designers.html" class="site-footer-link">Master Revivalist Directory</a></li>
+          <li><a href="products.html" class="site-footer-link">Authenticated Craft Seal</a></li>
+          <li><a href="about.html" class="site-footer-link">Patronage &amp; Guild Ethics</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="site-footer-heading">Archival Monograph</h4>
+        <p class="site-footer-newsletter-text">
+          Receive quarterly dispatches on newly documented Shekhawati textiles, karigar commissions, and private exhibition previews.
+        </p>
+        <form class="site-footer-form" onsubmit="event.preventDefault(); if(window.showToast) showToast('Subscribed to the Gota Patti Archival Monograph');">
+          <input type="email" required class="site-footer-input" placeholder="Enter your email address" aria-label="Email address"/>
+          <button type="submit" class="site-footer-submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="site-footer-bottom">
+      <p class="site-footer-copy">© 2025 GOTA PATTI — Archive &amp; Atelier. Handcrafted in Rajasthan, India. All Rights Reserved.</p>
+      <div class="site-footer-meta">
+        <span class="site-footer-meta-item">GI Certified Craft</span>
+        <span class="site-footer-meta-item">100% Hand-Folded Zari</span>
+        <span class="site-footer-meta-item">Jaipur Guild Registry</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="./auth.js"></script>
+</body>
+</html>

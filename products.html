@@ -1,1056 +1,546 @@
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Product Archive &amp; Contemporary Applications — Gota Patti</title>
-  <meta name="description" content="Curated research archive of traditional and contemporary Rajasthani Gota Patti objects, apparel, accessories, and home applications with interactive filtering and material specifications."/>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
-  <style>
-    @layer base {
-      html, body { margin: 0; padding: 0; }
-      body { overscroll-behavior: none; }
-      main > :first-child { margin-top: 0 !important; }
-      main > :last-child { margin-bottom: 0 !important; }
-    }
-    ::-webkit-scrollbar { width: 5px; }
-    ::-webkit-scrollbar-track { background: #0a0607; }
-    ::-webkit-scrollbar-thumb { background: rgba(212, 175, 55, 0.4); border-radius: 4px; }
-    ::-webkit-scrollbar-thumb:hover { background: rgba(212, 175, 55, 0.8); }
-    .font-serif-luxury { font-family: 'Bodoni Moda', serif; line-height: 1.25; letter-spacing: 0.04em; }
-  </style>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script id="tailwind-config">
-    tailwind.config = {
-      darkMode: "class",
-      theme: {
-        extend: {
-          colors: {
-            "primary": "#3d020d",
-            "primary-container": "#5a1720",
-            "secondary": "#735b25",
-            "secondary-container": "#fddc99",
-            "secondary-fixed": "#ffdf9e",
-            "surface": "#fff9ef",
-            "surface-bright": "#fffdf9",
-            "surface-container-lowest": "#ffffff",
-            "surface-container-low": "#f9f3ea",
-            "surface-container": "#f3ede4",
-            "surface-container-high": "#ede7df",
-            "surface-container-highest": "#e7e2d9",
-            "on-surface": "#1d1b16",
-            "on-surface-variant": "#544243",
-            "tertiary": "#221814",
-            "tertiary-container": "#382d28",
-            "on-primary": "#ffffff",
-            "outline": "#877273",
-            "outline-variant": "#d9c1c1"
-          },
-          fontFamily: {
-            "display-lg": ["Bodoni Moda", "serif"],
-            "headline-lg": ["Bodoni Moda", "serif"],
-            "headline-md": ["Bodoni Moda", "serif"],
-            "headline-sm": ["Bodoni Moda", "serif"],
-            "body-lg": ["Plus Jakarta Sans", "sans-serif"],
-            "body-md": ["Plus Jakarta Sans", "sans-serif"],
-            "body-sm": ["Plus Jakarta Sans", "sans-serif"],
-            "label-lg": ["Plus Jakarta Sans", "sans-serif"],
-            "label-md": ["Plus Jakarta Sans", "sans-serif"],
-            "label-sm": ["Plus Jakarta Sans", "sans-serif"]
-          }
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GOTA PATTI — Products &amp; Curated Collection</title>
+<link href="https://rsms.me/" rel="preconnect"/>
+<link href="https://rsms.me/inter/inter.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<style>
+  @layer base {
+    html, body { margin: 0; padding: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+    body { overscroll-behavior: none; }
+    main > :first-child { margin-top: 0 !important; }
+    main > :last-child { margin-bottom: 0 !important; }
+  }
+</style>
+<script src="https://cdn.tailwindcss.com"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "outline-variant": "#d9c1c1",
+          "on-secondary-container": "#775f28",
+          "inverse-primary": "#ffb3b6",
+          "secondary": "#735b25",
+          "on-secondary-fixed-variant": "#59440f",
+          "on-tertiary-container": "#a4948e",
+          "surface-bright": "#fff9ef",
+          "on-secondary-fixed": "#261a00",
+          "error-container": "#ffdad6",
+          "on-tertiary-fixed": "#231915",
+          "on-primary": "#ffffff",
+          "primary": "#3d020d",
+          "primary-fixed": "#ffdada",
+          "secondary-container": "#fddc99",
+          "on-tertiary-fixed-variant": "#51443f",
+          "tertiary-container": "#382d28",
+          "on-tertiary": "#ffffff",
+          "on-primary-fixed": "#3f030e",
+          "on-error-container": "#93000a",
+          "surface-tint": "#96454c",
+          "outline": "#877273",
+          "on-primary-fixed-variant": "#782e36",
+          "primary-fixed-dim": "#ffb3b6",
+          "on-secondary": "#ffffff",
+          "on-background": "#1d1b16",
+          "tertiary-fixed-dim": "#d5c3bc",
+          "surface-container-lowest": "#ffffff",
+          "error": "#ba1a1a",
+          "secondary-fixed": "#ffdf9e",
+          "on-surface": "#1d1b16",
+          "on-error": "#ffffff",
+          "tertiary-fixed": "#f2ded8",
+          "background": "#fff9ef",
+          "on-primary-container": "#da7c82",
+          "surface-container-low": "#f9f3ea",
+          "surface-variant": "#e7e2d9",
+          "surface-container-highest": "#e7e2d9",
+          "surface-container-high": "#ede7df",
+          "on-surface-variant": "#4a3c3d",
+          "surface": "#fff9ef",
+          "surface-container": "#f3ede4",
+          "inverse-on-surface": "#f6f0e7",
+          "inverse-surface": "#32302a",
+          "secondary-fixed-dim": "#e2c382",
+          "surface-dim": "#dfd9d1",
+          "primary-container": "#5a1720",
+          "tertiary": "#221814"
+        },
+        spacing: {
+          "space-xs": "0.375rem",
+          "space-lg": "2.25rem",
+          "space-sm": "0.75rem",
+          "margin": "4rem",
+          "gutter": "2rem",
+          "margin-mobile": "1.25rem",
+          "space-xl": "3.75rem",
+          "space-md": "1.25rem",
+          "gutter-mobile": "1rem"
+        },
+        fontFamily: {
+          "headline": ["Inter", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+          "body": ["Inter", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+          "label": ["Inter", "-apple-system", "BlinkMacSystemFont", "sans-serif"]
         }
       }
-    };
-  </script>
-  <link rel="stylesheet" href="./styles.css"/>
+    }
+  };
+</script>
+<link rel="stylesheet" href="./header.css"/>
 </head>
-<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-primary">
+<body class="bg-surface text-on-surface antialiased selection:bg-secondary-container selection:text-primary">
 
-  <!-- GLOBAL UNIFIED HEADER -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(36,26,22,0.04)] border-b border-[#d4af37]/15">
-    <div class="h-20 max-w-[1440px] mx-auto px-6 lg:px-12 flex items-center justify-between">
-      <div class="flex items-center gap-4">
-        <a class="flex flex-col group text-left" href="index.html">
-          <span class="font-headline-sm uppercase tracking-[0.2em] text-primary group-hover:text-primary-container transition-colors">GOTA PATTI</span>
-          <span class="font-label-sm text-[10px] tracking-[0.25em] text-secondary uppercase -mt-1">Archive &amp; Atelier</span>
-        </a>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a href="index.html" class="site-brand">
+      <span class="site-brand-title">GOTA PATTI</span>
+    </a>
+    <nav class="site-nav" aria-label="Main Navigation">
+      <a href="index.html" class="site-nav-link">HOME</a>
+      <a href="designers.html" class="site-nav-link">DESIGNERS</a>
+      <a href="process.html" class="site-nav-link">PROCESS &amp; MATERIALS</a>
+      <a href="products.html" class="site-nav-link active" aria-current="page">PRODUCTS</a>
+      <a href="about.html" class="site-nav-link">ABOUT</a>
+    </nav>
+    <div class="site-actions">
+      <div class="site-search">
+        <span class="material-symbols-outlined">search</span>
+        <input id="headerSearchInput" type="text" placeholder="Search pieces..." aria-label="Search pieces"/>
       </div>
-      <nav class="hidden lg:flex items-center gap-8">
-        <a class="font-label-md tracking-[0.16em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="index.html">HOME</a>
-        <a class="font-label-md tracking-[0.16em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="about.html">ABOUT CRAFT</a>
-        <a class="font-label-md tracking-[0.16em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="process.html">PROCESS &amp; MATERIALS</a>
-        <a class="font-label-md tracking-[0.16em] uppercase text-primary relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:bg-secondary py-1 font-semibold" href="products.html">PRODUCT ARCHIVE</a>
-        <a class="font-label-md tracking-[0.16em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="resources.html">RESOURCES</a>
-        <a class="font-label-md tracking-[0.16em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="contact.html">CONTACT</a>
-      </nav>
-      <div class="flex items-center gap-3">
-        <button id="searchTriggerBtn" aria-label="Open Search" class="flex items-center gap-2 px-3 py-1.5 bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors text-xs font-mono border border-secondary/20 rounded">
-          <span class="material-symbols-outlined text-[16px]">search</span>
-          <span class="hidden sm:inline">Search</span>
-          <kbd class="hidden sm:inline text-[10px] px-1 bg-surface rounded text-secondary font-mono">⌘K</kbd>
-        </button>
-        <button id="mobileMenuBtn" aria-label="Toggle Navigation" class="lg:hidden p-2 text-primary hover:text-secondary transition-colors">
-          <span class="material-symbols-outlined text-2xl">menu</span>
-        </button>
-      </div>
+      <button type="button" onclick="openCartModal()" class="site-action-btn" title="Shopping Bag" aria-label="Open Shopping Bag">
+        <span class="material-symbols-outlined">shopping_bag</span>
+        <span class="gp-cart-badge site-cart-badge" style="display:none">0</span>
+      </button>
+      <button type="button" onclick="openAuthModal('signin')" class="site-action-btn" title="Patron Account" aria-label="Patron Account">
+        <span class="material-symbols-outlined">person</span>
+        <span class="gp-auth-label site-auth-label"></span>
+      </button>
+      <button type="button" class="site-mobile-toggle" onclick="document.getElementById('mobile-menu').classList.toggle('open')" aria-label="Toggle Menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
     </div>
-    <!-- Mobile Drawer -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-surface-bright border-b border-secondary/20 px-6 py-6 space-y-4">
-      <a class="block font-label-md text-sm uppercase tracking-wider text-on-surface hover:text-primary" href="index.html">Home</a>
-      <a class="block font-label-md text-sm uppercase tracking-wider text-on-surface hover:text-primary" href="about.html">About Craft</a>
-      <a class="block font-label-md text-sm uppercase tracking-wider text-on-surface hover:text-primary" href="process.html">Process &amp; Materials</a>
-      <a class="block font-label-md text-sm uppercase tracking-wider text-primary font-bold" href="products.html">Product Archive</a>
-      <a class="block font-label-md text-sm uppercase tracking-wider text-on-surface hover:text-primary" href="resources.html">Resources &amp; Links</a>
-      <a class="block font-label-md text-sm uppercase tracking-wider text-on-surface hover:text-primary" href="contact.html">Contact &amp; Field Studies</a>
-    </div>
-  </header>
+  </div>
+  <div id="mobile-menu" class="site-mobile-drawer">
+    <nav class="site-mobile-nav">
+      <a href="index.html" class="site-nav-link">HOME</a>
+      <a href="designers.html" class="site-nav-link">DESIGNERS</a>
+      <a href="process.html" class="site-nav-link">PROCESS &amp; MATERIALS</a>
+      <a href="products.html" class="site-nav-link active">PRODUCTS</a>
+      <a href="about.html" class="site-nav-link">ABOUT</a>
+    </nav>
+  </div>
+</header>
 
-  <main class="w-full pt-20 bg-surface min-h-screen">
-    <!-- ACADEMIC NOTICE BANNER -->
-    <div class="w-full bg-secondary/10 border-b border-secondary/20 px-6 py-2.5 text-center">
-      <p class="font-mono text-xs text-secondary flex items-center justify-center gap-2">
-        <span class="material-symbols-outlined text-sm">info</span>
-        <span>Curated Educational Research Catalog &bull; Conceptual Study Collection for Academic Analysis &bull; Non-Transactional</span>
+<main class="w-full pt-[72px] bg-surface min-h-[calc(100vh-20rem)]">
+  <!-- Minimal Editorial Page Header -->
+  <section class="w-full bg-surface-container-low border-b border-[#c5a059]/20 px-margin-mobile lg:px-margin py-10 lg:py-12">
+    <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row md:items-end justify-between gap-4">
+      <div>
+        <span class="text-xs font-medium tracking-[0.2em] text-secondary uppercase block mb-2">Atelier Collection</span>
+        <h1 class="text-3xl sm:text-4xl font-bold text-primary tracking-tight">Handcrafted Gota Patti Pieces</h1>
+      </div>
+      <p class="text-sm sm:text-base text-on-surface-variant max-w-md leading-relaxed">
+        Authentic heirloom textiles, apparel, footwear, and objects embroidered by master karigars in Jaipur and Shekhawati.
       </p>
     </div>
+  </section>
 
-    <!-- CURATORIAL BANNER -->
-    <section class="w-full bg-surface-container-low px-6 lg:px-12 py-12 border-b border-[#d4af37]/20">
-      <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row md:items-end justify-between gap-6">
-        <div class="space-y-3 max-w-2xl">
-          <div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-bright rounded-full border border-secondary/30">
-            <span class="w-2 h-2 rounded-full bg-secondary"></span>
-            <span class="font-label-sm text-[11px] tracking-[0.25em] text-secondary uppercase font-mono">Archive Folio Vol. IV // Catalog Raisonné</span>
-          </div>
-          <h1 class="font-display-lg text-3xl sm:text-4xl lg:text-5xl text-primary uppercase tracking-tight">
-            Crafted in Gold: Traditional &amp; Contemporary Works
-          </h1>
-          <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
-            A systematically cataloged corpus of traditional Rajasthani ceremonial garments, modern high-fashion couture separates, accessories, and interior craft artifacts rendered in Gota Patti.
-          </p>
-        </div>
-        <div class="flex items-center gap-6 py-2 md:py-0 font-mono text-xs">
-          <div>
-            <span class="block font-headline-sm text-xl text-primary font-bold" id="totalArtifactsCount">8</span>
-            <span class="block text-outline uppercase text-[10px]">Documented Pieces</span>
-          </div>
-          <div class="w-px h-8 bg-secondary/20"></div>
-          <div>
-            <span class="block font-headline-sm text-xl text-primary font-bold">4</span>
-            <span class="block text-outline uppercase text-[10px]">Disciplines</span>
-          </div>
-          <div class="w-px h-8 bg-secondary/20"></div>
-          <div>
-            <span class="block font-headline-sm text-xl text-primary font-bold">100%</span>
-            <span class="block text-outline uppercase text-[10px]">Artisan Lineage</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CATEGORY CARDS / TABS -->
-    <section class="w-full bg-surface px-6 lg:px-12 py-6 border-b border-secondary/15">
-      <div class="max-w-[1440px] mx-auto">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="categoryCards">
-          <button class="cat-card p-5 bg-surface-container text-left flex flex-col justify-between h-32 border border-secondary/30 transition-all cursor-pointer" data-cat="all">
-            <div class="flex justify-between w-full font-mono text-xs">
-              <span class="text-secondary font-bold uppercase">Folio All</span>
-              <span class="px-2 py-0.5 bg-surface text-primary">All Works</span>
-            </div>
-            <div>
-              <h3 class="font-headline-sm text-lg text-primary">Complete Corpus</h3>
-              <p class="font-sans text-[11px] text-on-surface-variant">All archived pieces &amp; artifacts</p>
-            </div>
-          </button>
-
-          <button class="cat-card p-5 bg-surface-container-low hover:bg-surface-container text-left flex flex-col justify-between h-32 border border-secondary/15 transition-all cursor-pointer" data-cat="Apparel">
-            <div class="flex justify-between w-full font-mono text-xs">
-              <span class="text-outline uppercase">Folio 01</span>
-              <span class="px-2 py-0.5 bg-surface text-primary">Apparel</span>
-            </div>
-            <div>
-              <h3 class="font-headline-sm text-lg text-primary">Apparel &amp; Occasion</h3>
-              <p class="font-sans text-[11px] text-on-surface-variant">Sarees, Odhnas, Kurtas, Lehengas</p>
-            </div>
-          </button>
-
-          <button class="cat-card p-5 bg-surface-container-low hover:bg-surface-container text-left flex flex-col justify-between h-32 border border-secondary/15 transition-all cursor-pointer" data-cat="Accessories">
-            <div class="flex justify-between w-full font-mono text-xs">
-              <span class="text-outline uppercase">Folio 02</span>
-              <span class="px-2 py-0.5 bg-surface text-primary">Accessories</span>
-            </div>
-            <div>
-              <h3 class="font-headline-sm text-lg text-primary">Craft Accessories</h3>
-              <p class="font-sans text-[11px] text-on-surface-variant">Potlis, Clutches, Mojaris</p>
-            </div>
-          </button>
-
-          <button class="cat-card p-5 bg-surface-container-low hover:bg-surface-container text-left flex flex-col justify-between h-32 border border-secondary/15 transition-all cursor-pointer" data-cat="Home">
-            <div class="flex justify-between w-full font-mono text-xs">
-              <span class="text-outline uppercase">Folio 03</span>
-              <span class="px-2 py-0.5 bg-surface text-primary">Home &amp; Décor</span>
-            </div>
-            <div>
-              <h3 class="font-headline-sm text-lg text-primary">Home &amp; Installations</h3>
-              <p class="font-sans text-[11px] text-on-surface-variant">Cushions, Framed Wall Panels</p>
-            </div>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- STICKY FILTER BAR -->
-    <section class="w-full bg-surface-bright sticky top-20 z-40 border-b border-secondary/20 shadow-sm px-6 lg:px-12 py-4">
-      <div class="max-w-[1440px] mx-auto space-y-3">
-        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
-          <!-- Text Search Input -->
-          <div class="relative flex-1 max-w-md">
-            <span class="material-symbols-outlined text-[18px] absolute left-3 top-2.5 text-outline">search</span>
-            <input id="archiveSearchInput" type="text" placeholder="Filter by motif, fabric, guild, or title..." class="w-full pl-9 pr-4 py-2 bg-surface-container-low border border-secondary/20 text-xs font-sans text-on-surface focus:outline-none focus:border-primary"/>
-          </div>
-
-          <!-- Dropdown Selectors -->
-          <div class="flex flex-wrap items-center gap-3">
-            <!-- Technique Filter -->
-            <select id="techniqueFilter" class="bg-surface-container-low border border-secondary/20 text-xs font-mono py-2 px-3 text-on-surface focus:outline-none">
-              <option value="all">Technique: All</option>
-              <option value="Gota Tukdi">Gota Tukdi</option>
-              <option value="Lappa">Lappa Ribbon Work</option>
-              <option value="Bijia">Bijia Edging</option>
-              <option value="Seekhi">Seekhi Gota</option>
-              <option value="Tankaayi">Tankaayi Hand-Stitched</option>
+  <!-- Compact Functional Filter & Sort Bar -->
+  <section class="w-full bg-surface sticky top-[72px] z-30 border-b border-[#c5a059]/25">
+    <div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin py-4">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
+        <!-- Filter Controls -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 lg:flex lg:items-center gap-3">
+          <!-- Category Filter -->
+          <div class="relative">
+            <label for="filterCategory" class="sr-only">Category</label>
+            <select id="filterCategory" aria-label="Filter by Category" class="w-full lg:w-auto appearance-none bg-surface-container-lowest border border-[#c5a059]/35 text-on-surface text-xs font-medium tracking-wider uppercase pl-3.5 pr-9 py-2.5 cursor-pointer focus:outline-none focus:border-primary">
+              <option value="all">Category: All</option>
+              <option value="Apparel">Apparel</option>
+              <option value="Accessories">Accessories</option>
+              <option value="Home &amp; Décor">Home &amp; Décor</option>
+              <option value="Craft Objects">Craft Objects</option>
             </select>
+            <span class="material-symbols-outlined text-[16px] absolute right-2.5 top-2.5 pointer-events-none text-on-surface-variant">expand_more</span>
+          </div>
 
-            <!-- Material Filter -->
-            <select id="materialFilter" class="bg-surface-container-low border border-secondary/20 text-xs font-mono py-2 px-3 text-on-surface focus:outline-none">
-              <option value="all">Material: All</option>
-              <option value="Silk">Mulberry / Raw Silk</option>
-              <option value="Chanderi">Chanderi Silk</option>
-              <option value="Organza">Silk Organza</option>
-              <option value="Velvet">Silk Velvet</option>
-              <option value="Tussar">Wild Tussar</option>
-              <option value="Leather">Handcrafted Leather</option>
+          <!-- Colour Filter -->
+          <div class="relative">
+            <label for="filterColor" class="sr-only">Colour</label>
+            <select id="filterColor" aria-label="Filter by Colour" class="w-full lg:w-auto appearance-none bg-surface-container-lowest border border-[#c5a059]/35 text-on-surface text-xs font-medium tracking-wider uppercase pl-3.5 pr-9 py-2.5 cursor-pointer focus:outline-none focus:border-primary">
+              <option value="all">Colour: All</option>
+              <option value="Crimson &amp; Maroon">Crimson &amp; Maroon</option>
+              <option value="Ivory &amp; Gold">Ivory &amp; Gold</option>
+              <option value="Chanderi Gold &amp; Beige">Chanderi Gold &amp; Beige</option>
+              <option value="Blush Rose">Blush Rose</option>
+              <option value="Midnight Indigo">Midnight Indigo</option>
+              <option value="Camel &amp; Tan">Camel &amp; Tan</option>
             </select>
+            <span class="material-symbols-outlined text-[16px] absolute right-2.5 top-2.5 pointer-events-none text-on-surface-variant">expand_more</span>
+          </div>
 
-            <!-- Motif Filter -->
-            <select id="motifFilter" class="bg-surface-container-low border border-secondary/20 text-xs font-mono py-2 px-3 text-on-surface focus:outline-none">
-              <option value="all">Motif: All</option>
-              <option value="Tree of Life">Tree of Life</option>
-              <option value="Lotus">Lotus Rosette</option>
-              <option value="Chevron">Chevron / Geometric</option>
-              <option value="Keri">Keri (Paisley)</option>
-              <option value="Suraj">Suraj (Solar Disc)</option>
-              <option value="Peepal">Peepal Leaf</option>
+          <!-- Price Range Filter -->
+          <div class="relative">
+            <label for="filterPrice" class="sr-only">Price Range</label>
+            <select id="filterPrice" aria-label="Filter by Price Range" class="w-full lg:w-auto appearance-none bg-surface-container-lowest border border-[#c5a059]/35 text-on-surface text-xs font-medium tracking-wider uppercase pl-3.5 pr-9 py-2.5 cursor-pointer focus:outline-none focus:border-primary">
+              <option value="all">Price: All</option>
+              <option value="under-20k">Under ₹20,000</option>
+              <option value="20k-50k">₹20,000 – ₹50,000</option>
+              <option value="50k-100k">₹50,000 – ₹1,00,000</option>
+              <option value="above-100k">Above ₹1,00,000</option>
             </select>
-
-            <!-- View Toggle -->
-            <div class="flex items-center border border-secondary/20 bg-surface-container-low p-0.5">
-              <button id="viewGridBtn" aria-label="Grid View" class="p-1.5 bg-primary text-on-primary">
-                <span class="material-symbols-outlined text-[16px] block">grid_view</span>
-              </button>
-              <button id="viewListBtn" aria-label="List View" class="p-1.5 text-on-surface-variant hover:text-primary">
-                <span class="material-symbols-outlined text-[16px] block">view_agenda</span>
-              </button>
-            </div>
+            <span class="material-symbols-outlined text-[16px] absolute right-2.5 top-2.5 pointer-events-none text-on-surface-variant">expand_more</span>
           </div>
         </div>
 
-        <!-- Active Filter Chips & Reset -->
-        <div id="activeChipsContainer" class="flex flex-wrap items-center gap-2 pt-2 border-t border-secondary/10">
-          <span class="font-mono text-[10px] text-outline uppercase tracking-wider">Active Filters:</span>
-          <div id="chipsList" class="flex flex-wrap items-center gap-2"></div>
-          <button id="resetAllFiltersBtn" class="font-mono text-[10px] text-secondary hover:text-primary uppercase underline cursor-pointer ml-auto">
-            Reset Filters
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRODUCT CATALOG GRID -->
-    <section class="w-full px-6 lg:px-12 py-12 bg-surface">
-      <div class="max-w-[1440px] mx-auto space-y-8">
-        
-        <div class="flex items-center justify-between text-xs font-mono text-outline">
-          <span id="displayCountText">Displaying 8 curated museum &amp; atelier works</span>
-          <span>Open Research Archive</span>
-        </div>
-
-        <!-- Cards Container -->
-        <div id="productCatalogContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all">
-          
-          <!-- CARD 1 -->
-          <article class="product-item group bg-surface-container-lowest border border-secondary/15 flex flex-col justify-between shadow-xs hover:shadow-xl transition-all duration-300"
-            data-category="Apparel"
-            data-technique="Gota Tukdi"
-            data-material="Silk"
-            data-motif="Tree of Life"
-            data-title="The Shekhawati Tree of Life Odhni"
-            data-provenance="Jaipur Guild &bull; Radha Devi"
-            data-price="₹ 88,000"
-            data-hours="78 Working Hours"
-            data-desc="Deep crimson handspun mulberry silk draped with symmetrical beaten-gold leaves, depicting ancient Rajasthani arboreal iconography. Over 3,200 individual diamond-shaped gilded copper ribbons couched with silk.">
-            <div>
-              <div class="relative aspect-[3/4] overflow-hidden bg-surface-container-high">
-                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG7pE0Y_U8VuqtEkYl1ZTLxkk-GI6MZAYF5u6yGxNHus6mhcycEnoOptWQn_Y4hrFdZpPXraFrERnIlj2udHLuxW6_VVWPJEpehptOEpyTIBWTcBG_tonAUgNA5R2jSrgFiJCous-C_a10fWU-U94nk-nIoymbd_yOhs_gU6yUdLgahQEl0AeWASFNIPKxinUeIlZpHqR-KEMROy6ObGdEzT9lyWahQdPTGSNaO9QAv7YyaA2eNn9IAQ" alt="The Shekhawati Tree of Life Odhni"/>
-                <div class="absolute top-4 left-4 flex gap-1">
-                  <span class="px-2 py-0.5 bg-surface text-primary font-mono text-[10px] uppercase shadow-xs">Jaipur Guild</span>
-                  <span class="px-2 py-0.5 bg-primary text-on-primary font-mono text-[10px] uppercase">Masterwork</span>
-                </div>
-                <button class="quick-look-btn absolute bottom-3 right-3 p-2 bg-surface text-primary hover:bg-primary hover:text-on-primary shadow cursor-pointer transition-colors" title="Quick Look">
-                  <span class="material-symbols-outlined text-sm">visibility</span>
-                </button>
-              </div>
-              <div class="p-6 space-y-2">
-                <div class="flex items-center justify-between text-xs font-mono text-outline">
-                  <span class="text-secondary font-bold">Gota Tukdi &bull; Tree of Life</span>
-                  <span>ART. #GP-109</span>
-                </div>
-                <h2 class="font-headline-sm text-lg text-primary">The Shekhawati Tree of Life Odhni</h2>
-                <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2">
-                  Crimson mulberry silk with sacred fig leaf canopy folded from fine metallic ribbons.
-                </p>
-                <div class="pt-2 flex items-baseline justify-between font-mono text-xs border-t border-secondary/10">
-                  <span class="font-bold text-primary">₹ 88,000 (Valuation)</span>
-                  <span class="text-secondary">78 Hours</span>
-                </div>
-              </div>
-            </div>
-            <div class="p-6 pt-0">
-              <a href="shop.html" class="w-full py-2.5 bg-surface-container hover:bg-primary hover:text-on-primary text-primary font-mono text-xs uppercase tracking-wider flex items-center justify-center gap-1 transition-colors">
-                <span>Examine Curatorial Folio</span>
-                <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- CARD 2 -->
-          <article class="product-item group bg-surface-container-lowest border border-secondary/15 flex flex-col justify-between shadow-xs hover:shadow-xl transition-all duration-300"
-            data-category="Accessories"
-            data-technique="Tankaayi"
-            data-material="Silk"
-            data-motif="Lotus"
-            data-title="Lotus Rosette Raw Silk Potli"
-            data-provenance="Atelier Nayla &bull; Kamla Devi"
-            data-price="₹ 16,500"
-            data-hours="22 Working Hours"
-            data-desc="Hand-formed petals of brushed antique gold ribbon clustered around micro seed pearls, gathered by a gold zari tassel drawcord on natural ivory raw silk.">
-            <div>
-              <div class="relative aspect-[3/4] overflow-hidden bg-surface-container-high">
-                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmMycy3QOBryHOWxiOLhpbti6wv3hWNTEB21v5VCQFRRe7W1xsfz1EfFDHy807qIvIBXXQifzHfe1eiMN9iUrqb8McKLh9DMY_2_Ok4eGsfVp9gxBZAIOe2f9esdaA86-Yk-LYNGgkeq2sn8akYTenJaebF-sGhveDdWzVYTbrZmNHnQJl65O3mEcxm4M1MU4CfhNF77MpZIYg4ReGSTmr7P29Fmk0oaD8d3CpJws3-vdZAxAEFjx_9g" alt="Lotus Rosette Raw Silk Potli"/>
-                <div class="absolute top-4 left-4">
-                  <span class="px-2 py-0.5 bg-surface text-primary font-mono text-[10px] uppercase shadow-xs">Atelier Nayla</span>
-                </div>
-                <button class="quick-look-btn absolute bottom-3 right-3 p-2 bg-surface text-primary hover:bg-primary hover:text-on-primary shadow cursor-pointer transition-colors" title="Quick Look">
-                  <span class="material-symbols-outlined text-sm">visibility</span>
-                </button>
-              </div>
-              <div class="p-6 space-y-2">
-                <div class="flex items-center justify-between text-xs font-mono text-outline">
-                  <span class="text-secondary font-bold">Phool Patti &bull; Lotus</span>
-                  <span>ACC. #GP-204</span>
-                </div>
-                <h2 class="font-headline-sm text-lg text-primary">Lotus Rosette Raw Silk Potli</h2>
-                <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2">
-                  Ivory silk pouch bag adorned with three-dimensional folded ribbon lotus rosettes.
-                </p>
-                <div class="pt-2 flex items-baseline justify-between font-mono text-xs border-t border-secondary/10">
-                  <span class="font-bold text-primary">₹ 16,500 (Valuation)</span>
-                  <span class="text-secondary">22 Hours</span>
-                </div>
-              </div>
-            </div>
-            <div class="p-6 pt-0">
-              <a href="shop.html" class="w-full py-2.5 bg-surface-container hover:bg-primary hover:text-on-primary text-primary font-mono text-xs uppercase tracking-wider flex items-center justify-center gap-1 transition-colors">
-                <span>Examine Curatorial Folio</span>
-                <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- CARD 3 -->
-          <article class="product-item group bg-surface-container-lowest border border-secondary/15 flex flex-col justify-between shadow-xs hover:shadow-xl transition-all duration-300"
-            data-category="Apparel"
-            data-technique="Lappa"
-            data-material="Chanderi"
-            data-motif="Chevron"
-            data-title="Chevron Lappa Chanderi Kurta"
-            data-provenance="Raw Mango Curatorial Archive"
-            data-price="₹ 34,000"
-            data-hours="36 Working Hours"
-            data-desc="Woven on centuries-old pit looms in Chanderi, embedded with diagonal antique ribbon insets producing rhythmic light play and sheer geometric structure.">
-            <div>
-              <div class="relative aspect-[3/4] overflow-hidden bg-surface-container-high">
-                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADOdykuiFp9-6DmclLxhDo7nn5EGwoB91pXh-6G11IQSXoHFh6fcdrhjvCEE_ilQPmCGQHKLDAhxzUqgf-ZiRpaL8rG9n6nKnZZEstaABtZIBoa5eeX5_6U6Ux2gGe8mvDkgNcYSU9Ufy0-vDReLf113Hpo5J7BSx4PHMA4i7ak5bDTqHr9wKxnJ0bEO4jFtA8QXmdwhwo5BBWe3E4DJ2PdUsTfqHc1X4sXUICJ1GQYgKzYAatAQMLlg" alt="Chevron Lappa Chanderi Kurta"/>
-                <div class="absolute top-4 left-4">
-                  <span class="px-2 py-0.5 bg-surface text-primary font-mono text-[10px] uppercase shadow-xs">Raw Mango Study</span>
-                </div>
-                <button class="quick-look-btn absolute bottom-3 right-3 p-2 bg-surface text-primary hover:bg-primary hover:text-on-primary shadow cursor-pointer transition-colors" title="Quick Look">
-                  <span class="material-symbols-outlined text-sm">visibility</span>
-                </button>
-              </div>
-              <div class="p-6 space-y-2">
-                <div class="flex items-center justify-between text-xs font-mono text-outline">
-                  <span class="text-secondary font-bold">Lappa Work &bull; Chevron</span>
-                  <span>APP. #GP-312</span>
-                </div>
-                <h2 class="font-headline-sm text-lg text-primary">Chevron Lappa Chanderi Kurta</h2>
-                <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2">
-                  Sheer honey-tinted Chanderi silk with continuous beaten silver and gold ribbon insertions.
-                </p>
-                <div class="pt-2 flex items-baseline justify-between font-mono text-xs border-t border-secondary/10">
-                  <span class="font-bold text-primary">₹ 34,000 (Valuation)</span>
-                  <span class="text-secondary">36 Hours</span>
-                </div>
-              </div>
-            </div>
-            <div class="p-6 pt-0">
-              <a href="shop.html" class="w-full py-2.5 bg-surface-container hover:bg-primary hover:text-on-primary text-primary font-mono text-xs uppercase tracking-wider flex items-center justify-center gap-1 transition-colors">
-                <span>Examine Curatorial Folio</span>
-                <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- CARD 4 -->
-          <article class="product-item group bg-surface-container-lowest border border-secondary/15 flex flex-col justify-between shadow-xs hover:shadow-xl transition-all duration-300"
-            data-category="Apparel"
-            data-technique="Tankaayi"
-            data-material="Velvet"
-            data-motif="Keri"
-            data-title="Keri Motif Handcrafted Bridal Lehenga"
-            data-provenance="Amber Karkhana Guild &bull; Ustad Hanif"
-            data-price="₹ 2,45,000"
-            data-hours="210 Working Hours"
-            data-desc="Rich maroon silk velvet base loaded with dimensional paisley motifs, each anchored with micro gold wire tacking. 6 kalis of dense beaten gota foliage created over 210 artisan hours.">
-            <div>
-              <div class="relative aspect-[3/4] overflow-hidden bg-surface-container-high">
-                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxtvg5BuLCxMd-AzA0UT6v04C7JSYwGGZx5K_HZXPu8mt4W2niJgMpcpfl1fXKCwaxpYRWDd0U5zIol45cCTYd9aOkSpJ9tKzUVspiMl4_vskpRdd3tpoUOeU4zrW15j8b-ayn1a2wnEnpPZPkDO_z8sxqB1Rv-YJBrdJ0To_IpEGH7h823ejiiP5TWuii4JZrjFwsGe8yGBGxOVtGbmDjATpjwhACOfW_XTaN2An2Viz6DuzPcS44Tg" alt="Keri Motif Handcrafted Bridal Lehenga"/>
-                <div class="absolute top-4 left-4 flex gap-1">
-                  <span class="px-2 py-0.5 bg-surface text-primary font-mono text-[10px] uppercase shadow-xs">Heritage Study</span>
-                  <span class="px-2 py-0.5 bg-secondary text-surface-bright font-mono text-[10px] uppercase">Royal Kali</span>
-                </div>
-                <button class="quick-look-btn absolute bottom-3 right-3 p-2 bg-surface text-primary hover:bg-primary hover:text-on-primary shadow cursor-pointer transition-colors" title="Quick Look">
-                  <span class="material-symbols-outlined text-sm">visibility</span>
-                </button>
-              </div>
-              <div class="p-6 space-y-2">
-                <div class="flex items-center justify-between text-xs font-mono text-outline">
-                  <span class="text-secondary font-bold">Pakki Gota &bull; Keri (Paisley)</span>
-                  <span>BRD. #GP-508</span>
-                </div>
-                <h2 class="font-headline-sm text-lg text-primary">Keri Motif Bridal Lehenga</h2>
-                <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2">
-                  Opulent deep maroon velvet loaded with dimensional paisley medallions and silver wire trim.
-                </p>
-                <div class="pt-2 flex items-baseline justify-between font-mono text-xs border-t border-secondary/10">
-                  <span class="font-bold text-primary">₹ 2,45,000 (Valuation)</span>
-                  <span class="text-secondary">210 Hours</span>
-                </div>
-              </div>
-            </div>
-            <div class="p-6 pt-0">
-              <a href="shop.html" class="w-full py-2.5 bg-surface-container hover:bg-primary hover:text-on-primary text-primary font-mono text-xs uppercase tracking-wider flex items-center justify-center gap-1 transition-colors">
-                <span>Examine Curatorial Folio</span>
-                <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- CARD 5 -->
-          <article class="product-item group bg-surface-container-lowest border border-secondary/15 flex flex-col justify-between shadow-xs hover:shadow-xl transition-all duration-300"
-            data-category="Home"
-            data-technique="Gota Tukdi"
-            data-material="Tussar"
-            data-motif="Suraj"
-            data-title="Suraj Solar Disc Silk Cushion Cover"
-            data-provenance="Grassroot Jaipur &bull; Churu Lineage"
-            data-price="₹ 12,000"
-            data-hours="18 Working Hours"
-            data-desc="Symbolizing the Rajput solar dynasties, 64 rays of hand-beaten gold foil ribbon converge at a centered mirror rosette on natural wild tussar silk ground.">
-            <div>
-              <div class="relative aspect-[3/4] overflow-hidden bg-surface-container-high">
-                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDOg8kW7IiNi1b_p7qyYDq7UgBWZfWvISwJVtq75CuTZiRww7RcgM7qgjiHeMlfQ3MIpG-OIxBSPgo-f4MGEMQGMoW8xRRPmejW4qzgi1jDBilzKCYhPb5luprBN1hPhbGbkJKXICdHFGKekQea7esI_lO452lDUmnwL8hjD44rKTdkyKaXahFj8E1KXv8rFThoX7vpQW4EepylxDHdkN6z_SVUfiN9cr8gRedOZSViCWmHfW0Gx83EA" alt="Suraj Solar Disc Silk Cushion Cover"/>
-                <div class="absolute top-4 left-4">
-                  <span class="px-2 py-0.5 bg-surface text-primary font-mono text-[10px] uppercase shadow-xs">Grassroot Jaipur</span>
-                </div>
-                <button class="quick-look-btn absolute bottom-3 right-3 p-2 bg-surface text-primary hover:bg-primary hover:text-on-primary shadow cursor-pointer transition-colors" title="Quick Look">
-                  <span class="material-symbols-outlined text-sm">visibility</span>
-                </button>
-              </div>
-              <div class="p-6 space-y-2">
-                <div class="flex items-center justify-between text-xs font-mono text-outline">
-                  <span class="text-secondary font-bold">Suraj Chakra &bull; Solar Disc</span>
-                  <span>HME. #GP-442</span>
-                </div>
-                <h2 class="font-headline-sm text-lg text-primary">Suraj Solar Disc Cushion Cover</h2>
-                <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2">
-                  Sand-beige wild tussar silk field carrying an astral medallion of tapering metallic rays.
-                </p>
-                <div class="pt-2 flex items-baseline justify-between font-mono text-xs border-t border-secondary/10">
-                  <span class="font-bold text-primary">₹ 12,000 (Valuation)</span>
-                  <span class="text-secondary">18 Hours</span>
-                </div>
-              </div>
-            </div>
-            <div class="p-6 pt-0">
-              <a href="shop.html" class="w-full py-2.5 bg-surface-container hover:bg-primary hover:text-on-primary text-primary font-mono text-xs uppercase tracking-wider flex items-center justify-center gap-1 transition-colors">
-                <span>Examine Curatorial Folio</span>
-                <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- CARD 6 -->
-          <article class="product-item group bg-surface-container-lowest border border-secondary/15 flex flex-col justify-between shadow-xs hover:shadow-xl transition-all duration-300"
-            data-category="Apparel"
-            data-technique="Bijia"
-            data-material="Organza"
-            data-motif="Lotus"
-            data-title="Bijia-Edged Organza Dupatta"
-            data-provenance="Atelier Nayla Collective"
-            data-price="₹ 24,000"
-            data-hours="32 Working Hours"
-            data-desc="Translucent blush silk organza framed by continuous zigzag gold ribbon trim (Bijia) with gossamer floral butis scattered throughout. Prevents fraying and catches ambient illumination.">
-            <div>
-              <div class="relative aspect-[3/4] overflow-hidden bg-surface-container-high">
-                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdM-MqbGSu8q3f5Jz7gjKJPZTLfDPbs5jtCufOqL1QiG1EvtB_jvHypH2mQ0nBE2l-Z7j3cJWwazRg4T6wLl5Sz6Jl9F0CM7sR0FrHBbwtE3R8NlGZIF_24mjSv3591gLNn104ENBLr8MMsA6M6gQpeRDL7RidFyq1kyTkb6gqJhNqSujcWdz-wnx60ezEUn3ywfUiY-6SMTOAJc3j_ZhFs0cSEMQKA6oLi6tCsiPWi1GwrWTegqkvCg" alt="Bijia-Edged Organza Dupatta"/>
-                <div class="absolute top-4 left-4">
-                  <span class="px-2 py-0.5 bg-surface text-primary font-mono text-[10px] uppercase shadow-xs">Atelier Nayla</span>
-                </div>
-                <button class="quick-look-btn absolute bottom-3 right-3 p-2 bg-surface text-primary hover:bg-primary hover:text-on-primary shadow cursor-pointer transition-colors" title="Quick Look">
-                  <span class="material-symbols-outlined text-sm">visibility</span>
-                </button>
-              </div>
-              <div class="p-6 space-y-2">
-                <div class="flex items-center justify-between text-xs font-mono text-outline">
-                  <span class="text-secondary font-bold">Bijia Edging &bull; Scattered Buti</span>
-                  <span>APP. #GP-188</span>
-                </div>
-                <h2 class="font-headline-sm text-lg text-primary">Bijia-Edged Organza Dupatta</h2>
-                <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2">
-                  Pale blush sheer organza with saw-tooth zigzag metallic edge and scattered flower petals.
-                </p>
-                <div class="pt-2 flex items-baseline justify-between font-mono text-xs border-t border-secondary/10">
-                  <span class="font-bold text-primary">₹ 24,000 (Valuation)</span>
-                  <span class="text-secondary">32 Hours</span>
-                </div>
-              </div>
-            </div>
-            <div class="p-6 pt-0">
-              <a href="shop.html" class="w-full py-2.5 bg-surface-container hover:bg-primary hover:text-on-primary text-primary font-mono text-xs uppercase tracking-wider flex items-center justify-center gap-1 transition-colors">
-                <span>Examine Curatorial Folio</span>
-                <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- CARD 7 -->
-          <article class="product-item group bg-surface-container-lowest border border-secondary/15 flex flex-col justify-between shadow-xs hover:shadow-xl transition-all duration-300"
-            data-category="Home"
-            data-technique="Gota Tukdi"
-            data-material="Silk"
-            data-motif="Peepal"
-            data-title="Archival Jaipur Peepal Leaf Wall Panel"
-            data-provenance="Jaipur Master Guild // Museum Mount"
-            data-price="₹ 62,000"
-            data-hours="54 Working Hours"
-            data-desc="Preservation-grade museum float mount featuring continuous single-ribbon folding technique dated back to the 18th-century Kachhwaha court, set onto deep indigo raw silk.">
-            <div>
-              <div class="relative aspect-[3/4] overflow-hidden bg-surface-container-high">
-                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf1CXEzv8RNiavd9aOxk6tzqIz2XLrAMTXLc88B-Hp3edvOlM9zVNA1cC-6kaBONhuUtLyb9sqYbqz1RYwprhvj1YfaCY_FTRrC8CyQ-BZWykH7rFsZoCdhUP-MjdMriocRL3-Iacpmndnd3UqdGpWLOhn20FIQV2fqhjFk3Fjw1-zQqUGGiShgJU3kxB8glToUBIYjHsudkg4lvl7HC2vXnVeoYTuaSgDSrrddZApcecOJuKZpaljsA" alt="Archival Jaipur Peepal Leaf Wall Panel"/>
-                <div class="absolute top-4 left-4 flex gap-1">
-                  <span class="px-2 py-0.5 bg-surface text-primary font-mono text-[10px] uppercase shadow-xs">Jaipur Guild</span>
-                  <span class="px-2 py-0.5 bg-tertiary text-on-tertiary font-mono text-[10px] uppercase">Framed</span>
-                </div>
-                <button class="quick-look-btn absolute bottom-3 right-3 p-2 bg-surface text-primary hover:bg-primary hover:text-on-primary shadow cursor-pointer transition-colors" title="Quick Look">
-                  <span class="material-symbols-outlined text-sm">visibility</span>
-                </button>
-              </div>
-              <div class="p-6 space-y-2">
-                <div class="flex items-center justify-between text-xs font-mono text-outline">
-                  <span class="text-secondary font-bold">Foil Appliqué &bull; Peepal Leaf</span>
-                  <span>ART. #GP-721</span>
-                </div>
-                <h2 class="font-headline-sm text-lg text-primary">Jaipur Peepal Leaf Wall Panel</h2>
-                <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2">
-                  Sacred fig botanical leaf rendered in 24k electroplated ribbon on midnight indigo raw silk.
-                </p>
-                <div class="pt-2 flex items-baseline justify-between font-mono text-xs border-t border-secondary/10">
-                  <span class="font-bold text-primary">₹ 62,000 (Valuation)</span>
-                  <span class="text-secondary">54 Hours</span>
-                </div>
-              </div>
-            </div>
-            <div class="p-6 pt-0">
-              <a href="shop.html" class="w-full py-2.5 bg-surface-container hover:bg-primary hover:text-on-primary text-primary font-mono text-xs uppercase tracking-wider flex items-center justify-center gap-1 transition-colors">
-                <span>Examine Curatorial Folio</span>
-                <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-              </a>
-            </div>
-          </article>
-
-          <!-- CARD 8 -->
-          <article class="product-item group bg-surface-container-lowest border border-secondary/15 flex flex-col justify-between shadow-xs hover:shadow-xl transition-all duration-300"
-            data-category="Accessories"
-            data-technique="Seekhi"
-            data-material="Leather"
-            data-motif="Chevron"
-            data-title="Hand-Folded Metallic Ribbon Mojaris"
-            data-provenance="Grassroot Jaipur &bull; Shekhawati Cluster"
-            data-price="₹ 14,500"
-            data-hours="19 Working Hours"
-            data-desc="Each shoe upper is completely sheathed in hand-punched gold tape laid in an interlocking rhomboid jaal pattern over vegetable-tanned camel leather.">
-            <div>
-              <div class="relative aspect-[3/4] overflow-hidden bg-surface-container-high">
-                <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFwquSo83PQzSzf37Xt7du2NPXRUmJpMGA3xKfaItXxxljbuSPpKjlFsnxWJliRc26QhMSDHEYsA8CzYvtTwd7cqD1A7pTmGL51ibU5FCg6uxeXFJbj3vo6ke7n4wQVkhUXC5OGOOrEfgh_b7URRAd7yRt1qXHcewsW_VrlGxxcQiNnbv689UJpHk3cKuOkElPGVLCqGBnZV6qH1ltyOv1LZKqGuE6TzKjs_SuJVHM_yWuIBkPD0N2cA" alt="Hand-Folded Metallic Ribbon Mojaris"/>
-                <div class="absolute top-4 left-4">
-                  <span class="px-2 py-0.5 bg-surface text-primary font-mono text-[10px] uppercase shadow-xs">Grassroot Jaipur</span>
-                </div>
-                <button class="quick-look-btn absolute bottom-3 right-3 p-2 bg-surface text-primary hover:bg-primary hover:text-on-primary shadow cursor-pointer transition-colors" title="Quick Look">
-                  <span class="material-symbols-outlined text-sm">visibility</span>
-                </button>
-              </div>
-              <div class="p-6 space-y-2">
-                <div class="flex items-center justify-between text-xs font-mono text-outline">
-                  <span class="text-secondary font-bold">Seekhi Jaal &bull; Geometric</span>
-                  <span>ACC. #GP-602</span>
-                </div>
-                <h2 class="font-headline-sm text-lg text-primary">Metallic Ribbon Mojaris</h2>
-                <p class="font-body-sm text-xs text-on-surface-variant line-clamp-2">
-                  Vegetable-tanned leather slip-ons encased in geometric ribbon lattice mesh.
-                </p>
-                <div class="pt-2 flex items-baseline justify-between font-mono text-xs border-t border-secondary/10">
-                  <span class="font-bold text-primary">₹ 14,500 (Valuation)</span>
-                  <span class="text-secondary">19 Hours</span>
-                </div>
-              </div>
-            </div>
-            <div class="p-6 pt-0">
-              <a href="shop.html" class="w-full py-2.5 bg-surface-container hover:bg-primary hover:text-on-primary text-primary font-mono text-xs uppercase tracking-wider flex items-center justify-center gap-1 transition-colors">
-                <span>Examine Curatorial Folio</span>
-                <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-              </a>
-            </div>
-          </article>
-
-        </div>
-
-        <!-- Empty State -->
-        <div id="noResultsState" class="hidden py-16 text-center space-y-3 bg-surface-container-low border border-secondary/20">
-          <span class="material-symbols-outlined text-4xl text-secondary">filter_alt_off</span>
-          <h3 class="font-headline-sm text-lg text-primary">No Matching Archival Pieces Found</h3>
-          <p class="font-body-sm text-xs text-on-surface-variant max-w-md mx-auto">
-            Try adjusting your search criteria, clearing specific filters, or selecting "All Works" to view the full collection.
-          </p>
-          <button id="clearEmptyStateBtn" class="px-5 py-2 bg-primary text-on-primary text-xs font-mono uppercase tracking-wider mt-2 cursor-pointer">
-            Reset All Filters
-          </button>
-        </div>
-
-        <!-- LINK TO CONTEMPORARY DESIGNERS -->
-        <div class="p-8 bg-surface-container-low border border-secondary/20 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div class="space-y-1">
-            <span class="font-mono text-[11px] text-secondary uppercase tracking-widest font-bold">Contemporary Applications</span>
-            <h3 class="font-headline-sm text-lg text-primary">Designer &amp; Atelier Collaborations</h3>
-            <p class="font-body-sm text-xs text-on-surface-variant">
-              Examine how contemporary fashion houses and independent designers collaborate with generational karkhanas in Jaipur and Nayla.
-            </p>
+        <!-- Right: Product Count, Clear All & Sorting -->
+        <div class="flex flex-wrap items-center justify-between lg:justify-end gap-4">
+          <div class="flex items-center gap-3">
+            <span id="productMatchCount" class="text-xs font-medium text-on-surface-variant">Showing 8 of 8 pieces</span>
+            <button id="clearAllFiltersBtn" type="button" onclick="clearAllFilters()" class="hidden text-xs font-semibold text-primary hover:text-secondary underline underline-offset-4 uppercase tracking-wider">
+              Clear All
+            </button>
           </div>
-          <a href="designers.html" class="px-6 py-3 bg-primary text-on-primary font-mono text-xs uppercase tracking-wider hover:bg-primary-container transition-colors whitespace-nowrap flex items-center gap-2">
-            <span>Explore Designers Folio</span>
-            <span class="material-symbols-outlined text-sm">north_east</span>
-          </a>
+
+          <div class="relative">
+            <label for="sortOrder" class="sr-only">Sort By</label>
+            <select id="sortOrder" aria-label="Sort Products" class="appearance-none bg-surface-container-lowest border border-[#c5a059]/35 text-on-surface text-xs font-medium tracking-wider uppercase pl-3.5 pr-9 py-2.5 cursor-pointer focus:outline-none focus:border-primary">
+              <option value="featured">Sort: Featured</option>
+              <option value="newest">Sort: Newest</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+            </select>
+            <span class="material-symbols-outlined text-[16px] absolute right-2.5 top-2.5 pointer-events-none text-on-surface-variant">expand_more</span>
+          </div>
         </div>
       </div>
-    </section>
-  </main>
 
-  <!-- QUICK LOOK / ARTIFACT ANALYSIS MODAL -->
-  <div id="quickLookModal" class="fixed inset-0 z-50 bg-tertiary/75 backdrop-blur-sm hidden items-center justify-center p-4">
-    <div class="bg-surface max-w-2xl w-full p-8 shadow-2xl border border-secondary/30 relative max-h-[90vh] overflow-y-auto">
-      <button id="closeQuickLookBtn" class="absolute top-4 right-4 p-2 text-outline hover:text-primary cursor-pointer">
-        <span class="material-symbols-outlined text-2xl">close</span>
-      </button>
-      <div class="space-y-4">
-        <div class="flex items-center gap-2 font-mono text-xs text-secondary">
-          <span class="w-2 h-2 rounded-full bg-secondary"></span>
-          <span class="uppercase tracking-widest">Morphology &amp; Provenance Analysis</span>
-        </div>
-        <h3 id="modalTitle" class="font-headline-md text-2xl text-primary">Artifact Title</h3>
-        <div class="flex flex-wrap items-center gap-4 text-xs font-mono text-on-surface-variant border-b border-secondary/15 pb-3">
-          <span id="modalPrice" class="font-bold text-primary text-sm">₹ 00,000</span>
-          <span>&bull;</span>
-          <span id="modalHours" class="text-secondary font-bold">00 Hours</span>
-          <span>&bull;</span>
-          <span id="modalProvenance">Provenance Details</span>
-        </div>
-        <p id="modalDesc" class="font-body-md text-sm text-on-surface-variant leading-relaxed">
-          Description content will populate here dynamically.
+      <!-- Active Filter Indicators Row -->
+      <div id="activeFiltersRow" class="hidden items-center flex-wrap gap-2 pt-3 mt-3 border-t border-[#c5a059]/15"></div>
+    </div>
+  </section>
+
+  <!-- Clean Balanced Product Grid Section -->
+  <section class="w-full bg-surface px-margin-mobile lg:px-margin py-10 lg:py-14">
+    <div class="max-w-[1440px] mx-auto">
+      <div id="productCatalogContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <!-- Populated dynamically from GOTA_PATTI_PRODUCTS and pre-rendered below for instant paint -->
+      </div>
+
+      <!-- Empty Filter State -->
+      <div id="productEmptyState" class="hidden py-20 text-center bg-surface-container-low border border-[#c5a059]/20 px-6">
+        <span class="material-symbols-outlined text-4xl text-secondary mb-2 block">filter_alt_off</span>
+        <h2 class="text-lg font-semibold text-primary mb-1">No matching pieces found</h2>
+        <p class="text-sm text-on-surface-variant mb-6 max-w-md mx-auto">
+          No handcrafted works match your current combination of filters. Reset your filters to view the full collection.
         </p>
+        <button type="button" onclick="clearAllFilters()" class="px-6 py-3 bg-primary text-on-primary text-xs font-semibold uppercase tracking-[0.15em] hover:bg-primary-container transition-colors">
+          Clear All Filters
+        </button>
+      </div>
+    </div>
+  </section>
+</main>
 
-        <!-- Technical Metrology Box -->
-        <div class="grid grid-cols-3 gap-3 p-4 bg-surface-container-low font-mono text-xs border border-secondary/15">
-          <div>
-            <span class="block text-[10px] text-outline uppercase">Ribbon Type</span>
-            <span id="modalTechnique" class="font-bold text-primary">Folded Gota</span>
-          </div>
-          <div>
-            <span class="block text-[10px] text-outline uppercase">Substrate</span>
-            <span id="modalMaterial" class="font-bold text-primary">Silk</span>
-          </div>
-          <div>
-            <span class="block text-[10px] text-outline uppercase">Motif Class</span>
-            <span id="modalMotif" class="font-bold text-primary">Botanical</span>
-          </div>
+<!-- Unified Deep Maroon & Antique Gold Archival Footer -->
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div class="site-footer-top">
+      <div>
+        <span class="site-footer-brand-badge">Jaipur &amp; Shekhawati Craft Archive</span>
+        <a href="index.html" class="site-footer-logo">GOTA PATTI</a>
+        <p class="site-footer-desc">
+          Preserving the royal metallic ribbon embroidery of Rajasthan—documenting master karigars, heirloom textiles, and contemporary couture ateliers since 1924.
+        </p>
+        <div class="site-footer-location">
+          <span class="material-symbols-outlined" style="font-size: 16px;">location_on</span>
+          <span>Johari Bazaar &amp; City Palace Precinct, Jaipur</span>
         </div>
-
-        <div class="pt-4 flex items-center justify-end gap-3">
-          <button id="dismissModalBtn" class="px-5 py-2.5 bg-surface-container hover:bg-surface-container-high text-primary font-mono text-xs uppercase tracking-wider transition-colors cursor-pointer">
-            Dismiss
-          </button>
-          <a href="shop.html" class="px-6 py-2.5 bg-primary text-on-primary hover:bg-primary-container font-mono text-xs uppercase tracking-wider transition-colors flex items-center gap-2 cursor-pointer">
-            <span>Detailed Monograph</span>
-            <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
-          </a>
-        </div>
+      </div>
+      <div>
+        <h4 class="site-footer-heading">Archive Navigation</h4>
+        <ul class="site-footer-links">
+          <li><a href="index.html" class="site-footer-link">Home</a></li>
+          <li><a href="designers.html" class="site-footer-link">Designers</a></li>
+          <li><a href="process.html" class="site-footer-link">Process &amp; Materials</a></li>
+          <li><a href="products.html" class="site-footer-link">Products</a></li>
+          <li><a href="about.html" class="site-footer-link">About the Archive</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="site-footer-heading">Craft &amp; Provenance</h4>
+        <ul class="site-footer-links">
+          <li><a href="process.html#craft-scroll-section" class="site-footer-link">Scroll Craft Transformation</a></li>
+          <li><a href="process.html" class="site-footer-link">Lappa &amp; Seekhiya Glossary</a></li>
+          <li><a href="designers.html" class="site-footer-link">Master Revivalist Directory</a></li>
+          <li><a href="products.html" class="site-footer-link">Authenticated Craft Seal</a></li>
+          <li><a href="about.html" class="site-footer-link">Patronage &amp; Guild Ethics</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="site-footer-heading">Archival Monograph</h4>
+        <p class="site-footer-newsletter-text">
+          Receive quarterly dispatches on newly documented Shekhawati textiles, karigar commissions, and private exhibition previews.
+        </p>
+        <form class="site-footer-form" onsubmit="event.preventDefault(); if(window.showToast) showToast('Subscribed to the Gota Patti Archival Monograph');">
+          <input type="email" required class="site-footer-input" placeholder="Enter your email address" aria-label="Email address"/>
+          <button type="submit" class="site-footer-submit">Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="site-footer-bottom">
+      <p class="site-footer-copy">© 2025 GOTA PATTI — Archive &amp; Atelier. Handcrafted in Rajasthan, India. All Rights Reserved.</p>
+      <div class="site-footer-meta">
+        <span class="site-footer-meta-item">GI Certified Craft</span>
+        <span class="site-footer-meta-item">100% Hand-Folded Zari</span>
+        <span class="site-footer-meta-item">Jaipur Guild Registry</span>
       </div>
     </div>
   </div>
+</footer>
 
-  <!-- SEARCH MODAL -->
-  <div id="searchModal" class="fixed inset-0 z-50 bg-tertiary/70 backdrop-blur-sm hidden items-center justify-center p-4">
-    <div class="bg-surface max-w-xl w-full p-6 shadow-2xl border border-secondary/20 rounded">
-      <div class="flex items-center justify-between pb-3 border-b border-secondary/20">
-        <div class="flex items-center gap-2 text-primary font-mono text-sm">
-          <span class="material-symbols-outlined text-lg">search</span>
-          <span>Search Craft Archive</span>
-        </div>
-        <button id="closeSearchModal" class="text-outline hover:text-primary"><span class="material-symbols-outlined">close</span></button>
-      </div>
-      <input id="searchInput" type="text" placeholder="Search motifs, techniques, materials, or history..." class="w-full mt-4 p-3 bg-surface-container-low border border-secondary/20 text-sm focus:outline-none focus:border-primary"/>
-      <div class="mt-4 max-h-60 overflow-y-auto space-y-2 text-xs" id="searchResults">
-        <a href="about.html#motifs" class="block p-2 hover:bg-surface-container transition-colors">
-          <span class="font-bold text-primary">Traditional Motifs</span>
-          <span class="block text-outline">Peacock, Paisley (Kairi), Floral Rosette, Lotus</span>
-        </a>
-        <a href="process.html" class="block p-2 hover:bg-surface-container transition-colors">
-          <span class="font-bold text-primary">Process &amp; Metallurgy</span>
-          <span class="block text-outline">Adda tensioning, Khakha stencil, Asli vs Lurex, Bijiya</span>
-        </a>
-        <a href="products.html" class="block p-2 hover:bg-surface-container transition-colors">
-          <span class="font-bold text-primary">Product Archive</span>
-          <span class="block text-outline">Sarees, Dupattas, Poshaks, Accessories, Home Décor</span>
-        </a>
-      </div>
-    </div>
-  </div>
+<script src="./auth.js"></script>
+<script>
+  (function() {
+    const state = {
+      category: 'all',
+      color: 'all',
+      price: 'all',
+      sort: 'featured',
+      query: ''
+    };
 
-  <!-- UNIFIED ACADEMIC FOOTER -->
-  <footer class="w-full bg-surface-container-low mt-20 border-t border-[#d4af37]/20">
-    <div class="max-w-[1440px] mx-auto px-6 lg:px-12 py-16">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-12">
-        <div class="lg:col-span-5 space-y-4">
-          <div class="flex items-center gap-2">
-            <span class="font-headline-sm uppercase tracking-[0.2em] text-primary">GOTA PATTI</span>
-            <span class="font-label-sm text-[10px] tracking-[0.2em] text-secondary uppercase">Archive &amp; Atelier</span>
-          </div>
-          <p class="font-body-sm text-xs text-on-surface-variant max-w-md leading-relaxed">
-            A Bachelor of Design (Communication Design) research and documentation project dedicated to the systematic preservation, material analysis, and contemporary study of Rajasthani Gota ribbon embroidery.
-          </p>
-          <div class="pt-2 text-xs font-mono text-outline">
-            <span>Jaipur • Shekhawati • Nayla Guilds</span>
-          </div>
-        </div>
-        <div class="lg:col-span-3 space-y-3">
-          <h4 class="font-label-md text-xs tracking-[0.2em] uppercase text-primary font-bold">Curatorial Folios</h4>
-          <ul class="space-y-2 text-xs text-on-surface-variant font-mono">
-            <li><a class="hover:text-primary transition-colors" href="index.html">01. Home &amp; Overview</a></li>
-            <li><a class="hover:text-primary transition-colors" href="about.html">02. About the Craft (12 Sections)</a></li>
-            <li><a class="hover:text-primary transition-colors" href="process.html">03. Process &amp; Materials</a></li>
-            <li><a class="hover:text-primary transition-colors" href="products.html">04. Product Archive</a></li>
-          </ul>
-        </div>
-        <div class="lg:col-span-4 space-y-3">
-          <h4 class="font-label-md text-xs tracking-[0.2em] uppercase text-primary font-bold">Academic Resources</h4>
-          <ul class="space-y-2 text-xs text-on-surface-variant font-mono">
-            <li><a class="hover:text-primary transition-colors" href="resources.html">Bibliography &amp; Literature</a></li>
-            <li><a class="hover:text-primary transition-colors" href="resources.html#museums">Museum Collections &amp; Exhibits</a></li>
-            <li><a class="hover:text-primary transition-colors" href="contact.html">Fieldwork Notes &amp; Contact</a></li>
-            <li><a class="hover:text-primary transition-colors" href="designers.html">Contemporary Designer Profiles</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="pt-8 border-t border-secondary/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-outline">
-        <p>&copy; 2025–2026 Gota Patti Digital Archive. Bachelor of Design Academic Project.</p>
-        <div class="flex items-center gap-4">
-          <span>Non-Commercial Educational Research</span>
-          <span>&bull;</span>
-          <span>Open Documentation</span>
-        </div>
-      </div>
-    </div>
-  </footer>
+    const priceLabels = {
+      'under-20k': 'Under ₹20,000',
+      '20k-50k': '₹20,000 – ₹50,000',
+      '50k-100k': '₹50,000 – ₹1,00,000',
+      'above-100k': 'Above ₹1,00,000'
+    };
 
-  <!-- JAVASCRIPT: FILTERING, SEARCH, MODAL & RESPONSIVENESS -->
-  <script>
-    (function() {
-      // Elements
-      const items = Array.from(document.querySelectorAll('.product-item'));
-      const searchInput = document.getElementById('archiveSearchInput');
-      const techniqueFilter = document.getElementById('techniqueFilter');
-      const materialFilter = document.getElementById('materialFilter');
-      const motifFilter = document.getElementById('motifFilter');
-      const categoryCards = document.querySelectorAll('.cat-card');
-      const chipsList = document.getElementById('chipsList');
-      const resetBtn = document.getElementById('resetAllFiltersBtn');
-      const displayCountText = document.getElementById('displayCountText');
-      const noResultsState = document.getElementById('noResultsState');
-      const clearEmptyStateBtn = document.getElementById('clearEmptyStateBtn');
-      const catalogContainer = document.getElementById('productCatalogContainer');
-      const viewGridBtn = document.getElementById('viewGridBtn');
-      const viewListBtn = document.getElementById('viewListBtn');
+    function matchesPriceRange(price, rangeKey) {
+      if (rangeKey === 'under-20k') return price < 20000;
+      if (rangeKey === '20k-50k') return price >= 20000 && price <= 50000;
+      if (rangeKey === '50k-100k') return price > 50000 && price <= 100000;
+      if (rangeKey === 'above-100k') return price > 100000;
+      return true;
+    }
 
-      let activeCategory = 'all';
+    function renderProducts() {
+      const products = window.GOTA_PATTI_PRODUCTS || [];
+      const container = document.getElementById('productCatalogContainer');
+      const emptyState = document.getElementById('productEmptyState');
+      const countEl = document.getElementById('productMatchCount');
+      const clearBtn = document.getElementById('clearAllFiltersBtn');
+      const activeRow = document.getElementById('activeFiltersRow');
 
-      function applyFilters() {
-        const query = (searchInput ? searchInput.value.toLowerCase().trim() : '');
-        const technique = (techniqueFilter ? techniqueFilter.value : 'all');
-        const material = (materialFilter ? materialFilter.value : 'all');
-        const motif = (motifFilter ? motifFilter.value : 'all');
+      if (!container) return;
 
-        let visibleCount = 0;
-
-        items.forEach(item => {
-          const cat = item.getAttribute('data-category');
-          const tech = item.getAttribute('data-technique');
-          const mat = item.getAttribute('data-material');
-          const mot = item.getAttribute('data-motif');
-          const title = item.getAttribute('data-title').toLowerCase();
-          const desc = item.getAttribute('data-desc').toLowerCase();
-
-          const matchesCategory = (activeCategory === 'all' || cat === activeCategory);
-          const matchesTech = (technique === 'all' || tech.includes(technique));
-          const matchesMat = (material === 'all' || mat.includes(material));
-          const matchesMot = (motif === 'all' || mot.includes(motif));
-          const matchesQuery = (!query || title.includes(query) || desc.includes(query) || cat.toLowerCase().includes(query) || tech.toLowerCase().includes(query));
-
-          if (matchesCategory && matchesTech && matchesMat && matchesMot && matchesQuery) {
-            item.style.display = '';
-            visibleCount++;
-          } else {
-            item.style.display = 'none';
-          }
-        });
-
-        if (displayCountText) {
-          displayCountText.textContent = `Displaying ${visibleCount} of ${items.length} curated museum & atelier works`;
+      const filtered = products.filter(p => {
+        if (state.category !== 'all' && p.category !== state.category) return false;
+        if (state.color !== 'all' && p.color !== state.color) return false;
+        if (state.price !== 'all' && !matchesPriceRange(p.price, state.price)) return false;
+        if (state.query) {
+          const q = state.query.toLowerCase();
+          const haystack = `${p.title} ${p.category} ${p.type} ${p.color} ${p.shortDesc} ${p.material}`.toLowerCase();
+          if (!haystack.includes(q)) return false;
         }
-
-        if (noResultsState) {
-          if (visibleCount === 0) {
-            noResultsState.classList.remove('hidden');
-          } else {
-            noResultsState.classList.add('hidden');
-          }
-        }
-
-        renderChips();
-      }
-
-      function renderChips() {
-        if (!chipsList) return;
-        chipsList.innerHTML = '';
-
-        const chips = [];
-
-        if (activeCategory !== 'all') {
-          chips.push({ label: `Category: ${activeCategory}`, reset: () => setCategory('all') });
-        }
-        if (techniqueFilter && techniqueFilter.value !== 'all') {
-          chips.push({ label: `Technique: ${techniqueFilter.value}`, reset: () => { techniqueFilter.value = 'all'; applyFilters(); } });
-        }
-        if (materialFilter && materialFilter.value !== 'all') {
-          chips.push({ label: `Material: ${materialFilter.value}`, reset: () => { materialFilter.value = 'all'; applyFilters(); } });
-        }
-        if (motifFilter && motifFilter.value !== 'all') {
-          chips.push({ label: `Motif: ${motifFilter.value}`, reset: () => { motifFilter.value = 'all'; applyFilters(); } });
-        }
-        if (searchInput && searchInput.value.trim()) {
-          chips.push({ label: `Search: "${searchInput.value.trim()}"`, reset: () => { searchInput.value = ''; applyFilters(); } });
-        }
-
-        chips.forEach(chip => {
-          const pill = document.createElement('span');
-          pill.className = 'inline-flex items-center gap-1.5 px-2.5 py-1 bg-surface-container text-on-surface font-mono text-[10px] border border-secondary/20';
-          pill.textContent = chip.label;
-
-          const closeBtn = document.createElement('button');
-          closeBtn.innerHTML = '&times;';
-          closeBtn.className = 'ml-1 text-outline hover:text-primary font-bold cursor-pointer';
-          closeBtn.addEventListener('click', chip.reset);
-
-          pill.appendChild(closeBtn);
-          chipsList.appendChild(pill);
-        });
-
-        const activeContainer = document.getElementById('activeChipsContainer');
-        if (activeContainer) {
-          if (chips.length > 0) {
-            activeContainer.classList.remove('hidden');
-          } else {
-            activeContainer.classList.add('hidden');
-          }
-        }
-      }
-
-      function setCategory(cat) {
-        activeCategory = cat;
-        categoryCards.forEach(card => {
-          if (card.getAttribute('data-cat') === cat) {
-            card.classList.remove('bg-surface-container-low');
-            card.classList.add('bg-surface-container', 'border-secondary/40');
-          } else {
-            card.classList.add('bg-surface-container-low');
-            card.classList.remove('bg-surface-container', 'border-secondary/40');
-          }
-        });
-        applyFilters();
-      }
-
-      categoryCards.forEach(card => {
-        card.addEventListener('click', () => {
-          const cat = card.getAttribute('data-cat');
-          setCategory(cat);
-        });
+        return true;
       });
 
-      if (searchInput) searchInput.addEventListener('input', applyFilters);
-      if (techniqueFilter) techniqueFilter.addEventListener('change', applyFilters);
-      if (materialFilter) materialFilter.addEventListener('change', applyFilters);
-      if (motifFilter) motifFilter.addEventListener('change', applyFilters);
+      filtered.sort((a, b) => {
+        if (state.sort === 'price-asc') return a.price - b.price;
+        if (state.sort === 'price-desc') return b.price - a.price;
+        if (state.sort === 'newest') return new Date(b.dateAdded) - new Date(a.dateAdded);
+        return a.featuredRank - b.featuredRank;
+      });
 
-      function resetAll() {
-        activeCategory = 'all';
+      // Update count
+      if (countEl) {
+        countEl.textContent = `Showing ${filtered.length} of ${products.length} ${products.length === 1 ? 'piece' : 'pieces'}`;
+      }
+
+      // Active filter pills
+      const activeChips = [];
+      if (state.category !== 'all') {
+        activeChips.push({ key: 'category', label: `Category: ${state.category}` });
+      }
+      if (state.color !== 'all') {
+        activeChips.push({ key: 'color', label: `Colour: ${state.color}` });
+      }
+      if (state.price !== 'all') {
+        activeChips.push({ key: 'price', label: `Price: ${priceLabels[state.price] || state.price}` });
+      }
+      if (state.query) {
+        activeChips.push({ key: 'query', label: `Search: "${state.query}"` });
+      }
+
+      const hasAnyActive = activeChips.length > 0 || state.sort !== 'featured';
+      if (clearBtn) {
+        clearBtn.classList.toggle('hidden', !hasAnyActive);
+      }
+
+      if (activeRow) {
+        if (activeChips.length === 0) {
+          activeRow.classList.add('hidden');
+          activeRow.classList.remove('flex');
+          activeRow.innerHTML = '';
+        } else {
+          activeRow.classList.remove('hidden');
+          activeRow.classList.add('flex');
+          activeRow.innerHTML = `
+            <span class="text-[11px] font-medium uppercase tracking-wider text-on-surface-variant mr-1">Active Filters:</span>
+            ${activeChips.map(chip => `
+              <button type="button" onclick="removeSingleFilter('${chip.key}')" class="inline-flex items-center gap-1.5 px-3 py-1 bg-surface-container text-primary text-xs font-medium border border-[#c5a059]/30 hover:bg-primary hover:text-on-primary transition-colors">
+                <span>${chip.label}</span>
+                <span class="material-symbols-outlined text-[14px]">close</span>
+              </button>
+            `).join('')}
+          `;
+        }
+      }
+
+      if (filtered.length === 0) {
+        container.classList.add('hidden');
+        if (emptyState) emptyState.classList.remove('hidden');
+        return;
+      }
+
+      container.classList.remove('hidden');
+      if (emptyState) emptyState.classList.add('hidden');
+
+      container.innerHTML = filtered.map(p => `
+        <article class="group bg-surface-container-lowest border border-[#c5a059]/25 flex flex-col justify-between transition-all duration-300 hover:border-[#c5a059]/70 hover:shadow-md">
+          <div>
+            <div class="relative aspect-[3/4] overflow-hidden bg-surface-container cursor-pointer" data-open-product="${p.id}">
+              <img src="${p.img}" alt="${p.title}" loading="lazy" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"/>
+              <div class="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/55 via-black/15 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex justify-end">
+                <span class="px-3 py-1.5 bg-[#fff9ef]/95 text-[#3d020d] text-[11px] font-semibold uppercase tracking-wider">
+                  View Details
+                </span>
+              </div>
+            </div>
+            <div class="p-5">
+              <div class="flex items-center justify-between text-[11px] font-medium text-secondary uppercase tracking-wider mb-1.5">
+                <span>${p.category}</span>
+                <span class="inline-flex items-center gap-1.5 text-on-surface-variant">
+                  <span class="w-2.5 h-2.5 rounded-full border border-black/15 inline-block" style="background-color:${p.colorHex}"></span>
+                  <span>${p.color}</span>
+                </span>
+              </div>
+              <h2 class="text-base font-semibold text-primary leading-snug mb-1.5 cursor-pointer hover:text-primary-container transition-colors" data-open-product="${p.id}">
+                ${p.title}
+              </h2>
+              <p class="text-xs text-on-surface-variant line-clamp-2 leading-relaxed mb-4">
+                ${p.shortDesc}
+              </p>
+            </div>
+          </div>
+
+          <div class="px-5 pb-5 pt-3 border-t border-[#c5a059]/15 flex items-center justify-between gap-3">
+            <span class="text-base font-bold text-primary">${p.priceFormatted}</span>
+            <button type="button"
+              data-add-to-cart
+              data-id="${p.id}"
+              data-title="${p.title}"
+              data-price="${p.priceFormatted}"
+              data-img="${p.img}"
+              class="px-4 py-2.5 bg-primary text-on-primary text-xs font-semibold uppercase tracking-wider hover:bg-primary-container transition-colors cursor-pointer">
+              Add to Cart
+            </button>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    window.removeSingleFilter = function(key) {
+      if (key === 'category') {
+        state.category = 'all';
+        document.getElementById('filterCategory').value = 'all';
+      } else if (key === 'color') {
+        state.color = 'all';
+        document.getElementById('filterColor').value = 'all';
+      } else if (key === 'price') {
+        state.price = 'all';
+        document.getElementById('filterPrice').value = 'all';
+      } else if (key === 'query') {
+        state.query = '';
+        const searchInput = document.getElementById('headerSearchInput');
         if (searchInput) searchInput.value = '';
-        if (techniqueFilter) techniqueFilter.value = 'all';
-        if (materialFilter) materialFilter.value = 'all';
-        if (motifFilter) motifFilter.value = 'all';
-        setCategory('all');
+      }
+      renderProducts();
+    };
+
+    window.clearAllFilters = function() {
+      state.category = 'all';
+      state.color = 'all';
+      state.price = 'all';
+      state.sort = 'featured';
+      state.query = '';
+      document.getElementById('filterCategory').value = 'all';
+      document.getElementById('filterColor').value = 'all';
+      document.getElementById('filterPrice').value = 'all';
+      document.getElementById('sortOrder').value = 'featured';
+      const searchInput = document.getElementById('headerSearchInput');
+      if (searchInput) searchInput.value = '';
+      renderProducts();
+    };
+
+    window.setProductSearchQuery = function(q) {
+      state.query = (q || '').trim();
+      renderProducts();
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Check URL query parameters (?q=... or ?category=...)
+      const params = new URLSearchParams(window.location.search);
+      const qParam = params.get('q');
+      const catParam = params.get('category');
+      if (qParam) {
+        state.query = qParam.trim();
+        const searchInput = document.getElementById('headerSearchInput');
+        if (searchInput) searchInput.value = state.query;
+      }
+      if (catParam) {
+        state.category = catParam;
+        const catSelect = document.getElementById('filterCategory');
+        if (catSelect) catSelect.value = catParam;
       }
 
-      if (resetBtn) resetBtn.addEventListener('click', resetAll);
-      if (clearEmptyStateBtn) clearEmptyStateBtn.addEventListener('click', resetAll);
-
-      // Grid vs List view toggle
-      if (viewGridBtn && viewListBtn && catalogContainer) {
-        viewGridBtn.addEventListener('click', () => {
-          catalogContainer.className = 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all';
-          viewGridBtn.className = 'p-1.5 bg-primary text-on-primary';
-          viewListBtn.className = 'p-1.5 text-on-surface-variant hover:text-primary';
-        });
-
-        viewListBtn.addEventListener('click', () => {
-          catalogContainer.className = 'grid grid-cols-1 md:grid-cols-2 gap-8 transition-all';
-          viewListBtn.className = 'p-1.5 bg-primary text-on-primary';
-          viewGridBtn.className = 'p-1.5 text-on-surface-variant hover:text-primary';
-        });
-      }
-
-      // Quick Look Modal Logic
-      const modal = document.getElementById('quickLookModal');
-      const closeQuickLookBtn = document.getElementById('closeQuickLookBtn');
-      const dismissModalBtn = document.getElementById('dismissModalBtn');
-
-      function openModalForCard(card) {
-        document.getElementById('modalTitle').textContent = card.getAttribute('data-title');
-        document.getElementById('modalPrice').textContent = card.getAttribute('data-price');
-        document.getElementById('modalHours').textContent = card.getAttribute('data-hours');
-        document.getElementById('modalProvenance').textContent = card.getAttribute('data-provenance');
-        document.getElementById('modalDesc').textContent = card.getAttribute('data-desc');
-        document.getElementById('modalTechnique').textContent = card.getAttribute('data-technique');
-        document.getElementById('modalMaterial').textContent = card.getAttribute('data-material');
-        document.getElementById('modalMotif').textContent = card.getAttribute('data-motif');
-
-        if (modal) {
-          modal.classList.remove('hidden');
-          modal.classList.add('flex');
-        }
-      }
-
-      function closeModal() {
-        if (modal) {
-          modal.classList.add('hidden');
-          modal.classList.remove('flex');
-        }
-      }
-
-      document.querySelectorAll('.quick-look-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          const card = btn.closest('.product-item');
-          if (card) openModalForCard(card);
-        });
+      document.getElementById('filterCategory').addEventListener('change', (e) => {
+        state.category = e.target.value;
+        renderProducts();
+      });
+      document.getElementById('filterColor').addEventListener('change', (e) => {
+        state.color = e.target.value;
+        renderProducts();
+      });
+      document.getElementById('filterPrice').addEventListener('change', (e) => {
+        state.price = e.target.value;
+        renderProducts();
+      });
+      document.getElementById('sortOrder').addEventListener('change', (e) => {
+        state.sort = e.target.value;
+        renderProducts();
       });
 
-      if (closeQuickLookBtn) closeQuickLookBtn.addEventListener('click', closeModal);
-      if (dismissModalBtn) dismissModalBtn.addEventListener('click', closeModal);
-
-      if (modal) {
-        modal.addEventListener('click', (e) => {
-          if (e.target === modal) closeModal();
+      const searchInput = document.getElementById('headerSearchInput');
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          state.query = e.target.value.trim();
+          renderProducts();
         });
       }
 
-      window.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeModal();
-      });
-
-      // Initial filter apply
-      applyFilters();
-    })();
-
-    // Header mobile menu & search
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    if (mobileMenuBtn && mobileMenu) {
-      mobileMenuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-      });
-    }
-
-    const searchTriggerBtn = document.getElementById('searchTriggerBtn');
-    const searchModal = document.getElementById('searchModal');
-    const closeSearchModal = document.getElementById('closeSearchModal');
-    const searchInput = document.getElementById('searchInput');
-
-    function openSearch() {
-      if (searchModal) {
-        searchModal.classList.remove('hidden');
-        searchModal.classList.add('flex');
-        if (searchInput) searchInput.focus();
-      }
-    }
-
-    function closeSearch() {
-      if (searchModal) {
-        searchModal.classList.add('hidden');
-        searchModal.classList.remove('flex');
-      }
-    }
-
-    if (searchTriggerBtn) searchTriggerBtn.addEventListener('click', openSearch);
-    if (closeSearchModal) closeSearchModal.addEventListener('click', closeSearch);
-
-    window.addEventListener('keydown', (e) => {
-      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
-        e.preventDefault();
-        openSearch();
-      }
-      if (e.key === 'Escape') closeSearch();
+      renderProducts();
     });
-  </script>
+  })();
+</script>
 </body>
 </html>

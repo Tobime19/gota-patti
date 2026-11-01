@@ -9,22 +9,13 @@
   'use strict';
 
   function initApp() {
-    // Check user preference for reduced motion
-    const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const preloader = document.getElementById('preloader');
-    if (prefersReducedMotion) {
-      if (preloader) {
-        preloader.style.display = 'none';
-      }
-      return; // Respect accessibility preference
-    }
-
     const TOTAL_FRAMES = 240;
     const canvas = document.getElementById('canvas');
     if (!canvas) return;
     const ctx = canvas.getContext('2d', { alpha: false });
 
     // DOM Elements
+    const preloader = document.getElementById('preloader');
     const preloaderBar = document.getElementById('preloader-bar');
     const progressText = document.getElementById('progress-text');
     const skipBtn = document.getElementById('skip-preloader-btn');
@@ -62,6 +53,8 @@
     let autoplayRafId = null;
     let isScrubbing = false;
     let isPreloaderDismissed = false;
+    let isPastAnimation = false;
+    let wasPastAnimation = false;
 
     // Set canvas dimensions with DPR
     function resizeCanvas() {
@@ -125,7 +118,15 @@
     }
 
     // Update Story Cards & Chapters based on current frame
-    function updateStoryOverlays(frameNum) {
+    function updateStoryOverlays(frameNum, forceDeactivate = false) {
+      // Disappear all story cards completely when user scrolls past animation section
+      if (forceDeactivate || isPastAnimation) {
+        storyCards.forEach((card) => {
+          if (card) card.classList.remove('active');
+        });
+        return;
+      }
+
       let activeIndex = 0;
       let chapterName = 'Origins';
 
@@ -258,10 +259,14 @@
         return;
       }
 
-      const sectionTop = scrollSection.offsetTop;
+      const sectionRect = scrollSection.getBoundingClientRect();
+      const sectionTop = sectionRect.top + scrollTopWindow;
       const sectionHeight = scrollSection.offsetHeight;
       const scrollRange = sectionHeight - window.innerHeight;
       const relativeScroll = scrollTopWindow - sectionTop;
+
+      // Determine if user has scrolled beyond the animation section into the next content
+      isPastAnimation = relativeScroll > scrollRange + 5;
 
       let fraction = 0;
       if (relativeScroll <= 0) {
@@ -273,6 +278,11 @@
       } else {
         fraction = Math.min(Math.max(0, relativeScroll / scrollRange), 1.0);
         targetFrame = Math.round(fraction * (TOTAL_FRAMES - 1)) + 1;
+      }
+
+      if (isPastAnimation !== wasPastAnimation) {
+        updateStoryOverlays(Math.round(smoothFrame), isPastAnimation);
+        wasPastAnimation = isPastAnimation;
       }
 
       updateScrubberUI(fraction);
@@ -296,10 +306,11 @@
       }
 
       const currentIntFrame = Math.round(smoothFrame);
-      if (currentIntFrame !== lastRenderedFrame) {
+      if (currentIntFrame !== lastRenderedFrame || isPastAnimation !== wasPastAnimation) {
         renderFrame(currentIntFrame);
-        updateStoryOverlays(currentIntFrame);
+        updateStoryOverlays(currentIntFrame, isPastAnimation);
         lastRenderedFrame = currentIntFrame;
+        wasPastAnimation = isPastAnimation;
       }
 
       requestAnimationFrame(animLoop);
@@ -319,7 +330,8 @@
         return;
       }
 
-      const sectionTop = scrollSection.offsetTop;
+      const sectionRect = scrollSection.getBoundingClientRect();
+      const sectionTop = sectionRect.top + (window.scrollY || document.documentElement.scrollTop || 0);
       const sectionHeight = scrollSection.offsetHeight;
       const scrollRange = sectionHeight - window.innerHeight;
       const targetScroll = sectionTop + fraction * scrollRange;
