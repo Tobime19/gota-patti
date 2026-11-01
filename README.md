@@ -29,3 +29,4 @@ The frontend shopping and checkout journey (`auth.js`) is fully wired with persi
    - `paymentProvider`: `'razorpay'` or `'stripe'`.
    - `paymentPublicKey`: Your live or test publishable key (`rzp_...` or `pk_...`).
 2. Until those credentials are provided, submitting the checkout form validates and saves the customer's delivery details locally and displays a transparent configuration notice without faking payment success or order confirmation.
+

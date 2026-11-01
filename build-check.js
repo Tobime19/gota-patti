@@ -80,3 +80,4 @@ if (errors.length > 0) {
 }
 
 console.log('✓ GOTA PATTI production build check passed: All 5 pages, Inter typography, footer, filters, shopping flow, and assets verified.');
+
