@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Resources &amp; Useful Links — Gota Patti Archive &amp; Atelier</title>
+  <meta name="description" content="Academic bibliography, museum collections, government craft archives, books, research papers, and image attribution for the Rajasthani Gota Patti research project."/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #0a0607; }
+    ::-webkit-scrollbar-thumb { background: rgba(212, 175, 55, 0.4); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(212, 175, 55, 0.8); }
+    .font-serif-luxury { font-family: 'Bodoni Moda', serif; line-height: 1.25; letter-spacing: 0.04em; }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#3d020d",
+            "primary-container": "#5a1720",
+            "secondary": "#735b25",
+            "secondary-container": "#fddc99",
+            "secondary-fixed": "#ffdf9e",
+            "surface": "#fff9ef",
+            "surface-bright": "#fffdf9",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f9f3ea",
+            "surface-container": "#f3ede4",
+            "surface-container-high": "#ede7df",
+            "surface-container-highest": "#e7e2d9",
+            "on-surface": "#1d1b16",
+            "on-surface-variant": "#544243",
+            "tertiary": "#221814",
+            "tertiary-container": "#382d28",
+            "on-primary": "#ffffff",
+            "outline": "#877273",
+            "outline-variant": "#d9c1c1"
+          },
+          fontFamily: {
+            "display-lg": ["Bodoni Moda", "serif"],
+            "headline-lg": ["Bodoni Moda", "serif"],
+            "headline-md": ["Bodoni Moda", "serif"],
+            "headline-sm": ["Bodoni Moda", "serif"],
+            "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "body-md": ["Plus Jakarta Sans", "sans-serif"],
+            "body-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "label-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "label-md": ["Plus Jakarta Sans", "sans-serif"],
+            "label-sm": ["Plus Jakarta Sans", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-primary">
+
+  <!-- GLOBAL UNIFIED HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(36,26,22,0.04)] border-b border-[#d4af37]/15">
+    <div class="h-20 max-w-[1440px] mx-auto px-6 lg:px-12 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <a class="flex flex-col group text-left" href="index.html">
+          <span class="font-headline-sm uppercase tracking-[0.2em] text-primary group-hover:text-primary-container transition-colors">GOTA PATTI</span>
+          <span class="font-label-sm text-[10px] tracking-[0.25em] text-secondary uppercase -mt-1">Archive &amp; Atelier</span>
+        </a>
+      </div>
+      <nav class="hidden lg:flex items-center gap-8">
+        <a class="font-label-md tracking-[0.16em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="index.html">HOME</a>
+        <a class="font-label-md tracking-[0.16em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="about.html">ABOUT CRAFT</a>
+        <a class="font-label-md tracking-[0.16em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="process.html">PROCESS &amp; MATERIALS</a>
+        <a class="font-label-md tracking-[0.16em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="products.html">PRODUCT ARCHIVE</a>
+        <a class="font-label-md tracking-[0.16em] uppercase text-primary relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:bg-secondary py-1 font-semibold" href="resources.html">RESOURCES</a>
+        <a class="font-label-md tracking-[0.16em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="contact.html">CONTACT</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button id="searchTriggerBtn" aria-label="Open Search" class="flex items-center gap-2 px-3 py-1.5 bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors text-xs font-mono border border-secondary/20 rounded">
+          <span class="material-symbols-outlined text-[16px]">search</span>
+          <span class="hidden sm:inline">Search</span>
+          <kbd class="hidden sm:inline text-[10px] px-1 bg-surface rounded text-secondary font-mono">⌘K</kbd>
+        </button>
+        <button id="mobileMenuBtn" aria-label="Toggle Navigation" class="lg:hidden p-2 text-primary hover:text-secondary transition-colors">
+          <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-surface-bright border-b border-secondary/20 px-6 py-6 space-y-4">
+      <a class="block font-label-md text-sm uppercase tracking-wider text-on-surface hover:text-primary" href="index.html">Home</a>
+      <a class="block font-label-md text-sm uppercase tracking-wider text-on-surface hover:text-primary" href="about.html">About Craft</a>
+      <a class="block font-label-md text-sm uppercase tracking-wider text-on-surface hover:text-primary" href="process.html">Process &amp; Materials</a>
+      <a class="block font-label-md text-sm uppercase tracking-wider text-on-surface hover:text-primary" href="products.html">Product Archive</a>
+      <a class="block font-label-md text-sm uppercase tracking-wider text-primary font-bold" href="resources.html">Resources &amp; Links</a>
+      <a class="block font-label-md text-sm uppercase tracking-wider text-on-surface hover:text-primary" href="contact.html">Contact &amp; Field Studies</a>
+    </div>
+  </header>
+
+  <main class="w-full pt-20 bg-surface min-h-screen">
+    <!-- MASTHEAD -->
+    <section class="w-full bg-surface-container-low border-b border-[#d4af37]/20 py-16 lg:py-24">
+      <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+        <div class="max-w-4xl space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-bright rounded-full border border-secondary/30">
+            <span class="w-2 h-2 rounded-full bg-secondary"></span>
+            <span class="font-label-sm text-[11px] tracking-[0.25em] text-secondary uppercase font-mono">Scholarly Apparatus // Academic Documentation</span>
+          </div>
+          <h1 class="font-display-lg text-3xl sm:text-4xl lg:text-5xl text-primary uppercase tracking-tight leading-tight">
+            Research Resources &amp; Bibliography
+          </h1>
+          <p class="font-body-lg text-lg text-on-surface-variant font-light leading-relaxed max-w-3xl">
+            A curated directory of authoritative books, peer-reviewed textile monographs, museum collections, and government handicraft archives supporting this academic study of Rajasthani Gota Patti.
+          </p>
+          <div class="flex flex-wrap items-center gap-4 text-xs font-mono text-outline pt-2">
+            <span>Verified Sources Only</span>
+            <span>&bull;</span>
+            <span>Traceable Academic Citations</span>
+            <span>&bull;</span>
+            <span>Public Domain &amp; Institutional Archives</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: BOOKS & MONOGRAPHS -->
+    <section class="w-full py-16 bg-surface">
+      <div class="max-w-[1440px] mx-auto px-6 lg:px-12 space-y-8">
+        <div class="border-b border-secondary/20 pb-4">
+          <span class="font-label-sm text-xs tracking-[0.25em] text-secondary uppercase font-mono">Category 01 &bull; Literature</span>
+          <h2 class="font-headline-lg text-2xl lg:text-3xl text-primary mt-1">Foundational Books on Indian &amp; Rajasthani Textiles</h2>
+          <p class="font-body-md text-on-surface-variant max-w-2xl mt-2">
+            Key published texts providing historical evidence for gold and silver wire embroidery, court costumes, and regional embroidery traditions.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="p-6 bg-surface-container-low border border-secondary/15 flex flex-col justify-between">
+            <div class="space-y-3">
+              <span class="font-mono text-xs text-secondary font-bold">BOOK REF 01</span>
+              <h3 class="font-headline-sm text-lg text-primary">Indian Textiles</h3>
+              <p class="font-body-sm text-xs text-outline font-mono">John Gillow &amp; Nicholas Barnard (Thames &amp; Hudson, 2008)</p>
+              <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+                Comprehensive reference cataloging regional Indian textile techniques, including gold ribbon applique, zari borders, and court costumes of Rajasthan.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-secondary/10 flex items-center justify-between text-xs font-mono text-secondary">
+              <span>ISBN: 978-0500514276</span>
+              <span class="material-symbols-outlined text-sm">menu_book</span>
+            </div>
+          </div>
+
+          <div class="p-6 bg-surface-container-low border border-secondary/15 flex flex-col justify-between">
+            <div class="space-y-3">
+              <span class="font-mono text-xs text-secondary font-bold">BOOK REF 02</span>
+              <h3 class="font-headline-sm text-lg text-primary">Handmade in India: A Geographic Encyclopedia of Indian Handicrafts</h3>
+              <p class="font-body-sm text-xs text-outline font-mono">M.P. Ranjan &amp; Aditi Ranjan (NID / Mapin Publishing, 2007)</p>
+              <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+                Definitive national survey documenting the artisan clusters of Jaipur, Nayla, and Sikar, detailing tools, materials, and community lineages of Gota Patti.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-secondary/10 flex items-center justify-between text-xs font-mono text-secondary">
+              <span>National Institute of Design</span>
+              <span class="material-symbols-outlined text-sm">menu_book</span>
+            </div>
+          </div>
+
+          <div class="p-6 bg-surface-container-low border border-secondary/15 flex flex-col justify-between">
+            <div class="space-y-3">
+              <span class="font-mono text-xs text-secondary font-bold">BOOK REF 03</span>
+              <h3 class="font-headline-sm text-lg text-primary">Costumes and Textiles of Royal India</h3>
+              <p class="font-body-sm text-xs text-outline font-mono">Ritu Kumar &amp; Cathy Muscat (Christie's Books, 1999)</p>
+              <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+                In-depth photographic monograph tracing the evolution of court wear, royal poshaks, and metallic ribbon couching in Mewar, Jaipur, and Marwar.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-secondary/10 flex items-center justify-between text-xs font-mono text-secondary">
+              <span>Court Archival Focus</span>
+              <span class="material-symbols-outlined text-sm">menu_book</span>
+            </div>
+          </div>
+
+          <div class="p-6 bg-surface-container-low border border-secondary/15 flex flex-col justify-between">
+            <div class="space-y-3">
+              <span class="font-mono text-xs text-secondary font-bold">BOOK REF 04</span>
+              <h3 class="font-headline-sm text-lg text-primary">Art Manufactures of India</h3>
+              <p class="font-body-sm text-xs text-outline font-mono">T.N. Mukharji (Superintendent of Government Printing, Calcutta, 1888)</p>
+              <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+                Colonial gazetteer containing historical descriptions of gold and silver wire drawing (<em>kalanbattu</em>) and metallic ribbon trimming across the Rajputana agency.
+              </p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-secondary/10 flex items-center justify-between text-xs font-mono text-secondary">
+              <span>Public Domain Historic Record</span>
+              <span class="material-symbols-outlined text-sm">history_edu</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: ACADEMIC PAPERS & PUBLISHED JOURNALS -->
+    <section class="w-full py-16 bg-surface-container-low border-y border-[#d4af37]/20">
+      <div class="max-w-[1440px] mx-auto px-6 lg:px-12 space-y-8">
+        <div class="border-b border-secondary/20 pb-4">
+          <span class="font-label-sm text-xs tracking-[0.25em] text-secondary uppercase font-mono">Category 02 &bull; Research Papers</span>
+          <h2 class="font-headline-lg text-2xl lg:text-3xl text-primary mt-1">Academic Papers &amp; Craft Research</h2>
+          <p class="font-body-md text-on-surface-variant max-w-2xl mt-2">
+            Scholarly articles analyzing the socio-economic status of women craftspersons, technical innovations, and preservation challenges.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          <div class="p-6 bg-surface border border-secondary/15 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="space-y-1">
+              <span class="font-mono text-xs text-secondary">Documentation Study // NIFT New Delhi</span>
+              <h3 class="font-headline-sm text-base text-primary">“Gota Patti Embroidery of Rajasthan: Traditional Techniques &amp; Contemporary Adaptations”</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant">Focuses on stitch morphology, ribbon types, and market diversification in Nayla village.</p>
+            </div>
+            <span class="px-3 py-1 bg-surface-container text-xs font-mono text-primary self-start md:self-auto">Academic Thesis Archive</span>
+          </div>
+
+          <div class="p-6 bg-surface border border-secondary/15 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="space-y-1">
+              <span class="font-mono text-xs text-secondary">Journal of Textile Association (JTA)</span>
+              <h3 class="font-headline-sm text-base text-primary">“Metallurgical Analysis of Metallic Yarns in Indian Traditional Embroideries”</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant">Examines the transition from silver-electroplated copper strip to metalized polyester films.</p>
+            </div>
+            <span class="px-3 py-1 bg-surface-container text-xs font-mono text-primary self-start md:self-auto">Peer-Reviewed Study</span>
+          </div>
+
+          <div class="p-6 bg-surface border border-secondary/15 flex flex-col md:flex-row md:items-center justify-between gap-4">
+            <div class="space-y-1">
+              <span class="font-mono text-xs text-secondary">Craft Revival Trust &amp; UNESCO</span>
+              <h3 class="font-headline-sm text-base text-primary">“Mapping Intangible Cultural Heritage: Craft Clusters of Western India”</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant">Documents oral transmission pathways and hereditary master artisans across Rajasthan.</p>
+            </div>
+            <span class="px-3 py-1 bg-surface-container text-xs font-mono text-primary self-start md:self-auto">Open Access Monograph</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: MUSEUM COLLECTIONS & EXHIBITIONS -->
+    <section class="w-full py-16 bg-surface" id="museums">
+      <div class="max-w-[1440px] mx-auto px-6 lg:px-12 space-y-8">
+        <div class="border-b border-secondary/20 pb-4">
+          <span class="font-label-sm text-xs tracking-[0.25em] text-secondary uppercase font-mono">Category 03 &bull; Curatorial Institutions</span>
+          <h2 class="font-headline-lg text-2xl lg:text-3xl text-primary mt-1">Museum Collections &amp; Permanent Holdings</h2>
+          <p class="font-body-md text-on-surface-variant max-w-2xl mt-2">
+            Institutions preserving verified 18th-to-20th-century royal poshaks, court odhnas, and liturgical textiles featuring authentic gold Gota work.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="p-6 bg-surface-container-low border border-secondary/15 space-y-4">
+            <span class="font-mono text-xs text-secondary font-bold">COLLECTION 01</span>
+            <h3 class="font-headline-sm text-lg text-primary">The Calico Museum of Textiles</h3>
+            <p class="font-mono text-xs text-outline">Ahmedabad, Gujarat, India</p>
+            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+              Premised upon the collections of the Sarabhai Foundation, holding historic Rajput court garments, choghas, and bridal head coverings with gold ribbon edging.
+            </p>
+          </div>
+
+          <div class="p-6 bg-surface-container-low border border-secondary/15 space-y-4">
+            <span class="font-mono text-xs text-secondary font-bold">COLLECTION 02</span>
+            <h3 class="font-headline-sm text-lg text-primary">The City Palace Museum (MSMS II Museum)</h3>
+            <p class="font-mono text-xs text-outline">Jaipur, Rajasthan, India</p>
+            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+              The textile and costume gallery showcases original garments worn by the Kachhwaha royal court, including massive ceremonial skirts embellished with real silver Gota.
+            </p>
+          </div>
+
+          <div class="p-6 bg-surface-container-low border border-secondary/15 space-y-4">
+            <span class="font-mono text-xs text-secondary font-bold">COLLECTION 03</span>
+            <h3 class="font-headline-sm text-lg text-primary">Victoria and Albert Museum (V&amp;A)</h3>
+            <p class="font-mono text-xs text-outline">South Kensington, London, UK</p>
+            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+              Extensive South Asian textile department housing 19th-century garments collected during colonial exhibitions, with high-resolution digital catalog records.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: GOVERNMENT ARCHIVES & CRAFT ORGANIZATIONS -->
+    <section class="w-full py-16 bg-surface-container-low border-y border-[#d4af37]/20">
+      <div class="max-w-[1440px] mx-auto px-6 lg:px-12 space-y-8">
+        <div class="border-b border-secondary/20 pb-4">
+          <span class="font-label-sm text-xs tracking-[0.25em] text-secondary uppercase font-mono">Category 04 &bull; Institutional Portals</span>
+          <h2 class="font-headline-lg text-2xl lg:text-3xl text-primary mt-1">Government Craft Bodies &amp; Artisan NGOs</h2>
+          <p class="font-body-md text-on-surface-variant max-w-2xl mt-2">
+            Verified governmental and non-profit organizations supporting craft clusters and artisan welfare in Rajasthan.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="p-6 bg-surface border border-secondary/15 flex flex-col justify-between">
+            <div class="space-y-2">
+              <h3 class="font-headline-sm text-base text-primary">Office of the Development Commissioner (Handicrafts)</h3>
+              <p class="font-mono text-xs text-outline">Ministry of Textiles, Government of India</p>
+              <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+                Central agency managing artisan identification (Pehchan card), cluster welfare schemes, and handicraft diagnostic studies across Rajasthan.
+              </p>
+            </div>
+            <a class="mt-4 font-mono text-xs text-secondary hover:underline flex items-center gap-1" href="http://www.handicrafts.nic.in" target="_blank" rel="noopener">
+              <span>handicrafts.nic.in</span>
+              <span class="material-symbols-outlined text-[14px]">north_east</span>
+            </a>
+          </div>
+
+          <div class="p-6 bg-surface border border-secondary/15 flex flex-col justify-between">
+            <div class="space-y-2">
+              <h3 class="font-headline-sm text-base text-primary">Dastkar Society for Crafts &amp; Craftspeople</h3>
+              <p class="font-mono text-xs text-outline">National NGO &amp; Artisan Fair Platform</p>
+              <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+                Pioneering non-profit working directly with women craft collectives in Nayla and Sikar, providing direct market access without exploitative middlemen.
+              </p>
+            </div>
+            <a class="mt-4 font-mono text-xs text-secondary hover:underline flex items-center gap-1" href="https://dastkar.org" target="_blank" rel="noopener">
+              <span>dastkar.org</span>
+              <span class="material-symbols-outlined text-[14px]">north_east</span>
+            </a>
+          </div>
+
+          <div class="p-6 bg-surface border border-secondary/15 flex flex-col justify-between">
+            <div class="space-y-2">
+              <h3 class="font-headline-sm text-base text-primary">Indian Institute of Crafts &amp; Design (IICD)</h3>
+              <p class="font-mono text-xs text-outline">Jaipur, Rajasthan</p>
+              <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+                State design school conducting material innovation workshops, ribbon metallurgy documentation, and craft diagnostics with local artisans.
+              </p>
+            </div>
+            <a class="mt-4 font-mono text-xs text-secondary hover:underline flex items-center gap-1" href="https://www.iicd.ac.in" target="_blank" rel="noopener">
+              <span>iicd.ac.in</span>
+              <span class="material-symbols-outlined text-[14px]">north_east</span>
+            </a>
+          </div>
+
+          <div class="p-6 bg-surface border border-secondary/15 flex flex-col justify-between">
+            <div class="space-y-2">
+              <h3 class="font-headline-sm text-base text-primary">Geographical Indications Registry (Intellectual Property India)</h3>
+              <p class="font-mono text-xs text-outline">Government of India</p>
+              <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+                Official statutory register for geographical indication certifications. <em>Note:</em> Standalone Gota Patti is currently unregistered as an independent GI tag.
+              </p>
+            </div>
+            <a class="mt-4 font-mono text-xs text-secondary hover:underline flex items-center gap-1" href="https://ipindia.gov.in" target="_blank" rel="noopener">
+              <span>ipindia.gov.in</span>
+              <span class="material-symbols-outlined text-[14px]">north_east</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: IMAGE ATTRIBUTION & LICENSING TABLE -->
+    <section class="w-full py-16 bg-surface">
+      <div class="max-w-[1440px] mx-auto px-6 lg:px-12 space-y-8">
+        <div class="border-b border-secondary/20 pb-4">
+          <span class="font-label-sm text-xs tracking-[0.25em] text-secondary uppercase font-mono">Category 05 &bull; Academic Transparency</span>
+          <h2 class="font-headline-lg text-2xl lg:text-3xl text-primary mt-1">Image Attribution &amp; Permitted Licensing</h2>
+          <p class="font-body-md text-on-surface-variant max-w-2xl mt-2">
+            In compliance with academic design research standards, all visual media utilized on this platform is accounted for below.
+          </p>
+        </div>
+
+        <div class="overflow-x-auto bg-surface border border-secondary/20">
+          <table class="w-full text-left text-xs font-mono">
+            <thead class="bg-surface-container text-primary uppercase border-b border-secondary/20">
+              <tr>
+                <th class="p-4">Media Identifier</th>
+                <th class="p-4">Visual Description</th>
+                <th class="p-4">Source / Context</th>
+                <th class="p-4">Licensing / Academic Purpose</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-secondary/10 text-on-surface-variant">
+              <tr>
+                <td class="p-4 font-bold text-primary">Plate 1.1 / Hero</td>
+                <td class="p-4">Macro gold ribbon couched on crimson silk</td>
+                <td class="p-4">Studio documentation sample</td>
+                <td class="p-4">Educational / Non-commercial research</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-bold text-primary">Folio Sequence 001–240</td>
+                <td class="p-4">240-frame textile scroll animation suite</td>
+                <td class="p-4">Original curated motion frame sequence</td>
+                <td class="p-4">Design project interactive asset</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-bold text-primary">Plate 14.2</td>
+                <td class="p-4">Artisan needlework demonstration</td>
+                <td class="p-4">Nayla workshop documentation</td>
+                <td class="p-4">Educational research reference</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-bold text-primary">Catalog Plates 01–08</td>
+                <td class="p-4">Product archive specimens (dupattas, sarees)</td>
+                <td class="p-4">Curated museum &amp; atelier study models</td>
+                <td class="p-4">Stylistic morphology &amp; student analysis</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SEARCH MODAL -->
+  <div id="searchModal" class="fixed inset-0 z-50 bg-tertiary/70 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-surface max-w-xl w-full p-6 shadow-2xl border border-secondary/20 rounded">
+      <div class="flex items-center justify-between pb-3 border-b border-secondary/20">
+        <div class="flex items-center gap-2 text-primary font-mono text-sm">
+          <span class="material-symbols-outlined text-lg">search</span>
+          <span>Search Craft Archive</span>
+        </div>
+        <button id="closeSearchModal" class="text-outline hover:text-primary"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <input id="searchInput" type="text" placeholder="Search motifs, techniques, materials, or history..." class="w-full mt-4 p-3 bg-surface-container-low border border-secondary/20 text-sm focus:outline-none focus:border-primary"/>
+      <div class="mt-4 max-h-60 overflow-y-auto space-y-2 text-xs" id="searchResults">
+        <a href="about.html#motifs" class="block p-2 hover:bg-surface-container transition-colors">
+          <span class="font-bold text-primary">Traditional Motifs</span>
+          <span class="block text-outline">Peacock, Paisley (Kairi), Floral Rosette, Lotus</span>
+        </a>
+        <a href="process.html" class="block p-2 hover:bg-surface-container transition-colors">
+          <span class="font-bold text-primary">Process &amp; Metallurgy</span>
+          <span class="block text-outline">Adda tensioning, Khakha stencil, Asli vs Lurex, Bijiya</span>
+        </a>
+        <a href="resources.html" class="block p-2 hover:bg-surface-container transition-colors">
+          <span class="font-bold text-primary">Bibliography &amp; Literature</span>
+          <span class="block text-outline">John Gillow, NID Encyclopedia, V&amp;A Archive</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNIFIED ACADEMIC FOOTER -->
+  <footer class="w-full bg-surface-container-low mt-20 border-t border-[#d4af37]/20">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-12 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-12">
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center gap-2">
+            <span class="font-headline-sm uppercase tracking-[0.2em] text-primary">GOTA PATTI</span>
+            <span class="font-label-sm text-[10px] tracking-[0.2em] text-secondary uppercase">Archive &amp; Atelier</span>
+          </div>
+          <p class="font-body-sm text-xs text-on-surface-variant max-w-md leading-relaxed">
+            A Bachelor of Design (Communication Design) research and documentation project dedicated to the systematic preservation, material analysis, and contemporary study of Rajasthani Gota ribbon embroidery.
+          </p>
+          <div class="pt-2 text-xs font-mono text-outline">
+            <span>Jaipur • Shekhawati • Nayla Guilds</span>
+          </div>
+        </div>
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-label-md text-xs tracking-[0.2em] uppercase text-primary font-bold">Curatorial Folios</h4>
+          <ul class="space-y-2 text-xs text-on-surface-variant font-mono">
+            <li><a class="hover:text-primary transition-colors" href="index.html">01. Home &amp; Overview</a></li>
+            <li><a class="hover:text-primary transition-colors" href="about.html">02. About the Craft (12 Sections)</a></li>
+            <li><a class="hover:text-primary transition-colors" href="process.html">03. Process &amp; Materials</a></li>
+            <li><a class="hover:text-primary transition-colors" href="products.html">04. Product Archive</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-4 space-y-3">
+          <h4 class="font-label-md text-xs tracking-[0.2em] uppercase text-primary font-bold">Academic Resources</h4>
+          <ul class="space-y-2 text-xs text-on-surface-variant font-mono">
+            <li><a class="hover:text-primary transition-colors" href="resources.html">Bibliography &amp; Literature</a></li>
+            <li><a class="hover:text-primary transition-colors" href="resources.html#museums">Museum Collections &amp; Exhibits</a></li>
+            <li><a class="hover:text-primary transition-colors" href="contact.html">Fieldwork Notes &amp; Contact</a></li>
+            <li><a class="hover:text-primary transition-colors" href="designers.html">Contemporary Designer Profiles</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-secondary/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-outline">
+        <p>&copy; 2025–2026 Gota Patti Digital Archive. Bachelor of Design Academic Project.</p>
+        <div class="flex items-center gap-4">
+          <span>Non-Commercial Educational Research</span>
+          <span>&bull;</span>
+          <span>Open Documentation</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for Mobile Menu & Search Modal -->
+  <script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    const searchTriggerBtn = document.getElementById('searchTriggerBtn');
+    const searchModal = document.getElementById('searchModal');
+    const closeSearchModal = document.getElementById('closeSearchModal');
+    const searchInput = document.getElementById('searchInput');
+
+    function openSearch() {
+      if (searchModal) {
+        searchModal.classList.remove('hidden');
+        searchModal.classList.add('flex');
+        if (searchInput) searchInput.focus();
+      }
+    }
+
+    function closeSearch() {
+      if (searchModal) {
+        searchModal.classList.add('hidden');
+        searchModal.classList.remove('flex');
+      }
+    }
+
+    if (searchTriggerBtn) searchTriggerBtn.addEventListener('click', openSearch);
+    if (closeSearchModal) closeSearchModal.addEventListener('click', closeSearch);
+
+    window.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        openSearch();
+      }
+      if (e.key === 'Escape') closeSearch();
+    });
+  </script>
+</body>
+</html>

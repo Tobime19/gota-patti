@@ -1,0 +1,29 @@
+# macOS / OS files
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Dependencies & Build caches
+node_modules/
+.npm/
+.cache/
+dist/
+build/
+.parcel-cache/
+
+# Environment & Secrets
+.env
+.env.*
+*.pem
+*.key
+secrets.*
+credentials.json
+
+# Local Backup & Editor directories
+.backup_*/
+.vscode/
+.idea/
+*.swp
+*.swo
+*.log

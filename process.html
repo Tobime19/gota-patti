@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Process &amp; Materials — Gota Patti Archive &amp; Atelier</title>
+  <meta name="description" content="A comprehensive research documentation of the tools, raw materials, metallurgy, ribbon folding techniques, and step-by-step crafting process of Rajasthani Gota Patti embroidery."/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+  <style>
+    @layer base {
+      html, body { margin: 0; padding: 0; }
+      body { overscroll-behavior: none; }
+      main > :first-child { margin-top: 0 !important; }
+      main > :last-child { margin-bottom: 0 !important; }
+    }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #0a0607; }
+    ::-webkit-scrollbar-thumb { background: rgba(212, 175, 55, 0.4); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: rgba(212, 175, 55, 0.8); }
+    .font-serif-luxury { font-family: 'Bodoni Moda', serif; line-height: 1.25; letter-spacing: 0.04em; }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#3d020d",
+            "primary-container": "#5a1720",
+            "secondary": "#735b25",
+            "secondary-container": "#fddc99",
+            "secondary-fixed": "#ffdf9e",
+            "surface": "#fff9ef",
+            "surface-bright": "#fffdf9",
+            "surface-container-lowest": "#ffffff",
+            "surface-container-low": "#f9f3ea",
+            "surface-container": "#f3ede4",
+            "surface-container-high": "#ede7df",
+            "surface-container-highest": "#e7e2d9",
+            "on-surface": "#1d1b16",
+            "on-surface-variant": "#544243",
+            "tertiary": "#221814",
+            "tertiary-container": "#382d28",
+            "on-primary": "#ffffff",
+            "outline": "#877273",
+            "outline-variant": "#d9c1c1"
+          },
+          fontFamily: {
+            "display-lg": ["Bodoni Moda", "serif"],
+            "headline-lg": ["Bodoni Moda", "serif"],
+            "headline-md": ["Bodoni Moda", "serif"],
+            "headline-sm": ["Bodoni Moda", "serif"],
+            "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "body-md": ["Plus Jakarta Sans", "sans-serif"],
+            "body-sm": ["Plus Jakarta Sans", "sans-serif"],
+            "label-lg": ["Plus Jakarta Sans", "sans-serif"],
+            "label-md": ["Plus Jakarta Sans", "sans-serif"],
+            "label-sm": ["Plus Jakarta Sans", "sans-serif"]
+          }
+        }
+      }
+    };
+  </script>
+  <link rel="stylesheet" href="./styles.css"/>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-primary">
+
+  <!-- GLOBAL UNIFIED HEADER -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(36,26,22,0.04)] border-b border-[#d4af37]/15">
+    <div class="h-20 max-w-[1440px] mx-auto px-6 lg:px-12 flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <a class="flex flex-col group text-left" href="index.html">
+          <span class="font-headline-sm uppercase tracking-[0.2em] text-primary group-hover:text-primary-container transition-colors">GOTA PATTI</span>
+          <span class="font-label-sm text-[10px] tracking-[0.25em] text-secondary uppercase -mt-1">Archive &amp; Atelier</span>
+        </a>
+      </div>
+      <nav class="hidden lg:flex items-center gap-8">
+        <a class="font-label-md tracking-[0.16em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="index.html">HOME</a>
+        <a class="font-label-md tracking-[0.16em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="about.html">ABOUT CRAFT</a>
+        <a class="font-label-md tracking-[0.16em] uppercase text-primary relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:bg-secondary py-1 font-semibold" href="process.html">PROCESS &amp; MATERIALS</a>
+        <a class="font-label-md tracking-[0.16em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="products.html">PRODUCT ARCHIVE</a>
+        <a class="font-label-md tracking-[0.16em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="resources.html">RESOURCES</a>
+        <a class="font-label-md tracking-[0.16em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="contact.html">CONTACT</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <button id="searchTriggerBtn" aria-label="Open Search" class="flex items-center gap-2 px-3 py-1.5 bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors text-xs font-mono border border-secondary/20 rounded">
+          <span class="material-symbols-outlined text-[16px]">search</span>
+          <span class="hidden sm:inline">Search</span>
+          <kbd class="hidden sm:inline text-[10px] px-1 bg-surface rounded text-secondary font-mono">⌘K</kbd>
+        </button>
+        <button id="mobileMenuBtn" aria-label="Toggle Navigation" class="lg:hidden p-2 text-primary hover:text-secondary transition-colors">
+          <span class="material-symbols-outlined text-2xl">menu</span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Drawer -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-surface-bright border-b border-secondary/20 px-6 py-6 space-y-4">
+      <a class="block font-label-md text-sm uppercase tracking-wider text-on-surface hover:text-primary" href="index.html">Home</a>
+      <a class="block font-label-md text-sm uppercase tracking-wider text-on-surface hover:text-primary" href="about.html">About Craft</a>
+      <a class="block font-label-md text-sm uppercase tracking-wider text-primary font-bold" href="process.html">Process &amp; Materials</a>
+      <a class="block font-label-md text-sm uppercase tracking-wider text-on-surface hover:text-primary" href="products.html">Product Archive</a>
+      <a class="block font-label-md text-sm uppercase tracking-wider text-on-surface hover:text-primary" href="resources.html">Resources &amp; Links</a>
+      <a class="block font-label-md text-sm uppercase tracking-wider text-on-surface hover:text-primary" href="contact.html">Contact &amp; Field Studies</a>
+    </div>
+  </header>
+
+  <main class="w-full pt-20 bg-surface min-h-screen">
+    <!-- HERO / MASTHEAD -->
+    <section class="w-full bg-surface-container-low border-b border-[#d4af37]/20 py-16 lg:py-24">
+      <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
+        <div class="max-w-4xl space-y-4">
+          <div class="inline-flex items-center gap-2 px-3 py-1 bg-surface-bright rounded-full border border-secondary/30">
+            <span class="w-2 h-2 rounded-full bg-secondary"></span>
+            <span class="font-label-sm text-[11px] tracking-[0.25em] text-secondary uppercase font-mono">Folio Vol. III // Technical Morphology</span>
+          </div>
+          <h1 class="font-display-lg text-3xl sm:text-4xl lg:text-5xl text-primary uppercase tracking-tight leading-tight">
+            The Metallurgy, Geometry &amp; Kinetics of Gota
+          </h1>
+          <p class="font-body-lg text-lg text-on-surface-variant font-light leading-relaxed max-w-3xl">
+            A comprehensive analytical breakdown of Gota Patti making: from the metallurgical drawing of gold-wrapped silver wires to the three-dimensional folding dynamics of the <em>patti</em> leaf on the traditional wooden <em>adda</em>.
+          </p>
+          <div class="flex flex-wrap items-center gap-4 text-xs font-mono text-outline pt-2">
+            <span>Jaipur • Nayla • Churu Clusters</span>
+            <span>•</span>
+            <span>7 Documented Technical Stages</span>
+            <span>•</span>
+            <span>Curatorial Plate Series 3.0</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1 & 2: RAW MATERIALS & BASE FABRICS -->
+    <section class="w-full py-16 bg-surface">
+      <div class="max-w-[1440px] mx-auto px-6 lg:px-12 space-y-12">
+        <div class="border-b border-secondary/20 pb-4">
+          <span class="font-label-sm text-xs tracking-[0.25em] text-secondary uppercase font-mono">Section 01 &bull; Substrates</span>
+          <h2 class="font-headline-lg text-2xl lg:text-3xl text-primary mt-1">Raw Materials &amp; Base Fabrics</h2>
+          <p class="font-body-md text-on-surface-variant max-w-2xl mt-2">
+            The structural tension between a delicate textile ground and the rigid metallic ribbon dictates the choice of base substrates in traditional Rajasthani ateliers.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-surface-container-low p-6 border border-secondary/10 flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4">
+                <span class="material-symbols-outlined">texture</span>
+              </div>
+              <h3 class="font-headline-sm text-lg text-primary mb-2">Chanderi &amp; Pure Georgette</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed mb-4">
+                Lightweight woven silk-cotton or crinkled silk georgette that accepts the micro-stitches without puckering, traditionally chosen for ceremonial <em>dupattas</em> and <em>odhnas</em>.
+              </p>
+            </div>
+            <span class="font-label-sm text-[10px] uppercase font-mono text-secondary tracking-widest">Weight: 45–60 GSM</span>
+          </div>
+
+          <div class="bg-surface-container-low p-6 border border-secondary/10 flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4">
+                <span class="material-symbols-outlined">layers</span>
+              </div>
+              <h3 class="font-headline-sm text-lg text-primary mb-2">Katan Silk &amp; Mashru</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed mb-4">
+                Dense mulberry silk or historic cotton-backed silk (Mashru) providing the high tensile stability required for dense, heavy <em>Pakki Gota</em> and royal court <em>poshaks</em>.
+              </p>
+            </div>
+            <span class="font-label-sm text-[10px] uppercase font-mono text-secondary tracking-widest">Weight: 80–120 GSM</span>
+          </div>
+
+          <div class="bg-surface-container-low p-6 border border-secondary/10 flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4">
+                <span class="material-symbols-outlined">water_drop</span>
+              </div>
+              <h3 class="font-headline-sm text-lg text-primary mb-2">Bandhani &amp; Leheriya</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed mb-4">
+                Hand-tied resist-dyed textiles from Jodhpur and Jaipur. The metallic ribbon work serves as a gleaming celestial contrast to vibrant solar and monsoon colorways.
+              </p>
+            </div>
+            <span class="font-label-sm text-[10px] uppercase font-mono text-secondary tracking-widest">Resist Dyed Ground</span>
+          </div>
+
+          <div class="bg-surface-container-low p-6 border border-secondary/10 flex flex-col justify-between">
+            <div>
+              <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-4">
+                <span class="material-symbols-outlined">linear_scale</span>
+              </div>
+              <h3 class="font-headline-sm text-lg text-primary mb-2">Silk Anchoring Cord</h3>
+              <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed mb-4">
+                Fine unspun or lightly twisted silk filament thread (<em>reshmi taar</em>), matched exactly to the textile ground or metallic ribbon to create invisible couching stitches.
+              </p>
+            </div>
+            <span class="font-label-sm text-[10px] uppercase font-mono text-secondary tracking-widest">Natural Filament Silk</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: METALLIC RIBBON & METALLURGY (ASLI VS LUREX) -->
+    <section class="w-full py-16 bg-surface-container-low border-y border-[#d4af37]/20">
+      <div class="max-w-[1440px] mx-auto px-6 lg:px-12 space-y-12">
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+          <div class="max-w-2xl">
+            <span class="font-label-sm text-xs tracking-[0.25em] text-secondary uppercase font-mono">Section 02 &bull; Ribbon Metallurgy</span>
+            <h2 class="font-headline-lg text-2xl lg:text-3xl text-primary mt-1">Authentic Asli Gota vs. Contemporary Lurex</h2>
+            <p class="font-body-md text-on-surface-variant mt-2">
+              The evolution of the metallic ribbon reflects the technological shift from precious metal alloy drawing in Mughal royal karkhanas to industrialized polymer laminates.
+            </p>
+          </div>
+          <div class="flex items-center gap-3 font-mono text-xs text-secondary">
+            <span class="material-symbols-outlined text-sm">science</span>
+            <span>Elemental Composition Study</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Asli Gota Card -->
+          <div class="bg-surface p-8 border-l-4 border-l-secondary shadow-sm space-y-6">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-secondary/10 text-secondary font-mono text-xs uppercase tracking-wider">Historical Benchmark</span>
+              <span class="font-mono text-xs text-outline">Purity: 92.5% Ag / 24K Au</span>
+            </div>
+            <h3 class="font-headline-md text-xl text-primary">Asli Gota (Gilded Pure Silver Wire)</h3>
+            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+              Traditionally forged in Johari Bazaar, Jaipur, authentic <em>Asli Gota</em> begins as a silver ingot that is repeatedly drawn through decreasing diamond dies into ultra-fine flattened wire (<em>badla</em>). This wire is wound around a core of undyed mulberry silk warp threads before being woven on narrow treadle looms.
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-secondary/15 font-mono text-xs">
+              <div>
+                <span class="block text-outline uppercase text-[10px]">Luster Profile</span>
+                <span class="font-bold text-primary">Warm Deep Patina</span>
+              </div>
+              <div>
+                <span class="block text-outline uppercase text-[10px]">Tactile Feel</span>
+                <span class="font-bold text-primary">Malleable &amp; Dense</span>
+              </div>
+              <div>
+                <span class="block text-outline uppercase text-[10px]">Aging Characteristic</span>
+                <span class="font-bold text-primary">Tarnishes Gracefully</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Synthetic Lurex Card -->
+          <div class="bg-surface p-8 border-l-4 border-l-outline shadow-sm space-y-6">
+            <div class="flex items-center justify-between">
+              <span class="px-3 py-1 bg-surface-container text-on-surface-variant font-mono text-xs uppercase tracking-wider">Industrial Contemporary</span>
+              <span class="font-mono text-xs text-outline">Polyester Film / Al Deposit</span>
+            </div>
+            <h3 class="font-headline-md text-xl text-primary">Synthetic Gota (Metalized Polyester / Lurex)</h3>
+            <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+              Introduced to the market in the late 1970s, synthetic ribbons are manufactured from vapor-deposited aluminum onto polyethylene terephthalate (PET) plastic film. While affordable and impervious to atmospheric oxidation, plastic gota lacks the heavy drape, crisp structural fold retention, and heirloom value of silver foil.
+            </p>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4 border-t border-secondary/15 font-mono text-xs">
+              <div>
+                <span class="block text-outline uppercase text-[10px]">Luster Profile</span>
+                <span class="font-bold text-primary">High-Key Specular</span>
+              </div>
+              <div>
+                <span class="block text-outline uppercase text-[10px]">Tactile Feel</span>
+                <span class="font-bold text-primary">Springy &amp; Lightweight</span>
+              </div>
+              <div>
+                <span class="block text-outline uppercase text-[10px]">Heat Sensitivity</span>
+                <span class="font-bold text-primary">Melts Under Ironing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: TOOLS & EQUIPMENT -->
+    <section class="w-full py-16 bg-surface">
+      <div class="max-w-[1440px] mx-auto px-6 lg:px-12 space-y-12">
+        <div class="border-b border-secondary/20 pb-4">
+          <span class="font-label-sm text-xs tracking-[0.25em] text-secondary uppercase font-mono">Section 03 &bull; Atelier Equipment</span>
+          <h2 class="font-headline-lg text-2xl lg:text-3xl text-primary mt-1">Tools of the Master Embroiderer</h2>
+          <p class="font-body-md text-on-surface-variant max-w-2xl mt-2">
+            The minimal yet highly specialized toolkit passed down through hereditary families in Jaipur and Nayla.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-surface-container-low p-6 border border-secondary/10">
+            <div class="font-mono text-secondary text-sm font-bold mb-2">01 // Khat / Adda</div>
+            <h3 class="font-headline-sm text-lg text-primary mb-2">The Wooden Embroidery Frame</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+              A heavy four-sided rectangular timber frame raised on trestles. The fabric is stitched to cotton side runners and stretched taut like a drum skin with cotton ropes to prevent distortion during needlework.
+            </p>
+          </div>
+
+          <div class="bg-surface-container-low p-6 border border-secondary/10">
+            <div class="font-mono text-secondary text-sm font-bold mb-2">02 // Khakha &amp; Neel</div>
+            <h3 class="font-headline-sm text-lg text-primary mb-2">Perforated Tracing Stencil</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+              Thick butter paper manually perforated with fine needles along motif contours. A mixture of kerosene and zinc oxide (white) or ultramarine indigo (neel) is rubbed across to transfer dots onto the stretched silk.
+            </p>
+          </div>
+
+          <div class="bg-surface-container-low p-6 border border-secondary/10">
+            <div class="font-mono text-secondary text-sm font-bold mb-2">03 // Katni &amp; Chimti</div>
+            <h3 class="font-headline-sm text-lg text-primary mb-2">Shears &amp; Shaping Tweezers</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+              Razor-sharp iron scissors (<em>katni</em>) designed to cut clean bias angles through metal ribbon bundles, alongside fine tweezers (<em>chimti</em>) used to fold and tuck microscopic leaf corners.
+            </p>
+          </div>
+
+          <div class="bg-surface-container-low p-6 border border-secondary/10">
+            <div class="font-mono text-secondary text-sm font-bold mb-2">04 // Thapi / Agate Burnisher</div>
+            <h3 class="font-headline-sm text-lg text-primary mb-2">Wooden Beater &amp; Polishing Stone</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+              A smooth hardwood block (<em>thapi</em>) used to gently flatten raised stitches, complemented by polished semi-precious agate stones (<em>pathri</em>) to burnish the metal ribbon into high-gloss radiance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5 & 6: STEP-BY-STEP MAKING PROCESS -->
+    <section class="w-full py-16 bg-surface-container-low">
+      <div class="max-w-[1440px] mx-auto px-6 lg:px-12 space-y-12">
+        <div class="border-b border-secondary/20 pb-4">
+          <span class="font-label-sm text-xs tracking-[0.25em] text-secondary uppercase font-mono">Section 04 &bull; Step-by-Step Workflow</span>
+          <h2 class="font-headline-lg text-2xl lg:text-3xl text-primary mt-1">The 7 Stages of Creation</h2>
+          <p class="font-body-md text-on-surface-variant max-w-2xl mt-2">
+            Every masterwork follows a strict linear sequence requiring collaborative effort across pattern makers, wire cutters, and women embroiderers.
+          </p>
+        </div>
+
+        <div class="space-y-6">
+          <!-- Step 1 -->
+          <div class="bg-surface p-6 lg:p-8 border border-secondary/15 flex flex-col md:flex-row gap-6 items-start">
+            <div class="flex-shrink-0 w-16 h-16 bg-primary text-secondary-fixed flex items-center justify-center font-display-lg text-2xl">01</div>
+            <div class="space-y-2 flex-1">
+              <div class="flex items-center gap-3">
+                <span class="font-mono text-xs text-secondary uppercase tracking-wider">Stage 01 // Preparation</span>
+                <span class="text-outline text-xs">&bull;</span>
+                <span class="font-mono text-xs text-outline">Khat Kheenchna (Tensioning)</span>
+              </div>
+              <h3 class="font-headline-sm text-xl text-primary">Mounting &amp; Calibrating the Adda</h3>
+              <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+                The base fabric is sewn onto cotton edge-strips mounted upon the wooden frame. Two to four artisans calibrate the rope tension so the warp and weft remain strictly perpendicular under pressure.
+              </p>
+            </div>
+            <div class="md:w-48 text-right font-mono text-xs text-outline">Estimated: 2–3 Hours</div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="bg-surface p-6 lg:p-8 border border-secondary/15 flex flex-col md:flex-row gap-6 items-start">
+            <div class="flex-shrink-0 w-16 h-16 bg-primary text-secondary-fixed flex items-center justify-center font-display-lg text-2xl">02</div>
+            <div class="space-y-2 flex-1">
+              <div class="flex items-center gap-3">
+                <span class="font-mono text-xs text-secondary uppercase tracking-wider">Stage 02 // Cartography</span>
+                <span class="text-outline text-xs">&bull;</span>
+                <span class="font-mono text-xs text-outline">Khakha Chhapayi (Tracing)</span>
+              </div>
+              <h3 class="font-headline-sm text-xl text-primary">Perforated Stencil Ink Transfer</h3>
+              <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+                The master craftsman positions the perforated tracing paper (<em>khakha</em>) across the fabric. A cotton pounce dabbed with indigo or chalk solution is wiped across, depositing tiny guide dots directly onto the silk.
+              </p>
+            </div>
+            <div class="md:w-48 text-right font-mono text-xs text-outline">Estimated: 1–2 Hours</div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="bg-surface p-6 lg:p-8 border border-secondary/15 flex flex-col md:flex-row gap-6 items-start">
+            <div class="flex-shrink-0 w-16 h-16 bg-primary text-secondary-fixed flex items-center justify-center font-display-lg text-2xl">03</div>
+            <div class="space-y-2 flex-1">
+              <div class="flex items-center gap-3">
+                <span class="font-mono text-xs text-secondary uppercase tracking-wider">Stage 03 // Precision Prep</span>
+                <span class="text-outline text-xs">&bull;</span>
+                <span class="font-mono text-xs text-outline">Gota Katayi (Ribbon Slicing)</span>
+              </div>
+              <h3 class="font-headline-sm text-xl text-primary">Angled Ribbon Slicing</h3>
+              <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+                Metallic ribbon spools are layered in bundles and sliced with shears at 45-degree angles to generate diamond segments (<em>tukdi</em>), diamond petals, or continuous border widths.
+              </p>
+            </div>
+            <div class="md:w-48 text-right font-mono text-xs text-outline">Estimated: 3–4 Hours</div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="bg-surface p-6 lg:p-8 border border-secondary/15 flex flex-col md:flex-row gap-6 items-start">
+            <div class="flex-shrink-0 w-16 h-16 bg-primary text-secondary-fixed flex items-center justify-center font-display-lg text-2xl">04</div>
+            <div class="space-y-2 flex-1">
+              <div class="flex items-center gap-3">
+                <span class="font-mono text-xs text-secondary uppercase tracking-wider">Stage 04 // Morphology</span>
+                <span class="text-outline text-xs">&bull;</span>
+                <span class="font-mono text-xs text-outline">Patti Morayi (Origami Pleating)</span>
+              </div>
+              <h3 class="font-headline-sm text-xl text-primary">Manual Petal Folding</h3>
+              <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+                With thumb, forefinger, and fine tweezers, the artisan folds the corners of the cut metallic ribbon inward, forming a curved, convex boat or teardrop shape. This step gives the <em>patti</em> its distinctive bas-relief depth.
+              </p>
+            </div>
+            <div class="md:w-48 text-right font-mono text-xs text-outline">Continuous Process</div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="bg-surface p-6 lg:p-8 border border-secondary/15 flex flex-col md:flex-row gap-6 items-start">
+            <div class="flex-shrink-0 w-16 h-16 bg-primary text-secondary-fixed flex items-center justify-center font-display-lg text-2xl">05</div>
+            <div class="space-y-2 flex-1">
+              <div class="flex items-center gap-3">
+                <span class="font-mono text-xs text-secondary uppercase tracking-wider">Stage 05 // Fixation</span>
+                <span class="text-outline text-xs">&bull;</span>
+                <span class="font-mono text-xs text-outline">Tankaayi (Stitching)</span>
+              </div>
+              <h3 class="font-headline-sm text-xl text-primary">Micro-Couching &amp; Edge Hemming</h3>
+              <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+                Using fine needles threaded with silk, the artisan tacks each folded petal onto the traced dots. The raw cut edges of the ribbon are tucked completely under the fabric or locked down using tight blanket stitches.
+              </p>
+            </div>
+            <div class="md:w-48 text-right font-mono text-xs text-outline">40–160 Hours</div>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="bg-surface p-6 lg:p-8 border border-secondary/15 flex flex-col md:flex-row gap-6 items-start">
+            <div class="flex-shrink-0 w-16 h-16 bg-primary text-secondary-fixed flex items-center justify-center font-display-lg text-2xl">06</div>
+            <div class="space-y-2 flex-1">
+              <div class="flex items-center gap-3">
+                <span class="font-mono text-xs text-secondary uppercase tracking-wider">Stage 06 // Accentuation</span>
+                <span class="text-outline text-xs">&bull;</span>
+                <span class="font-mono text-xs text-outline">Zardozi &amp; Moti Kaam</span>
+              </div>
+              <h3 class="font-headline-sm text-xl text-primary">Secondary Embellishment Integration</h3>
+              <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+                Coiled metal wire (<em>salma</em>, <em>dabka</em>), seed pearls (<em>moti</em>), and faceted metallic spangles (<em>sitara</em>) are couched into petal centers and vine interstices to enhance tactile dimensionality.
+              </p>
+            </div>
+            <div class="md:w-48 text-right font-mono text-xs text-outline">20–40 Hours</div>
+          </div>
+
+          <!-- Step 7 -->
+          <div class="bg-surface p-6 lg:p-8 border border-secondary/15 flex flex-col md:flex-row gap-6 items-start">
+            <div class="flex-shrink-0 w-16 h-16 bg-primary text-secondary-fixed flex items-center justify-center font-display-lg text-2xl">07</div>
+            <div class="space-y-2 flex-1">
+              <div class="flex items-center gap-3">
+                <span class="font-mono text-xs text-secondary uppercase tracking-wider">Stage 07 // Finishing</span>
+                <span class="text-outline text-xs">&bull;</span>
+                <span class="font-mono text-xs text-outline">Thapi Kootayi (Burnishing)</span>
+              </div>
+              <h3 class="font-headline-sm text-xl text-primary">Reverse Wooden Beating &amp; Agate Polishing</h3>
+              <p class="font-body-md text-sm text-on-surface-variant leading-relaxed">
+                The fabric is unmounted, inverted over a wool felt mat, and beaten gently with the wooden <em>thapi</em> to settle knots. The metallic facets are polished with agate stones to reveal an unbroken golden luster.
+              </p>
+            </div>
+            <div class="md:w-48 text-right font-mono text-xs text-outline">3–5 Hours</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7 & 8: FOLDING TECHNIQUES & FINISHING -->
+    <section class="w-full py-16 bg-surface">
+      <div class="max-w-[1440px] mx-auto px-6 lg:px-12 space-y-12">
+        <div class="border-b border-secondary/20 pb-4">
+          <span class="font-label-sm text-xs tracking-[0.25em] text-secondary uppercase font-mono">Section 05 &bull; Technical Taxonomies</span>
+          <h2 class="font-headline-lg text-2xl lg:text-3xl text-primary mt-1">Ribbon Shaping &amp; Folding Typologies</h2>
+          <p class="font-body-md text-on-surface-variant max-w-2xl mt-2">
+            The master embroiderer relies on distinct ribbon manipulations to achieve geometric, organic, or linear ornamental motifs.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-surface-container-low p-6 border border-secondary/15 space-y-3">
+            <span class="font-mono text-xs text-secondary font-bold">TYPE A // FOLDED EMBROIDERY</span>
+            <h3 class="font-headline-sm text-lg text-primary">Kachhi Gota</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+              The metallic ribbon is cut into small diamond units and folded once into a simple petal shape without double-hemming. Anchored with quick running stitches, this technique was historically used for everyday festive garments.
+            </p>
+          </div>
+
+          <div class="bg-surface-container-low p-6 border border-secondary/15 space-y-3">
+            <span class="font-mono text-xs text-secondary font-bold">TYPE B // HEIRLOOM COUTURE</span>
+            <h3 class="font-headline-sm text-lg text-primary">Pakki Gota</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+              The gold ribbon edges are completely folded under, hemmed with miniature buttonhole or couching stitches, leaving zero raw metallic edges exposed. This technique ensures high durability across decades of wear.
+            </p>
+          </div>
+
+          <div class="bg-surface-container-low p-6 border border-secondary/15 space-y-3">
+            <span class="font-mono text-xs text-secondary font-bold">TYPE C // CRINKLED EDGING</span>
+            <h3 class="font-headline-sm text-lg text-primary">Bijiya &amp; Gokhru</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+              Narrow metallic ribbon folded in rapid alternating zigzag triangles along fabric borders, creating a serrated golden tooth edge that frames dupattas and lehenga hems.
+            </p>
+          </div>
+
+          <div class="bg-surface-container-low p-6 border border-secondary/15 space-y-3">
+            <span class="font-mono text-xs text-secondary font-bold">TYPE D // APPLIQUÉ WEAVING</span>
+            <h3 class="font-headline-sm text-lg text-primary">Lappa Ka Kaam</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+              Wide metallic twill-woven ribbons stitched continuously as solid border panels or diagonal lattices without being cut into individual leaves. Creates an uninterrupted mirror-like plane of gold.
+            </p>
+          </div>
+
+          <div class="bg-surface-container-low p-6 border border-secondary/15 space-y-3">
+            <span class="font-mono text-xs text-secondary font-bold">TYPE E // CORD EMBROIDERY</span>
+            <h3 class="font-headline-sm text-lg text-primary">Seekhi Gota</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+              Ultra-fine ribbon or flattened metallic cord couched in linear geometric patterns, concentric circles, or flowing vines, frequently combined with shaded silk floss embroidery.
+            </p>
+          </div>
+
+          <div class="bg-surface-container-low p-6 border border-secondary/15 space-y-3">
+            <span class="font-mono text-xs text-secondary font-bold">TYPE F // WOVEN LATTICE</span>
+            <h3 class="font-headline-sm text-lg text-primary">Mothda Ribbon Work</h3>
+            <p class="font-body-sm text-xs text-on-surface-variant leading-relaxed">
+              Criss-cross diagonal ribbon alignments forming miniature diamond enclosures resembling lentils (<em>moth</em>), mirroring traditional Rajasthani resist-dyed patterns.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9 & 10: PROCESS FLOW DIAGRAM & TIME ESTIMATES -->
+    <section class="w-full py-16 bg-surface-container-low border-t border-[#d4af37]/20">
+      <div class="max-w-[1440px] mx-auto px-6 lg:px-12 space-y-10">
+        <div class="border-b border-secondary/20 pb-4">
+          <span class="font-label-sm text-xs tracking-[0.25em] text-secondary uppercase font-mono">Section 06 &bull; Production Realities</span>
+          <h2 class="font-headline-lg text-2xl lg:text-3xl text-primary mt-1">Process Flow &amp; Researched Labor Hours</h2>
+          <p class="font-body-md text-on-surface-variant max-w-2xl mt-2">
+            Documented through field interviews with artisan cooperatives in Nayla and Sikar. Production duration varies exponentially with stitch density and ribbon complexity.
+          </p>
+        </div>
+
+        <!-- Flow Visual Diagram -->
+        <div class="p-8 bg-surface border border-secondary/20 shadow-sm overflow-x-auto">
+          <div class="flex flex-col md:flex-row items-center justify-between gap-4 min-w-[700px]">
+            <div class="text-center space-y-2 flex-1">
+              <div class="w-12 h-12 mx-auto rounded-full bg-primary text-secondary-fixed flex items-center justify-center font-bold">1</div>
+              <span class="block font-bold text-sm text-primary">Design &amp; Khakha</span>
+              <span class="block text-xs font-mono text-outline">Paper Stenciling</span>
+            </div>
+            <span class="material-symbols-outlined text-secondary hidden md:inline">arrow_forward</span>
+            <div class="text-center space-y-2 flex-1">
+              <div class="w-12 h-12 mx-auto rounded-full bg-primary text-secondary-fixed flex items-center justify-center font-bold">2</div>
+              <span class="block font-bold text-sm text-primary">Adda Tensioning</span>
+              <span class="block text-xs font-mono text-outline">Frame Calibrated</span>
+            </div>
+            <span class="material-symbols-outlined text-secondary hidden md:inline">arrow_forward</span>
+            <div class="text-center space-y-2 flex-1">
+              <div class="w-12 h-12 mx-auto rounded-full bg-primary text-secondary-fixed flex items-center justify-center font-bold">3</div>
+              <span class="block font-bold text-sm text-primary">Indigo Stamping</span>
+              <span class="block text-xs font-mono text-outline">Pounce Powder</span>
+            </div>
+            <span class="material-symbols-outlined text-secondary hidden md:inline">arrow_forward</span>
+            <div class="text-center space-y-2 flex-1">
+              <div class="w-12 h-12 mx-auto rounded-full bg-primary text-secondary-fixed flex items-center justify-center font-bold">4</div>
+              <span class="block font-bold text-sm text-primary">Fold &amp; Tankaayi</span>
+              <span class="block text-xs font-mono text-outline">Micro-Couching</span>
+            </div>
+            <span class="material-symbols-outlined text-secondary hidden md:inline">arrow_forward</span>
+            <div class="text-center space-y-2 flex-1">
+              <div class="w-12 h-12 mx-auto rounded-full bg-primary text-secondary-fixed flex items-center justify-center font-bold">5</div>
+              <span class="block font-bold text-sm text-primary">Burnish &amp; Inspect</span>
+              <span class="block text-xs font-mono text-outline">Thapi Finishing</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Labor Metrics Table -->
+        <div class="overflow-x-auto bg-surface border border-secondary/20">
+          <table class="w-full text-left text-xs font-body-sm">
+            <thead class="bg-surface-container text-primary font-mono uppercase border-b border-secondary/20">
+              <tr>
+                <th class="p-4">Product Category</th>
+                <th class="p-4">Ribbon Type</th>
+                <th class="p-4">Primary Technique</th>
+                <th class="p-4">Artisans Involved</th>
+                <th class="p-4">Verified Labor Duration</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-secondary/10 text-on-surface-variant font-mono">
+              <tr>
+                <td class="p-4 font-bold text-primary">Scattered Buti Dupatta</td>
+                <td class="p-4">Synthetic / Cotton Warp</td>
+                <td class="p-4">Kachhi Gota Patti</td>
+                <td class="p-4">1–2 Artisans</td>
+                <td class="p-4 text-primary font-bold">14 – 24 Hours</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-bold text-primary">Ceremonial Border Saree</td>
+                <td class="p-4">Silver Alloy (50%)</td>
+                <td class="p-4">Pakki Gota + Bijiya</td>
+                <td class="p-4">2 Artisans</td>
+                <td class="p-4 text-primary font-bold">60 – 90 Hours</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-bold text-primary">Royal Heritage Poshak (Complete)</td>
+                <td class="p-4">Asli Gota (92.5% Ag)</td>
+                <td class="p-4">Pakki Gota, Lappa, Zardozi</td>
+                <td class="p-4">3–4 Master Craftsmen</td>
+                <td class="p-4 text-primary font-bold">180 – 260 Hours</td>
+              </tr>
+              <tr>
+                <td class="p-4 font-bold text-primary">Archival Pichhwai Wall Panel</td>
+                <td class="p-4">Asli Gota &amp; 24K Gilded Foil</td>
+                <td class="p-4">Tukdi Appliqué &amp; Marodi</td>
+                <td class="p-4">Master Ustad Guild</td>
+                <td class="p-4 text-primary font-bold">320+ Hours</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 11 & 12: GLOSSARY OF VERNACULAR TERMS -->
+    <section class="w-full py-16 bg-surface">
+      <div class="max-w-[1440px] mx-auto px-6 lg:px-12 space-y-10">
+        <div class="border-b border-secondary/20 pb-4">
+          <span class="font-label-sm text-xs tracking-[0.25em] text-secondary uppercase font-mono">Section 07 &bull; Lexicon</span>
+          <h2 class="font-headline-lg text-2xl lg:text-3xl text-primary mt-1">Glossary of Vernacular Craft Terminology</h2>
+          <p class="font-body-md text-on-surface-variant max-w-2xl mt-2">
+            Preserving the Rajasthani dialectical vocabulary utilized daily in the karkhanas of Jaipur and Shekhawati.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 font-mono text-xs">
+          <div class="p-5 bg-surface-container-low border border-secondary/15">
+            <span class="font-bold text-primary text-sm block mb-1">Adda (अड्डा)</span>
+            <p class="text-on-surface-variant font-sans text-xs">The heavy wooden embroidery stretcher upon which base fabrics are mounted.</p>
+          </div>
+          <div class="p-5 bg-surface-container-low border border-secondary/15">
+            <span class="font-bold text-primary text-sm block mb-1">Badla (बादला)</span>
+            <p class="text-on-surface-variant font-sans text-xs">Flattened metallic wire drawn from pure silver or electroplated copper.</p>
+          </div>
+          <div class="p-5 bg-surface-container-low border border-secondary/15">
+            <span class="font-bold text-primary text-sm block mb-1">Bijiya (बिजिया)</span>
+            <p class="text-on-surface-variant font-sans text-xs">Fine crinkled metallic ribbon with sharp triangular peaks used for hem reinforcement.</p>
+          </div>
+          <div class="p-5 bg-surface-container-low border border-secondary/15">
+            <span class="font-bold text-primary text-sm block mb-1">Chimti (चिमटी)</span>
+            <p class="text-on-surface-variant font-sans text-xs">Needle-nose tweezers used by women artisans to pinch and tuck ribbon corners.</p>
+          </div>
+          <div class="p-5 bg-surface-container-low border border-secondary/15">
+            <span class="font-bold text-primary text-sm block mb-1">Khakha (खाखा)</span>
+            <p class="text-on-surface-variant font-sans text-xs">Hand-perforated butter paper pattern used for stencil ink transfer onto fabric.</p>
+          </div>
+          <div class="p-5 bg-surface-container-low border border-secondary/15">
+            <span class="font-bold text-primary text-sm block mb-1">Lappa (लप्पा)</span>
+            <p class="text-on-surface-variant font-sans text-xs">Broad twill-woven metallic ribbon woven with pure silver or lurex warp threads.</p>
+          </div>
+          <div class="p-5 bg-surface-container-low border border-secondary/15">
+            <span class="font-bold text-primary text-sm block mb-1">Patti (पत्ती)</span>
+            <p class="text-on-surface-variant font-sans text-xs">A single folded leaf-shaped metallic ribbon unit tacked to form floral petals.</p>
+          </div>
+          <div class="p-5 bg-surface-container-low border border-secondary/15">
+            <span class="font-bold text-primary text-sm block mb-1">Tankaayi (टांकाई)</span>
+            <p class="text-on-surface-variant font-sans text-xs">The precise act of hand-sewing and securing folded metal ribbons with silk thread.</p>
+          </div>
+          <div class="p-5 bg-surface-container-low border border-secondary/15">
+            <span class="font-bold text-primary text-sm block mb-1">Thapi (थापी)</span>
+            <p class="text-on-surface-variant font-sans text-xs">Flat wooden tool used to beat the reverse of finished needlework to lock knots.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- SEARCH MODAL -->
+  <div id="searchModal" class="fixed inset-0 z-50 bg-tertiary/70 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-surface max-w-xl w-full p-6 shadow-2xl border border-secondary/20 rounded">
+      <div class="flex items-center justify-between pb-3 border-b border-secondary/20">
+        <div class="flex items-center gap-2 text-primary font-mono text-sm">
+          <span class="material-symbols-outlined text-lg">search</span>
+          <span>Search Craft Archive</span>
+        </div>
+        <button id="closeSearchModal" class="text-outline hover:text-primary"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <input id="searchInput" type="text" placeholder="Search motifs, techniques, materials, or history..." class="w-full mt-4 p-3 bg-surface-container-low border border-secondary/20 text-sm focus:outline-none focus:border-primary"/>
+      <div class="mt-4 max-h-60 overflow-y-auto space-y-2 text-xs" id="searchResults">
+        <a href="about.html#motifs" class="block p-2 hover:bg-surface-container transition-colors">
+          <span class="font-bold text-primary">Traditional Motifs</span>
+          <span class="block text-outline">Peacock, Paisley (Kairi), Floral Rosette, Lotus</span>
+        </a>
+        <a href="process.html" class="block p-2 hover:bg-surface-container transition-colors">
+          <span class="font-bold text-primary">Process &amp; Metallurgy</span>
+          <span class="block text-outline">Adda tensioning, Khakha stencil, Asli vs Lurex, Bijiya</span>
+        </a>
+        <a href="products.html" class="block p-2 hover:bg-surface-container transition-colors">
+          <span class="font-bold text-primary">Product Archive</span>
+          <span class="block text-outline">Sarees, Dupattas, Poshaks, Accessories, Home Décor</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- UNIFIED ACADEMIC FOOTER -->
+  <footer class="w-full bg-surface-container-low mt-20 border-t border-[#d4af37]/20">
+    <div class="max-w-[1440px] mx-auto px-6 lg:px-12 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-12">
+        <div class="lg:col-span-5 space-y-4">
+          <div class="flex items-center gap-2">
+            <span class="font-headline-sm uppercase tracking-[0.2em] text-primary">GOTA PATTI</span>
+            <span class="font-label-sm text-[10px] tracking-[0.2em] text-secondary uppercase">Archive &amp; Atelier</span>
+          </div>
+          <p class="font-body-sm text-xs text-on-surface-variant max-w-md leading-relaxed">
+            A Bachelor of Design (Communication Design) research and documentation project dedicated to the systematic preservation, material analysis, and contemporary study of Rajasthani Gota ribbon embroidery.
+          </p>
+          <div class="pt-2 text-xs font-mono text-outline">
+            <span>Jaipur • Shekhawati • Nayla Guilds</span>
+          </div>
+        </div>
+        <div class="lg:col-span-3 space-y-3">
+          <h4 class="font-label-md text-xs tracking-[0.2em] uppercase text-primary font-bold">Curatorial Folios</h4>
+          <ul class="space-y-2 text-xs text-on-surface-variant font-mono">
+            <li><a class="hover:text-primary transition-colors" href="index.html">01. Home &amp; Overview</a></li>
+            <li><a class="hover:text-primary transition-colors" href="about.html">02. About the Craft (12 Sections)</a></li>
+            <li><a class="hover:text-primary transition-colors" href="process.html">03. Process &amp; Materials</a></li>
+            <li><a class="hover:text-primary transition-colors" href="products.html">04. Product Archive</a></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-4 space-y-3">
+          <h4 class="font-label-md text-xs tracking-[0.2em] uppercase text-primary font-bold">Academic Resources</h4>
+          <ul class="space-y-2 text-xs text-on-surface-variant font-mono">
+            <li><a class="hover:text-primary transition-colors" href="resources.html">Bibliography &amp; Literature</a></li>
+            <li><a class="hover:text-primary transition-colors" href="resources.html#museums">Museum Collections &amp; Exhibits</a></li>
+            <li><a class="hover:text-primary transition-colors" href="contact.html">Fieldwork Notes &amp; Contact</a></li>
+            <li><a class="hover:text-primary transition-colors" href="designers.html">Contemporary Designer Profiles</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-secondary/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-outline">
+        <p>&copy; 2025–2026 Gota Patti Digital Archive. Bachelor of Design Academic Project.</p>
+        <div class="flex items-center gap-4">
+          <span>Non-Commercial Educational Research</span>
+          <span>&bull;</span>
+          <span>Open Documentation</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script for Mobile Menu & Search Modal -->
+  <script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenuBtn && mobileMenu) {
+      mobileMenuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+
+    const searchTriggerBtn = document.getElementById('searchTriggerBtn');
+    const searchModal = document.getElementById('searchModal');
+    const closeSearchModal = document.getElementById('closeSearchModal');
+    const searchInput = document.getElementById('searchInput');
+
+    function openSearch() {
+      if (searchModal) {
+        searchModal.classList.remove('hidden');
+        searchModal.classList.add('flex');
+        if (searchInput) searchInput.focus();
+      }
+    }
+
+    function closeSearch() {
+      if (searchModal) {
+        searchModal.classList.add('hidden');
+        searchModal.classList.remove('flex');
+      }
+    }
+
+    if (searchTriggerBtn) searchTriggerBtn.addEventListener('click', openSearch);
+    if (closeSearchModal) closeSearchModal.addEventListener('click', closeSearch);
+
+    window.addEventListener('keydown', (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        openSearch();
+      }
+      if (e.key === 'Escape') closeSearch();
+    });
+  </script>
+</body>
+</html>

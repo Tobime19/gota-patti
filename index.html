@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"outline-variant":"#d9c1c1","on-secondary-container":"#775f28","inverse-primary":"#ffb3b6","secondary":"#735b25","on-secondary-fixed-variant":"#59440f","on-tertiary-container":"#a4948e","surface-bright":"#fff9ef","on-secondary-fixed":"#261a00","error-container":"#ffdad6","on-tertiary-fixed":"#231915","on-primary":"#ffffff","primary":"#3d020d","primary-fixed":"#ffdada","secondary-container":"#fddc99","on-tertiary-fixed-variant":"#51443f","tertiary-container":"#382d28","on-tertiary":"#ffffff","on-primary-fixed":"#3f030e","on-error-container":"#93000a","surface-tint":"#96454c","outline":"#877273","on-primary-fixed-variant":"#782e36","primary-fixed-dim":"#ffb3b6","on-secondary":"#ffffff","on-background":"#1d1b16","tertiary-fixed-dim":"#d5c3bc","surface-container-lowest":"#ffffff","error":"#ba1a1a","secondary-fixed":"#ffdf9e","on-surface":"#1d1b16","on-error":"#ffffff","tertiary-fixed":"#f2ded8","background":"#fff9ef","on-primary-container":"#da7c82","surface-container-low":"#f9f3ea","surface-variant":"#e7e2d9","surface-container-highest":"#e7e2d9","surface-container-high":"#ede7df","on-surface-variant":"#544243","surface":"#fff9ef","surface-container":"#f3ede4","inverse-on-surface":"#f6f0e7","inverse-surface":"#32302a","secondary-fixed-dim":"#e2c382","surface-dim":"#dfd9d1","primary-container":"#5a1720","tertiary":"#221814"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-xs":"0.375rem","space-lg":"2.25rem","space-sm":"0.75rem","margin":"4rem","gutter":"2.5rem","margin-mobile":"1.25rem","space-xl":"3.75rem","space-md":"1.25rem","gutter-mobile":"1rem"},"fontFamily":{"display-md-mobile":["Bodoni Moda"],"label-md":["Plus Jakarta Sans"],"headline-lg":["Bodoni Moda"],"display-lg-mobile":["Bodoni Moda"],"body-sm":["Plus Jakarta Sans"],"display-md":["Bodoni Moda"],"label-lg":["Plus Jakarta Sans"],"display-lg":["Bodoni Moda"],"body-lg":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"headline-md":["Bodoni Moda"],"headline-sm":["Bodoni Moda"]},"fontSize":{"display-md-mobile":["2.25rem",{"lineHeight":"2.75rem","letterSpacing":"0em","fontWeight":"400"}],"label-md":["0.75rem",{"lineHeight":"1rem","letterSpacing":"0.12em","fontWeight":"500"}],"headline-lg":["2.25rem",{"lineHeight":"2.75rem","fontWeight":"500"}],"display-lg-mobile":["2.75rem",{"lineHeight":"3.25rem","letterSpacing":"-0.01em","fontWeight":"400"}],"body-sm":["0.8125rem",{"lineHeight":"1.35rem","fontWeight":"400"}],"display-md":["3.25rem",{"lineHeight":"3.75rem","letterSpacing":"-0.015em","fontWeight":"400"}],"label-lg":["0.875rem",{"lineHeight":"1.25rem","letterSpacing":"0.08em","fontWeight":"600"}],"display-lg":["4.5rem",{"lineHeight":"5rem","letterSpacing":"-0.02em","fontWeight":"400"}],"body-lg":["1.125rem",{"lineHeight":"1.85rem","letterSpacing":"0.01em","fontWeight":"300"}],"label-sm":["0.6875rem",{"lineHeight":"0.9rem","letterSpacing":"0.15em","fontWeight":"600"}],"body-md":["0.9375rem",{"lineHeight":"1.6rem","fontWeight":"400"}],"headline-md":["1.75rem",{"lineHeight":"2.25rem","fontWeight":"400"}],"headline-sm":["1.35rem",{"lineHeight":"1.85rem","fontWeight":"500"}]}}}};</script><link rel="stylesheet" href="./styles.css"/></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-primary">
+  <!-- PRELOADER -->
+  <div id="preloader" class="fixed inset-0 bg-[#0a0607] z-50 flex flex-col items-center justify-center p-6 text-center select-none">
+    <div class="relative w-20 h-20 mb-6 flex items-center justify-center">
+      <div class="absolute inset-0 rounded-full border-2 border-[#d4af37]/20 border-t-[#d4af37] animate-spin"></div>
+      <span class="material-symbols-outlined text-[#d4af37] text-3xl animate-pulse">diamond</span>
+    </div>
+    <div class="font-serif-luxury text-2xl lg:text-3xl text-stone-100 tracking-[0.2em] uppercase mb-1">
+      GOTA PATTI
+    </div>
+    <div class="text-[11px] font-mono uppercase tracking-[0.28em] text-[#d4af37] mb-6">
+      Archive & Atelier // Rajasthan
+    </div>
+    <div class="w-64 max-w-full h-1 bg-white/10 rounded-full overflow-hidden mb-3">
+      <div id="preloader-bar" class="h-full bg-gradient-to-r from-[#aa8016] via-[#d4af37] to-[#fcedb0] w-0 transition-all duration-150"></div>
+    </div>
+    <div class="flex items-center gap-3 text-xs font-mono text-stone-400">
+      <span>Loading 240 Master Frames</span>
+      <span class="text-[#d4af37]" id="progress-text">0%</span>
+    </div>
+    <button id="skip-preloader-btn" class="mt-8 px-5 py-2 text-xs font-mono tracking-wider uppercase text-stone-400 hover:text-[#d4af37] border border-white/10 hover:border-[#d4af37]/40 rounded-full transition-all">
+      Enter Experience &rarr;
+    </button>
+  </div>
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(36,26,22,0.04)] border-b border-[#d4af37]/15"><div class="h-20 max-w-[1440px] mx-auto px-6 lg:px-12 flex items-center justify-between"><div class="flex items-center gap-4"><a class="flex flex-col group text-left" href="index.html"><span class="font-headline-sm uppercase tracking-[0.2em] text-primary group-hover:text-primary-container transition-colors">GOTA PATTI</span><span class="font-label-sm text-[10px] tracking-[0.25em] text-secondary uppercase -mt-1">Archive &amp; Atelier</span></a></div><nav class="hidden lg:flex items-center gap-8"><a aria-current="page" class="font-label-md tracking-[0.16em] uppercase text-primary relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:right-0 after:h-[2px] after:bg-secondary py-1 font-semibold" href="index.html">HOME</a><a class="font-label-md tracking-[0.16em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="about.html">ABOUT CRAFT</a><a class="font-label-md tracking-[0.16em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="process.html">PROCESS &amp; MATERIALS</a><a class="font-label-md tracking-[0.16em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="products.html">PRODUCT ARCHIVE</a><a class="font-label-md tracking-[0.16em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="resources.html">RESOURCES</a><a class="font-label-md tracking-[0.16em] uppercase text-on-surface-variant hover:text-primary transition-colors py-1" href="contact.html">CONTACT</a></nav><div class="flex items-center gap-3"><button id="searchTriggerBtn" aria-label="Open Search" class="flex items-center gap-2 px-3 py-1.5 bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-primary transition-colors text-xs font-mono border border-secondary/20 rounded"><span class="material-symbols-outlined text-[16px]">search</span><span class="hidden sm:inline">Search</span><kbd class="hidden sm:inline text-[10px] px-1 bg-surface rounded text-secondary font-mono">⌘K</kbd></button><button id="mobileMenuBtn" aria-label="Toggle Navigation" class="lg:hidden p-2 text-primary hover:text-secondary transition-colors"><span class="material-symbols-outlined text-2xl">menu</span></button></div></div><!-- Mobile Drawer --><div id="mobileMenu" class="hidden lg:hidden bg-surface-bright border-b border-secondary/20 px-6 py-6 space-y-4"><a class="block font-label-md text-sm uppercase tracking-wider text-primary font-bold" href="index.html">Home</a><a class="block font-label-md text-sm uppercase tracking-wider text-on-surface hover:text-primary" href="about.html">About Craft</a><a class="block font-label-md text-sm uppercase tracking-wider text-on-surface hover:text-primary" href="process.html">Process &amp; Materials</a><a class="block font-label-md text-sm uppercase tracking-wider text-on-surface hover:text-primary" href="products.html">Product Archive</a><a class="block font-label-md text-sm uppercase tracking-wider text-on-surface hover:text-primary" href="resources.html">Resources &amp; Links</a><a class="block font-label-md text-sm uppercase tracking-wider text-on-surface hover:text-primary" href="contact.html">Contact &amp; Field Studies</a></div></header><main class="w-full bg-surface min-h-[calc(100vh-20rem)]"><div class="flex flex-col w-full">
+    <!-- Static Fallback Hero for Reduced Motion -->
+    <div id="reduced-motion-hero" class="hidden w-full bg-primary-container text-on-primary py-20 px-6 lg:px-12 border-b border-[#d4af37]/20">
+      <div class="max-w-[1440px] mx-auto space-y-4">
+        <span class="font-mono text-xs text-secondary-container uppercase tracking-widest block">Intangible Textile Heritage &bull; Academic Monograph</span>
+        <h1 class="font-display-lg text-4xl lg:text-6xl text-surface-bright uppercase">Gota Patti — Threads of Gold, Stories of Craft</h1>
+        <p class="font-body-lg text-lg text-surface-container max-w-2xl font-light">Explore Rajasthan’s Gota Patti tradition through its materials, techniques, motifs, cultural context, and the artisans who continue to shape this intricate textile craft.</p>
+        <div class="pt-4 flex gap-4">
+          <a href="about.html" class="px-6 py-3 bg-secondary-container text-on-secondary-fixed uppercase text-xs font-mono tracking-wider">Explore the Craft &rarr;</a>
+          <a href="about.html#motifs" class="px-6 py-3 bg-surface-container-highest/20 text-surface-bright uppercase text-xs font-mono tracking-wider">Discover the Motifs</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= INTERACTIVE 240-FRAME SCROLL ATELIER ================= -->
+    <section id="scroll-atelier" class="relative w-full h-[380vh] bg-[#0a0607]">
+      <div class="sticky top-0 w-full h-screen overflow-hidden flex flex-col justify-between">
+        <!-- Pinned High-DPI Canvas -->
+        <canvas id="canvas" class="absolute inset-0 w-full h-full object-cover z-0"></canvas>
+        
+        <!-- Cinematic Vignette -->
+        <div class="cinematic-vignette"></div>
+
+        <!-- Top floating HUD inside sticky canvas -->
+        <div class="relative z-10 pt-24 px-6 sm:px-12 flex items-center justify-between pointer-events-none">
+          <div class="pointer-events-auto flex items-center gap-2 px-3 py-1 bg-surface-bright/10 backdrop-blur-md rounded-full border border-[#d4af37]/30">
+            <span class="w-2 h-2 rounded-full bg-[#d4af37] animate-pulse"></span>
+            <span class="font-label-sm text-label-sm tracking-[0.25em] uppercase text-[#d4af37]">Folio in Motion // 240 Master Frames</span>
+          </div>
+          <div class="pointer-events-auto flex items-center gap-3">
+            <button id="autoplay-btn" aria-label="Toggle Auto-Play" class="glass-pill px-3.5 py-1.5 rounded-full text-xs font-mono tracking-wider uppercase text-stone-200 flex items-center gap-2 cursor-pointer shadow-lg">
+              <span class="material-symbols-outlined text-sm text-[#d4af37]" id="autoplay-icon">play_arrow</span>
+              <span id="autoplay-text">Auto-Play</span>
+            </button>
+            <div class="glass-panel px-3.5 py-1.5 rounded-full text-xs font-mono text-[#d4af37] flex items-center gap-2 shadow-lg">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#d4af37] animate-ping"></span>
+              <span id="frame-badge">001 / 240</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Synchronized Story Cards (Folio I, II, III, IV) -->
+        <div id="story-1" class="story-card active absolute left-6 sm:left-12 lg:left-20 top-[38%] -translate-y-1/2 z-10 max-w-md sm:max-w-lg">
+          <div class="glass-panel p-6 sm:p-7 rounded-2xl border-l-4 border-l-[#d4af37]">
+            <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-[#d4af37]/10 text-[#d4af37] text-[10px] font-mono uppercase tracking-widest mb-2.5">
+              <span>Folio I // Royal Origins</span>
+            </div>
+            <h2 class="font-serif-luxury text-2xl sm:text-3xl lg:text-4xl text-white tracking-wide uppercase leading-tight mb-3">
+              The Golden Discipline
+            </h2>
+            <p class="text-stone-300 font-light text-xs sm:text-sm lg:text-base leading-relaxed mb-4">
+              Originating in the royal court workshops of Rajasthan, <span class="text-[#fcedb0] font-normal">Gota Patti</span> is the venerable craft of folding and hand-stitching genuine metallic ribbons into regal silhouettes.
+            </p>
+            <div class="flex items-center gap-4 text-[11px] font-mono text-stone-400 border-t border-white/10 pt-3">
+              <span class="flex items-center gap-1.5">
+                <span class="material-symbols-outlined text-xs text-[#d4af37]">location_on</span> Jaipur &amp; Mewar
+              </span>
+              <span>•</span>
+              <span>Mughal &amp; Rajput Court Heritage</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="story-2" class="story-card absolute right-6 sm:right-12 lg:right-20 top-[38%] -translate-y-1/2 z-10 max-w-md sm:max-w-lg">
+          <div class="glass-panel p-6 sm:p-7 rounded-2xl border-r-4 border-r-[#d4af37] text-right">
+            <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-[#d4af37]/10 text-[#d4af37] text-[10px] font-mono uppercase tracking-widest mb-2.5">
+              <span>Folio II // Tactile Splendor</span>
+            </div>
+            <h2 class="font-serif-luxury text-2xl sm:text-3xl lg:text-4xl text-white tracking-wide uppercase leading-tight mb-3">
+              Ribbons of Pure Zari
+            </h2>
+            <p class="text-stone-300 font-light text-xs sm:text-sm lg:text-base leading-relaxed mb-4">
+              Each leaf (<span class="text-[#fcedb0] italic font-serif-luxury">patti</span>) is individually shaped, pinched, and hemmed with golden silk cords upon opulent crimson bandhani textiles.
+            </p>
+            <div class="flex items-center justify-end gap-4 text-[11px] font-mono text-stone-400 border-t border-white/10 pt-3">
+              <span>Gilded Silver &amp; Mulberry Silk</span>
+              <span>•</span>
+              <span class="text-[#d4af37]">Guild of Nayla</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="story-3" class="story-card absolute left-6 sm:left-12 lg:left-20 top-[38%] -translate-y-1/2 z-10 max-w-md sm:max-w-lg">
+          <div class="glass-panel p-6 sm:p-7 rounded-2xl border-l-4 border-l-[#d4af37]">
+            <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-[#d4af37]/10 text-[#d4af37] text-[10px] font-mono uppercase tracking-widest mb-2.5">
+              <span>Folio III // Fluid Motion</span>
+            </div>
+            <h2 class="font-serif-luxury text-2xl sm:text-3xl lg:text-4xl text-white tracking-wide uppercase leading-tight mb-3">
+              The Ceremonial Drape
+            </h2>
+            <p class="text-stone-300 font-light text-xs sm:text-sm lg:text-base leading-relaxed mb-4">
+              As the fabric unfurls, metallic facets capture ambient light, creating a shimmering optical illusion of cascading sunlight woven directly into silk.
+            </p>
+            <div class="flex items-center gap-4 text-[11px] font-mono text-stone-400 border-t border-white/10 pt-3">
+              <span>Solar Radiance</span>
+              <span>•</span>
+              <span>Royal Bridal Heritage</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="story-4" class="story-card absolute right-6 sm:right-12 lg:right-20 top-[38%] -translate-y-1/2 z-10 max-w-md sm:max-w-lg">
+          <div class="glass-panel p-6 sm:p-7 rounded-2xl border-r-4 border-r-[#d4af37] text-right">
+            <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-[#d4af37]/10 text-[#d4af37] text-[10px] font-mono uppercase tracking-widest mb-2.5">
+              <span>Folio IV // Timeless Finale</span>
+            </div>
+            <h2 class="font-serif-luxury text-2xl sm:text-3xl lg:text-4xl text-white tracking-wide uppercase leading-tight mb-3">
+              An Enduring Legacy
+            </h2>
+            <p class="text-stone-300 font-light text-xs sm:text-sm lg:text-base leading-relaxed mb-5">
+              Bridging generational court craftsmanship with modern global couture. Each piece remains an enduring heirloom.
+            </p>
+            <div class="flex items-center justify-end gap-3 pt-2">
+              <button id="replay-btn" class="glass-pill px-4 py-2 rounded-full text-xs font-mono uppercase tracking-wider text-[#d4af37] hover:bg-[#d4af37]/20 flex items-center gap-2 cursor-pointer shadow-lg">
+                <span class="material-symbols-outlined text-sm">replay</span>
+                <span>Replay Archive</span>
+              </button>
+              <a href="#anatomy" class="px-5 py-2 rounded-full text-xs font-mono uppercase tracking-wider bg-secondary text-white hover:bg-primary transition-all flex items-center gap-2 cursor-pointer shadow-lg">
+                <span>Explore Monograph ↓</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating Scrubber at bottom of sticky canvas -->
+        <div id="scrubber-container" class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 w-[92%] max-w-2xl transition-opacity duration-300">
+          <div class="glass-panel p-3 sm:p-4 rounded-2xl flex flex-col gap-2.5 shadow-2xl">
+            <div class="flex items-center justify-between text-[11px] font-mono text-stone-300">
+              <span class="flex items-center gap-1.5 text-stone-400">
+                <span class="material-symbols-outlined text-xs text-[#d4af37]">tune</span>
+                <span class="hidden sm:inline">Scrub Timeline or Scroll Down</span>
+                <span class="sm:hidden">Scrub Timeline</span>
+              </span>
+              <div class="flex items-center gap-3">
+                <span id="scroll-percent" class="text-[#d4af37] font-semibold">0%</span>
+                <span class="text-white/30">|</span>
+                <span id="active-chapter-name" class="uppercase tracking-wider text-stone-300">Origins</span>
+              </div>
+            </div>
+
+            <div id="timeline-scrubber" class="scrubber-track" title="Click or drag to scrub frames">
+              <div id="scrubber-fill" class="scrubber-fill"></div>
+              <div id="scrubber-thumb" class="scrubber-thumb"></div>
+              <div class="chapter-node passed" style="left: 0%;"></div>
+              <div class="chapter-node" id="node-2" style="left: 27%;"></div>
+              <div class="chapter-node" id="node-3" style="left: 56%;"></div>
+              <div class="chapter-node" id="node-4" style="left: 87%;"></div>
+            </div>
+
+            <div class="flex items-center justify-between text-[10px] font-mono text-stone-400 pt-0.5">
+              <span class="hidden sm:inline">Scroll to advance frames &bull; Continue down for full Monograph</span>
+              <span class="sm:hidden">Scroll to Advance</span>
+              <a href="#anatomy" class="text-[#d4af37] hover:underline flex items-center gap-1">
+                <span>Monograph Sections</span>
+                <span class="material-symbols-outlined text-[12px]">arrow_downward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Initial Scroll Prompt -->
+        <div id="initial-scroll-hint" class="absolute bottom-36 left-1/2 -translate-x-1/2 z-10 px-5 py-2.5 glass-pill rounded-full text-xs text-stone-300 font-mono flex items-center gap-2 shadow-2xl animate-bounce pointer-events-none transition-opacity duration-500">
+          <span class="material-symbols-outlined text-[#d4af37] text-sm">expand_more</span>
+          <span>Scroll down or press Spacebar to play</span>
+        </div>
+      </div>
+    </section>
+
+<!-- SECTION 1: FULL-SCREEN HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-primary-container text-on-primary">
+<div class="relative min-h-[942px] flex flex-col justify-between max-w-[1440px] mx-auto px-margin-mobile lg:px-margin pt-12 pb-12">
+<!-- Background Ambient Vignette & Textile Focus -->
+<div class="absolute inset-0 pointer-events-none opacity-40 mix-blend-soft-light">
+<img class="w-full h-full object-cover" data-alt="Macro photography of artisanal Rajasthani Gota Patti gold metal ribbons hand stitched onto rich crimson raw silk textile with delicate pearl zardozi embellishments" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyxnQ3jx2zjb-Y5JEIqwx8Fo-RPcusJqdaiY8FxW4wRCRE_B-lB-nudKEYaEw0G3EJzXpee5MgSSOuuWpGYckLUfRPNa6-f7CJq0uae32AMz6tdbVVzjJHx3hlGhKHJzcKDFmDrhouvy3cui_kLbS37H-ZCFzzO0S-sEhwli40fTfgR95Y5l8T3ufqD8cZNVkbUDbCvq1FeDyn5UfjJ4cPZ5UQCTFwKp2A-27ccRpDCMS7Z_QySyak3w"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-primary via-primary-container/85 to-primary/40 pointer-events-none"></div>
+<!-- Top Archive Registry Stamp -->
+<div class="relative z-10 flex flex-wrap items-center justify-between gap-4 pt-4">
+<div class="flex items-center gap-3">
+<span class="w-2.5 h-2.5 bg-secondary-container"></span>
+<span class="font-label-sm text-label-sm tracking-[0.28em] uppercase text-secondary-container">EST. RAJASTHAN // ARCHIVE FOLIO NO. 01</span>
+</div>
+<div class="flex items-center gap-6 text-tertiary-fixed-dim font-label-sm text-label-sm tracking-[0.16em]">
+<span>JAIPUR</span>
+<span class="text-secondary-fixed">/</span>
+<span>SHEKHAWATI</span>
+<span class="text-secondary-fixed">/</span>
+<span>MEWAR</span>
+</div>
+</div>
+<!-- Hero Typographic Centerpiece -->
+<div class="relative z-10 my-auto py-12 lg:py-16 max-w-5xl">
+<div class="inline-flex items-center gap-2 mb-4 px-3 py-1 bg-surface-bright/10 backdrop-blur-sm">
+<span class="font-label-sm text-label-sm tracking-[0.25em] text-secondary-container uppercase">Intangible Textile Heritage</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile lg:text-display-lg tracking-tight uppercase leading-tight text-surface-bright mb-6">
+          Gota Patti — Threads of Gold, Stories of Craft.
+        </h1>
+<p class="mt-4 font-body-lg text-body-lg text-surface-container max-w-2xl font-light opacity-95 leading-relaxed">
+          Explore Rajasthan’s Gota Patti tradition through its materials, techniques, motifs, cultural context, and the artisans who continue to shape this intricate textile craft.
+        </p>
+<div class="mt-10 flex flex-wrap items-center gap-5">
+<a class="inline-flex items-center gap-3 px-8 py-4 bg-secondary-container text-on-secondary-fixed hover:bg-secondary-fixed font-label-md text-label-md uppercase tracking-[0.18em] transition-all duration-300 shadow-md" href="about.html">
+<span>EXPLORE THE CRAFT</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center gap-2 px-7 py-4 bg-surface-container-highest/15 hover:bg-surface-container-highest/25 text-surface-bright font-label-md text-label-md uppercase tracking-[0.16em] backdrop-blur-sm transition-colors" href="about.html#motifs">
+<span>DISCOVER THE MOTIFS</span>
+</a>
+</div>
+</div>
+<!-- Curated Stats Ribbon (Verified Facts & Academic Accuracy) -->
+<div class="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-8 bg-primary/70 backdrop-blur-md p-6 lg:p-8 border-t border-[#d4af37]/20">
+<div class="space-y-1">
+<div class="font-headline-lg text-headline-md text-secondary-container font-light">17th Century</div>
+<div class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-surface-container-high">Court Heritage</div>
+<div class="font-body-sm text-body-sm text-outline-variant font-light">Mughal &amp; Rajput royal karkhanas to contemporary couture ateliers.</div>
+</div>
+<div class="space-y-1">
+<div class="font-headline-lg text-headline-md text-secondary-container font-light">Sacred Motifs</div>
+<div class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-surface-container-high">Symbolic Lexicon</div>
+<div class="font-body-sm text-body-sm text-outline-variant font-light">Documented expressions of fertility, monsoon renewal, and solar cycles.</div>
+</div>
+<div class="space-y-1">
+<div class="font-headline-lg text-headline-md text-secondary-container font-light">Jaipur &amp; Nayla</div>
+<div class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-surface-container-high">Artisan Guilds</div>
+<div class="font-body-sm text-body-sm text-outline-variant font-light">Generational family master craftsmen &amp; women artisans of Nayla.</div>
+</div>
+<div class="space-y-1">
+<div class="font-headline-lg text-headline-md text-secondary-container font-light">GI Status: Unregistered</div>
+<div class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-surface-container-high">Statutory Register</div>
+<div class="font-body-sm text-body-sm text-outline-variant font-light">Standalone craft uncertified by GI Registry; community advocacy ongoing.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: WHAT IS GOTA PATTI? -->
+<section class="w-full py-space-xl lg:py-28 bg-surface" id="anatomy">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="flex flex-col lg:flex-row gap-gutter lg:gap-16 items-start">
+<!-- Left: Tactile Craft Macro Imagery Frame -->
+<div class="w-full lg:w-7/12 flex flex-col space-y-4">
+<div class="relative overflow-hidden bg-surface-container shadow-xl aspect-[4/3] group">
+<img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" data-alt="High fidelity macro of gilded gold ribbon leaves hand pinched and tacked onto deep scarlet silk fabric, showing pure metallic luster, subtle warp fibers and tiny silk stitches" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVNAkKtyPPgKwnIlqC5MqPn1sKvZU3kl8Yvt7hpAxU7T8fFx0HLKzqMlP3yf7E4fpBtU9XkDiCKvwcJrOrvj3OsWTwKfuW9b9DMBicQQ96bX_C0xwsDCAkrsCaKXXcy9qqOBXDO1JY_uDowIhXiy5RYVanybL7HGTuxTal8w0TFB3TrxJGJmWHV7hSPY5gJyJyvyiOcpcnoNByqD7PM29uX3dkajd6Ie2eeTQwtJjsC4iufzlO2rMfXw"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 font-label-sm text-label-sm uppercase tracking-[0.2em]">
+              Archive Plate 1.1
+            </div>
+<div class="absolute bottom-4 right-4 bg-surface-bright/95 text-primary px-4 py-2 font-label-sm text-label-sm tracking-[0.14em] uppercase shadow-sm">
+              Alloy: 78% Gilded Silver // Silk Warp
+            </div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm pt-2">
+<span class="italic font-headline-sm text-primary">Fig. 1.1 — Hand-folded pure silver and copper gilt ribbons on mulberry silk.</span>
+<span class="font-mono text-label-sm text-secondary">Jaipur Atelier Reference</span>
+</div>
+</div>
+<!-- Right: Anatomy & Rigorous Explanation -->
+<div class="w-full lg:w-5/12 space-y-8">
+<div class="space-y-3">
+<span class="font-label-sm text-label-sm tracking-[0.25em] uppercase text-secondary">Technical Anatomy</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+              Anatomy of an Embellishment
+            </h2>
+<p class="font-body-lg text-body-lg text-on-surface font-light leading-relaxed">
+              Gota Patti is a traditional Indian textile embellishment technique in which thin metallic ribbons (traditionally made from gold or silver-colored material) are cut, folded, and stitched onto fabric to create intricate decorative motifs.
+            </p>
+</div>
+<!-- Micro-facts comparison grid -->
+<div class="space-y-4 pt-2">
+<div class="bg-surface-container-low p-6 transition-all hover:bg-surface-container">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary text-2xl mt-0.5">straighten</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Lappa vs. Gota</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 font-light">
+<strong class="text-primary font-medium">Lappa</strong> describes the wide, unembroidered flat woven metallic ribbon band used for architectural hem borders. In contrast, <strong class="text-primary font-medium">Gota</strong> is a narrower woven tape with metallic warp and cotton/silk weft, structured specifically to be folded, pinched, and faceted without cracking.
+                  </p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 transition-all hover:bg-surface-container">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary text-2xl mt-0.5">tune</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Kachhi vs. Pakki Gota</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 font-light">
+<strong class="text-primary font-medium">Kachhi Gota</strong> involves raw ribbon cutouts tacked with minimal blind stitches, leaving a softer, semi-flexible texture. <strong class="text-primary font-medium">Pakki Gota</strong> secures every ribbon petal edge under dense zardozi couching cords, fine coiled wire, and seed pearls for century-long heirloom permanence.
+                  </p>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-2 flex items-center gap-4">
+<div class="w-12 h-1 bg-secondary"></div>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.2em] text-on-surface-variant">Archival Reference: Craft Council of India Reg. 488</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: ORIGIN & HISTORY TIMELINE -->
+<section class="w-full py-space-xl lg:py-28 bg-surface-container-low">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="max-w-3xl mb-16 space-y-3">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-secondary">Chronicle of Metallurgical Art</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Origin &amp; History: The Royal Tapestry</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant font-light">
+          A living craft tradition documenting how beaten precious gold leaves moved from feudal Mewar armor linings to contemporary museum collections.
+        </p>
+</div>
+<!-- Interactive Horizontal / Vertical Timeline Flow -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+<!-- Milestone 1 -->
+<div class="bg-surface-bright p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-sm text-label-sm tracking-[0.2em] text-secondary font-mono">ERA 01</span>
+<span class="w-2 h-2 bg-primary"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Pre-16th Century</h3>
+<h4 class="font-label-md text-label-md uppercase tracking-wider text-secondary mb-3">Royal Courts &amp; Ceremonies</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Originated under the patronage of Mewar and Marwar maharanas. Real gold foil (*kalabattu*) wrapped around silk threads was reserved solely for coronation coats, temple flags, and ceremonial armor sheaths.
+            </p>
+</div>
+<div class="pt-6 mt-6 bg-surface-container-lowest/50 p-2 font-label-sm text-label-sm text-on-surface-variant">
+            Locality: Udaipur &amp; Chittorgarh
+          </div>
+</div>
+<!-- Milestone 2 -->
+<div class="bg-surface-bright p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-sm text-label-sm tracking-[0.2em] text-secondary font-mono">ERA 02</span>
+<span class="w-2 h-2 bg-primary"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">17th–18th Century</h3>
+<h4 class="font-label-md text-label-md uppercase tracking-wider text-secondary mb-3">Festive &amp; Bridal Traditions</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Expansion into nuptial trousseaus. Imperial Rajput queens commissioned layered sheer *Odhnis* with heavy Gota *pallus*, and Nathdwara temple *Pichhwais* representing cosmic devotion through gilded floral emblems.
+            </p>
+</div>
+<div class="pt-6 mt-6 bg-surface-container-lowest/50 p-2 font-label-sm text-label-sm text-on-surface-variant">
+            Textile: Tussar &amp; Kota Doria
+          </div>
+</div>
+<!-- Milestone 3 -->
+<div class="bg-surface-bright p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-sm text-label-sm tracking-[0.2em] text-secondary font-mono">ERA 03</span>
+<span class="w-2 h-2 bg-primary"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">19th Century</h3>
+<h4 class="font-label-md text-label-md uppercase tracking-wider text-secondary mb-3">Guild Specialization</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Artisanal clans in Jaipur’s walled city and Shekhawati mercantile towns codified localized signatures: ultra-delicate *Champa* florets in Nayla and heavy relief *Keri* medallions in Bikaner.
+            </p>
+</div>
+<div class="pt-6 mt-6 bg-surface-container-lowest/50 p-2 font-label-sm text-label-sm text-on-surface-variant">
+            Guild: Walled City Artisans
+          </div>
+</div>
+<!-- Milestone 4 -->
+<div class="bg-surface-bright p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-sm text-label-sm tracking-[0.2em] text-secondary font-mono">ERA 04</span>
+<span class="w-2 h-2 bg-primary"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-3">Late 20th Century</h3>
+<h4 class="font-label-md text-label-md uppercase tracking-wider text-secondary mb-3">Preservation Pressures</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Industrial synthetic metallic films threatened the extinction of hand-beaten gold leaf ribbons. Master ustads documented authentic folds to maintain traditional needlecraft integrity.
+            </p>
+</div>
+<div class="pt-6 mt-6 bg-surface-container-lowest/50 p-2 font-label-sm text-label-sm text-on-surface-variant">
+            Risk: Synthetic Imitations
+          </div>
+</div>
+<!-- Milestone 5 -->
+<div class="bg-primary text-on-primary p-6 flex flex-col justify-between shadow-lg">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-sm text-label-sm tracking-[0.2em] text-secondary-container font-mono">ERA 05</span>
+<span class="w-2 h-2 bg-secondary-container"></span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-surface-bright mb-3">21st Century</h3>
+<h4 class="font-label-md text-label-md uppercase tracking-wider text-secondary-container mb-3">Contemporary Haute Couture</h4>
+<p class="font-body-sm text-body-sm text-surface-container font-light leading-relaxed">
+              Radical renaissance. Haute couture ateliers translate Gota into quiet architectural geometry, unbleached handloom linens, and minimal luxury garments exhibited worldwide.
+            </p>
+</div>
+<div class="pt-6 mt-6 bg-primary-container p-2 font-label-sm text-label-sm text-secondary-container">
+            Status: Global High Fashion
+          </div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: THE CRAFT PROCESS (7 STEPS) -->
+<section class="w-full py-space-xl lg:py-28 bg-surface">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-secondary">The Atelier Methodology</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight mt-2">
+            The 7 Disciplines of Creation
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md font-light">
+          From ribbon metallurgy to the burnisher’s final stone stroke, each piece demands between 120 and 400 uninterrupted artisan hours.
+        </p>
+</div>
+<!-- 7 Step Process Matrix -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-4">
+<!-- Step 1 -->
+<div class="bg-surface-container p-5 flex flex-col justify-between space-y-6 hover:bg-surface-container-high transition-colors">
+<div>
+<span class="font-mono text-label-md text-secondary block mb-3 font-semibold">01 / SELECT</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Selecting the Gota</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Grading ribbons for width (3mm to 40mm), weave tightness, and pure copper-gilt luster.
+            </p>
+</div>
+<span class="material-symbols-outlined text-secondary text-2xl">texture</span>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container p-5 flex flex-col justify-between space-y-6 hover:bg-surface-container-high transition-colors">
+<div>
+<span class="font-mono text-label-md text-secondary block mb-3 font-semibold">02 / CUT</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Precision Slicing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Master cutting (*Katai*) into diamond lozenges, teardrop petals, and exact 45-degree angle bevels.
+            </p>
+</div>
+<span class="material-symbols-outlined text-secondary text-2xl">content_cut</span>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container p-5 flex flex-col justify-between space-y-6 hover:bg-surface-container-high transition-colors">
+<div>
+<span class="font-mono text-label-md text-secondary block mb-3 font-semibold">03 / FOLD</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Patti Folding</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Tactile pinching (*Tukdi*) where each metallic petal is folded into a 3D parabolic ridge.
+            </p>
+</div>
+<span class="material-symbols-outlined text-secondary text-2xl">filter_vintage</span>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container p-5 flex flex-col justify-between space-y-6 hover:bg-surface-container-high transition-colors">
+<div>
+<span class="font-mono text-label-md text-secondary block mb-3 font-semibold">04 / COMPOSE</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Shaping Motifs</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Assembling solitary petals into intricate compound rosettes, peacock crests, and floral jaal trellises.
+            </p>
+</div>
+<span class="material-symbols-outlined text-secondary text-2xl">grain</span>
+</div>
+<!-- Step 5 -->
+<div class="bg-surface-container p-5 flex flex-col justify-between space-y-6 hover:bg-surface-container-high transition-colors">
+<div>
+<span class="font-mono text-label-md text-secondary block mb-3 font-semibold">05 / ARRANGE</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Chhapayi Stencil</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Pouncing indigo and chalk through pin-pricked butter paper to guide exact motif placement on stretched fabric.
+            </p>
+</div>
+<span class="material-symbols-outlined text-secondary text-2xl">grid_on</span>
+</div>
+<!-- Step 6 -->
+<div class="bg-surface-container p-5 flex flex-col justify-between space-y-6 hover:bg-surface-container-high transition-colors">
+<div>
+<span class="font-mono text-label-md text-secondary block mb-3 font-semibold">06 / STITCH</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-2">Hand Tankaayi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Tacking down edges with invisible silk stitches (*Tankaayi*) and framing them in coiled metallic wire (*Gidha*).
+            </p>
+</div>
+<span class="material-symbols-outlined text-secondary text-2xl">healing</span>
+</div>
+<!-- Step 7 -->
+<div class="bg-primary text-on-primary p-5 flex flex-col justify-between space-y-6">
+<div>
+<span class="font-mono text-label-md text-secondary-container block mb-3 font-semibold">07 / FINISH</span>
+<h3 class="font-headline-sm text-headline-sm text-surface-bright mb-2">Burnishing</h3>
+<p class="font-body-sm text-body-sm text-surface-container font-light leading-relaxed">
+              Polishing the work with smooth agate stone rollers and light steam to lock metallic reflection and flatten tension.
+            </p>
+</div>
+<span class="material-symbols-outlined text-secondary-container text-2xl">auto_fix_high</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: MOTIFS (INTERACTIVE GALLERY) -->
+<section class="w-full py-space-xl lg:py-28 bg-surface-container-low" id="lexicon">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-4">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-secondary">Sacred Symbolic Lexicon</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight mt-2">
+            The 7 Canonical Motifs
+          </h2>
+</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">
+          Click or hover any archetype to reveal symbolic meaning &amp; craft mechanics.
+        </div>
+</div>
+<!-- Motifs Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Motif 1: Keri -->
+<div class="bg-surface-bright p-8 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div>
+<div class="flex items-center justify-between text-secondary mb-6">
+<span class="font-label-sm text-label-sm tracking-[0.2em] uppercase font-mono">MOTIF 01</span>
+<span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">eco</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">Keri</h3>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest block mb-4">The Royal Mango Paisle</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Signifying fertility, auspicious royal celebration, and abundance. Folded from curved concentric Gota strips with central zardozi seed stitching.
+            </p>
+</div>
+<div class="pt-6 mt-6 bg-surface-container-low p-3 space-y-1">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider block font-semibold">Artisan Term: "Ambi Patti"</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Typical Size: 4cm to 18cm bridal border</span>
+</div>
+</div>
+<!-- Motif 2: Phool -->
+<div class="bg-surface-bright p-8 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div>
+<div class="flex items-center justify-between text-secondary mb-6">
+<span class="font-label-sm text-label-sm tracking-[0.2em] uppercase font-mono">MOTIF 02</span>
+<span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">spa</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">Phool</h3>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest block mb-4">Floral Lotus &amp; Rose</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Multi-tiered radiating rosettes representing divine purity. Constructed with 8, 16, or 32 individual diamond-cut Gota ribbons clustered around a gilded knot.
+            </p>
+</div>
+<div class="pt-6 mt-6 bg-surface-container-low p-3 space-y-1">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider block font-semibold">Artisan Term: "Champa Phool"</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Petal Count: 16-facet radial symmetry</span>
+</div>
+</div>
+<!-- Motif 3: Pan -->
+<div class="bg-surface-bright p-8 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div>
+<div class="flex items-center justify-between text-secondary mb-6">
+<span class="font-label-sm text-label-sm tracking-[0.2em] uppercase font-mono">MOTIF 03</span>
+<span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">yard</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">Pan</h3>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest block mb-4">Sacred Betel Leaf</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Heart-shaped leaf representing auspicious welcome and marital joy. Characterized by folded metallic center veins and fine pearl outlines.
+            </p>
+</div>
+<div class="pt-6 mt-6 bg-surface-container-low p-3 space-y-1">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider block font-semibold">Artisan Term: "Pan Tukdi"</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Embellishment: Seed pearl borders</span>
+</div>
+</div>
+<!-- Motif 4: Mor -->
+<div class="bg-surface-bright p-8 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div>
+<div class="flex items-center justify-between text-secondary mb-6">
+<span class="font-label-sm text-label-sm tracking-[0.2em] uppercase font-mono">MOTIF 04</span>
+<span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">cruelty_free</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">Mor</h3>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest block mb-4">Royal Monsoon Peacock</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              The supreme bird of Rajasthani lyric poetry. Crowned plumage composed of graduated Gota scallops and green-gilt thread under-couching.
+            </p>
+</div>
+<div class="pt-6 mt-6 bg-surface-container-low p-3 space-y-1">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider block font-semibold">Artisan Term: "Mayur Chhap"</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Craft Hours: 14 hours per emblem</span>
+</div>
+</div>
+<!-- Motif 5: Chidiya -->
+<div class="bg-surface-bright p-8 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div>
+<div class="flex items-center justify-between text-secondary mb-6">
+<span class="font-label-sm text-label-sm tracking-[0.2em] uppercase font-mono">MOTIF 05</span>
+<span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">flutter</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">Chidiya</h3>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest block mb-4">Sparrow &amp; Falcon Flight</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Abstracted winged creatures symbolizing freedom and desert morning skies, captured through angular folded geometric ribbon wings.
+            </p>
+</div>
+<div class="pt-6 mt-6 bg-surface-container-low p-3 space-y-1">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider block font-semibold">Artisan Term: "Pakshi Buti"</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Style: Asymmetrical diagonal stitch</span>
+</div>
+</div>
+<!-- Motif 6: Geometric (Jaal) -->
+<div class="bg-surface-bright p-8 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div>
+<div class="flex items-center justify-between text-secondary mb-6">
+<span class="font-label-sm text-label-sm tracking-[0.2em] uppercase font-mono">MOTIF 06</span>
+<span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">grid_view</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">Geometric</h3>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest block mb-4">Jali Trellis &amp; Chevron</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Lattice patterns echoing Rajasthani palace stone screens (*Jharokhas*). Woven Gota ribbons crossing at 60-degree mathematical diamonds.
+            </p>
+</div>
+<div class="pt-6 mt-6 bg-surface-container-low p-3 space-y-1">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider block font-semibold">Artisan Term: "Leheriya Jaal"</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Coverage: Full garment field lattice</span>
+</div>
+</div>
+<!-- Motif 7: Suraj -->
+<div class="bg-surface-bright p-8 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 group">
+<div>
+<div class="flex items-center justify-between text-secondary mb-6">
+<span class="font-label-sm text-label-sm tracking-[0.2em] uppercase font-mono">MOTIF 07</span>
+<span class="material-symbols-outlined text-3xl group-hover:scale-110 transition-transform">wb_sunny</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-1">Suraj</h3>
+<span class="font-label-md text-label-md text-secondary uppercase tracking-widest block mb-4">Sun Coronas &amp; Halo</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Solar emblem of the Suryavanshi dynastic lineage. Concentric halos of finely spiked gold leaf ribbons reflecting brilliant desert daylight.
+            </p>
+</div>
+<div class="pt-6 mt-6 bg-surface-container-low p-3 space-y-1">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider block font-semibold">Artisan Term: "Surya Mandal"</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant block">Application: Central bridal back panel</span>
+</div>
+</div>
+<!-- Lexicon Summary Tile -->
+<div class="bg-primary text-on-primary p-8 flex flex-col justify-between shadow-md">
+<div>
+<span class="font-label-sm text-label-sm tracking-[0.25em] text-secondary-container uppercase">Archive Research</span>
+<h3 class="font-headline-md text-headline-md text-surface-bright mt-4 mb-2">42 Additional Minor Butis</h3>
+<p class="font-body-sm text-body-sm text-surface-container font-light leading-relaxed">
+              Explore our digitized database of regional sub-variants, including the rare Shekhawati camel-pack buti and Mewar hunting florets.
+            </p>
+</div>
+<a class="inline-flex items-center gap-2 text-secondary-container hover:text-surface-bright font-label-md text-label-md uppercase tracking-widest pt-6 transition-colors" href="#">
+<span>ACCESS COMPLETE ARCHIVE</span>
+<span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: FROM TRADITION TO CONTEMPORARY DESIGN -->
+<section class="w-full py-space-xl lg:py-28 bg-surface">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-secondary">The Aesthetic Continuum</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Tradition to Contemporary Architecture</h2>
+<p class="font-body-md text-body-md text-on-surface-variant font-light">
+          Witnessing the transformation from ceremonial temple splendor to sculptural, deconstructed global luxury.
+        </p>
+</div>
+<!-- Split Screen Contrast -->
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Left: The Tradition -->
+<div class="bg-surface-container-low p-8 lg:p-12 flex flex-col justify-between space-y-8 shadow-sm">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.22em] text-primary font-semibold">THE TRADITION</span>
+<span class="font-label-sm text-label-sm text-secondary font-mono">1600 — 1950</span>
+</div>
+<h3 class="font-headline-lg text-headline-md lg:text-headline-lg text-primary">Ceremonial Grandeur &amp; Pichhwai</h3>
+<p class="font-body-md text-body-md text-on-surface-variant font-light leading-relaxed">
+              Characterized by opulent weight, crimson and saffron silks, and dense surface coverage. Traditional pieces served as family heirloom reserves, laden with heavy silver ribbon, pearl clusters, and sacred devotional iconography.
+            </p>
+</div>
+<div class="relative overflow-hidden aspect-[16/10] bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Vintage royal Rajasthani bridal poshak with extensive full coverage gota patti work in heavy pure gold thread, red silk, and zardozi borders displayed in a museum setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEeGPwimwVJ47w04QLejAjb0_Pp2_gPAz95VFwgEWuccns2K3Tf3v3U6FdzF0416_AiVgbmn5OsXyDKkXCkvOh8PcBSGvMHqlH5_kkiU1TZR-SUITfEW-SjLzcx0al41l_Yqcg-9r4xJCHayj2rsvxIS_U6qSK2MuuQleiYBkqMJrtPhxDE-BLaN_FWZcSzuzT1dPf5VTxe6DTFfDJ_Gdqkz_u-uTHJfXpNmOW9XC_n0kDs4pv3wo1iA"/>
+</div>
+<div class="grid grid-cols-2 gap-4 pt-2">
+<div class="bg-surface-bright p-4">
+<span class="font-label-sm text-label-sm text-secondary uppercase block mb-1">Typical Weight</span>
+<span class="font-headline-sm text-headline-sm text-primary">3.5 — 6.0 kg</span>
+</div>
+<div class="bg-surface-bright p-4">
+<span class="font-label-sm text-label-sm text-secondary uppercase block mb-1">Fabric Base</span>
+<span class="font-headline-sm text-headline-sm text-primary">Mulberry Satin &amp; Velvet</span>
+</div>
+</div>
+</div>
+<!-- Right: The Contemporary -->
+<div class="bg-primary text-on-primary p-8 lg:p-12 flex flex-col justify-between space-y-8 shadow-md">
+<div class="space-y-4">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase tracking-[0.22em] text-secondary-container font-semibold">THE CONTEMPORARY</span>
+<span class="font-label-sm text-label-sm text-tertiary-fixed-dim font-mono">2000 — PRESENT</span>
+</div>
+<h3 class="font-headline-lg text-headline-md lg:text-headline-lg text-surface-bright">Minimalist Geometry &amp; Structure</h3>
+<p class="font-body-md text-body-md text-surface-container font-light leading-relaxed">
+              Contemporary designers extract the ribbon fold as a modernist architectural motif. Applying whisper-weight metallic wire to sheer unbleached organza, deconstructed evening capes, structured sculptural potlis, and gallery wall tapestries.
+            </p>
+</div>
+<div class="relative overflow-hidden aspect-[16/10] bg-primary-container">
+<img class="w-full h-full object-cover opacity-90" data-alt="High fashion contemporary couture trench coat in natural raw tussar linen with sparse minimal geometric gold wire gota ribbons applied in modern architectural lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtRF9c3H6k969lV_-x9JJ1iwlo1HLnciH-obxQB0JHfRHb24yFNrYilBl_acsL6z0xY02PNZy5W9oARlVnG78RsnQMvj7d2lW59xdt9ozHM3PYh9BOWW0BL-d2uok2OEk98GFPPWQc3PouycTQ3HqQN4ZtWS9WLFAvr-jVVVskj6Qw-Ru9OOA4ig1xONRtnuzWlyeCy-JIKpHN4-GGdHgT2b82CtLimndcNnR9t8c7LGoB-BNDdOxeiQ"/>
+</div>
+<div class="grid grid-cols-2 gap-4 pt-2">
+<div class="bg-primary-container p-4">
+<span class="font-label-sm text-label-sm text-secondary-container uppercase block mb-1">Typical Weight</span>
+<span class="font-headline-sm text-headline-sm text-surface-bright">380 — 750 grams</span>
+</div>
+<div class="bg-primary-container p-4">
+<span class="font-label-sm text-label-sm text-secondary-container uppercase block mb-1">Fabric Base</span>
+<span class="font-headline-sm text-headline-sm text-surface-bright">Handspun Linen &amp; Chanderi</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 7: FEATURED DESIGNERS -->
+<section class="w-full py-space-xl lg:py-28 bg-surface-container-low">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-secondary">The Visionaries</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight mt-2">
+            Featured Curators &amp; Labels
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md font-light">
+          Three pioneering design houses redefining the dialogue between ancient Rajasthani needlecraft and global luxury minimalism.
+        </p>
+</div>
+<!-- 3 Curated Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Designer 1: Anavila Misra -->
+<div class="bg-surface-bright flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Editorial portrait of organic linen textiles adorned with subtle whisper-thin gold gota patti geometric borders in minimalist muted tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKKV4Gb6DkuPJXXzqe2p26otPNGYDLsBQik3JM_4WGJPXc4fsJo8cAGznhbxjImiGq7SsLAPBBASHMpVDcIVq37UqEg4HVkm8P0bhutPW4s_eJTDrfGAZV0FFVqkeciH--utOkiHO8vn3DCxFHRu--4sqXaOccz-TaGxXejpO_ogQHXYrvncmtvYJXX3KUQP1Q45O6WDtTbw-TsYJFa4-CLmKb2SD4q2Z6539S3_xihDG4kewldxdgRA"/>
+<span class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 font-label-sm text-label-sm uppercase tracking-widest">
+              Quiet Luxury
+            </span>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between space-y-6">
+<div class="space-y-3">
+<h3 class="font-headline-md text-headline-md text-primary">Anavila Misra</h3>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.16em]">Architectural Handwoven Linen</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+                Reinterpreting Gota Patti as whisper-thin geometry on handwoven organic linen. Stripping away heavy ostentation to celebrate negative space and raw, tactile fiber textures.
+              </p>
+</div>
+<div class="pt-4 border-t-0 bg-surface-container-lowest p-4 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Atelier: Mumbai</span>
+<a class="font-label-sm text-label-sm text-primary hover:text-secondary uppercase tracking-widest font-semibold flex items-center gap-1" href="#">
+<span>View Profile</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Designer 2: Raw Mango (Sanjay Garg) -->
+<div class="bg-surface-bright flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Lush editorial photograph of rich jewel-toned emerald silk chanderi saree featuring bold traditional Gota Patti motifs hand stitched by master craftsmen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmmtjfyVyAC1qcG0imDq3xVaAvPKaqoW22tMVG4NBbw3OgdxpGo7WLqc9kM7l8fA3SA3fuU4wwKHWgx5yWhMxw73dP0FBGjYYElf-_Lb7nz-4-asIfAVPjkh7N5tyyIkGY6xf_kBa-y0Mkv8x1aTCQRSe-BgkSvNb6DLmpK7ppbr29b7KDFfwhOH45M_Z6rmEhNtvULrEAqS35TMvepeK-XrucOhhQt6gEPJNV1YGYtt8fKRJm5gzszw"/>
+<span class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 font-label-sm text-label-sm uppercase tracking-widest">
+              Heritage Revival
+            </span>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between space-y-6">
+<div class="space-y-3">
+<h3 class="font-headline-md text-headline-md text-primary">Raw Mango</h3>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.16em]">Sanjay Garg Atelier</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+                Reviving traditional Chanderi and Varanasi weaves with bold, architectural Gota tessellations. Garg collaborates directly with rural Rajasthan clusters to resurrect forgotten antique motifs.
+              </p>
+</div>
+<div class="pt-4 border-t-0 bg-surface-container-lowest p-4 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Atelier: New Delhi</span>
+<a class="font-label-sm text-label-sm text-primary hover:text-secondary uppercase tracking-widest font-semibold flex items-center gap-1" href="#">
+<span>View Profile</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Designer 3: Rimzim Dadu -->
+<div class="bg-surface-bright flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-[4/3] bg-surface-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Avant-garde experimental garment constructed entirely of micro metallic cords and gilded wire ribbing reminiscent of deconstructed Gota Patti folds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATGgef_ojOmVQ56paZvaATtTaCT2yYMtektTINBzZ_2YL79uemJa_8qKlGBi0dnGVGkkI2mSWpRZYLsXvIv0C4spo3n_RRd2Z41IufSVXPMS1zbkd-MVY8mON4qGVh-21g720DmIPYrmEKzr-Rdm7DiOsk822XIlHkY1vx02sbIhV4YHw_XQfayQ7O3_3KY6f9r29Yu8S3W_NoUwEteOT9SAvvylnSLHlGVqYx1l_iNs06J9C7TBDPtg"/>
+<span class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 font-label-sm text-label-sm uppercase tracking-widest">
+              Material Futurist
+            </span>
+</div>
+<div class="p-8 flex-1 flex flex-col justify-between space-y-6">
+<div class="space-y-3">
+<h3 class="font-headline-md text-headline-md text-primary">Rimzim Dadu</h3>
+<p class="font-label-sm text-label-sm text-secondary uppercase tracking-[0.16em]">Metallurgical Sculpting</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+                Pioneering experimental metal wire cord sculpting that converges with classic Gota ribbing techniques. Transforming delicate ribbon pleating into structured couture armor.
+              </p>
+</div>
+<div class="pt-4 border-t-0 bg-surface-container-lowest p-4 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Atelier: New Delhi</span>
+<a class="font-label-sm text-label-sm text-primary hover:text-secondary uppercase tracking-widest font-semibold flex items-center gap-1" href="#">
+<span>View Profile</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 8: FEATURED PRODUCTS -->
+<section class="w-full py-space-xl lg:py-28 bg-surface">
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-6">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.25em] text-secondary">The Curated Folio</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight mt-2">
+            Featured Ma<a class="inline-flex items-center gap-2 px-6 py-3 bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md uppercase tracking-[0.16em] transition-colors" href="products.html">
+<span>EXPLORE COMPLETE ARCHIVE</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+<!-- 3 Products Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Product 1 -->
+<div class="bg-surface-container-low group flex flex-col justify-between shadow-sm hover:shadow-lg transition-all duration-300">
+<div class="relative overflow-hidden aspect-[3/4] bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" data-alt="Regal royal Shekhawati sheer crimson Odhni with dense gold ribbon pallu border and delicate floral jaal motifs draped over an ebony mannequin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-BGSOx52PLTfPIf82D7_tveEjN3bNtqBex8ywoYQis1wyl-H1VfAaEAbBQzRxi2Am2rEEl_2HjXy9T-4qPcaDUhA742vKbWrdhw25PVm2S0CIyrvXJzeFeLkk7TZEulYgmZfaS2H6Cn6b_MlZF87NWJtmQWAOcGmZe82gYJl7TCoiZNoywZezYCropJMwjxTyBXaiTMm8Mn9rRTsXfFLK1JaVP5Gdrc4YFNZ_aNTFJflrjOp8YQ0z8w"/>
+<div class="absolute top-4 left-4 bg-surface-bright/95 text-primary px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider">
+              Artisan Provenance: Jaipur
+            </div>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-baseline">
+<h3 class="font-headline-sm text-headline-sm text-primary">The Royal Shekhawati Odhni</h3>
+<span class="font-label-lg text-label-lg font-semibold text-secondary">₹ 84,000</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Fine silk organza adorned with Pakki Gota flower crests, edged in traditional hammered silver lappa. 180 hours of hand-stitchery.
+            </p>
+<div class="pt-2 flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-mono">Curatorial Specimen</span>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-primary hover:text-secondary font-semibold" href="products.html">
+                Study Piece →
+              </a>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="bg-surface-container-low group flex flex-col justify-between shadow-sm hover:shadow-lg transition-all duration-300">
+<div class="relative overflow-hidden aspect-[3/4] bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" data-alt="Close up luxury studio shot of an architectural structured potli bag in ivory raw silk embellished with geometric gold keri leaf gota motifs and pearl tassels" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyJrCoDMAnYVyVlyPTKa3dHYHeJBt1yLjl5WakcXvi1axt_lr-nyL9bgWtL4HgDl5qxf1CW7snmLS8jJB9EpTNphEK5Wz-6z_LoLIvEp7dXkLViWKINye6fDBMOAju9cgKWsTP72aN6YL2xNzcNKxyAkPS2rcfybZVPauKPw5gigpn13jo5pVSWzysXvLVCIKb45cMdY4xqCxZFkOQHK1wNH0CtANWhYdt3sHfhpDRRNH2tCoOTk4klg"/>
+<div class="absolute top-4 left-4 bg-surface-bright/95 text-primary px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider">
+              Artisan Provenance: Nayla
+            </div>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-baseline">
+<h3 class="font-headline-sm text-headline-sm text-primary">Architectural Keri Raw Silk Potli</h3>
+<span class="font-label-lg text-label-lg font-semibold text-secondary">₹ 18,500</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Structured evening silhouette crafted from hand-loomed mulberry silk with 3D embossed Gota mango motifs and gold bullion cordage.
+            </p>
+<div class="pt-2 flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-mono">Curatorial Specimen</span>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-primary hover:text-secondary font-semibold" href="products.html">
+                Study Piece →
+              </a>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="bg-surface-container-low group flex flex-col justify-between shadow-sm hover:shadow-lg transition-all duration-300">
+<div class="relative overflow-hidden aspect-[3/4] bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" data-alt="High end luxury editorial of a contemporary silk chanderi kurta in muted sandstone color with minimal horizontal hand-folded gold gota ribbons on neckline and cuffs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn5Y6Y6QdRKeihd27cwAEMeZVVKo7MkeEIKc1Vs78jl7pKxsFdgFFWXmEr6_TJFL4EmWI0pcFJPBh1NGAo4EqXfW_mgPwGeHcZteMJS4OWOkey2z3WlH6goRSXzsBI5srbVJTO5SY60hhRXVWbrgw0qdZPKHABhTxp1dPbJLgwgBFx7a0jFwdiO5g7ceIs-5Me8xVQk-w49CZEs1U8eKneL9PTsglwwXSJR-_8D5RnP0z88hBY83874A"/>
+<div class="absolute top-4 left-4 bg-surface-bright/95 text-primary px-3 py-1 font-label-sm text-label-sm uppercase tracking-wider">
+              Artisan Provenance: Sanganer
+            </div>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-baseline">
+<h3 class="font-headline-sm text-headline-sm text-primary">Hand-Folded Chanderi Kurta</h3>
+<span class="font-label-lg text-label-lg font-semibold text-secondary">₹ 36,000</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant font-light leading-relaxed">
+              Bespoke tunic in handspun Chanderi with minimalist horizontal pleated Gota tucks across yoke and hemline. Designed for timeless versatility.
+            </p>
+<div class="pt-2 flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-mono">Curatorial Specimen</span>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-primary hover:text-secondary font-semibold" href="products.html">
+                Study Piece →
+              </a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 9: CRAFT STORY (DRAMATIC EDITORIAL FINALE) -->
+<section class="w-full bg-primary-container text-on-primary py-space-xl lg:py-32 relative overflow-hidden">
+<!-- Ambient Golden Glow -->
+<div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-secondary-container/10 blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-secondary/15 blur-3xl pointer-events-none"></div>
+<div class="max-w-[1440px] mx-auto px-margin-mobile lg:px-margin relative z-10">
+<div class="max-w-4xl mx-auto text-center space-y-10">
+<div class="inline-flex items-center gap-3 px-4 py-1.5 bg-surface-bright/10 backdrop-blur-sm mx-auto">
+<span class="w-2 h-2 bg-secondary-container"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-[0.3em] text-secondary-container">The Human Continuum</span>
+</div>
+<blockquote class="font-display-md text-display-md-mobile lg:text-display-md text-surface-bright font-normal leading-tight tracking-tight">
+          “More than embellishment. It is a story stitched by hand.”
+        </blockquote>
+<p class="font-body-lg text-body-lg text-surface-container font-light max-w-2xl mx-auto leading-relaxed opacity-90">
+          In the courtyards of Nayla and the ancient havelis of Jaipur, generations of women sit beside low wooden stretchers (<em>addas</em>). With fine tweezers and ribbons of pure beaten metal, they stitch sacred patience into silk—sustaining centuries of living heritage.
+        </p>
+<div class="pt-6 flex flex-col sm:flex-row items-center justify-center gap-6">
+<a class="px-9 py-4 bg-secondary-container text-on-secondary-fixed hover:bg-secondary-fixed font-label-md text-label-md uppercase tracking-[0.2em] transition-all duration-300 shadow-lg" href="about.html">
+            DISCOVER THE CRAFT
+          </a>
+<a class="px-8 py-4 bg-primary text-surface-bright hover:bg-primary/80 font-label-md text-label-md uppercase tracking-[0.16em] transition-colors" href="contact.html">
+            ACADEMIC INQUIRIES &rarr;
+          </a>
+</div>
+<!-- Geographic Hallmark Footer -->
+<div class="pt-16 flex flex-wrap items-center justify-center gap-8 text-tertiary-fixed-dim font-label-sm text-label-sm tracking-[0.2em] uppercase opacity-75">
+<span>JAIPUR ATELIER: 26.9124° N, 75.7873° E</span>
+<span class="text-secondary-fixed">●</span>
+<span>CURATORIAL ARCHIVE VOL. IV</span>
+<span class="text-secondary-fixed">●</span>
+<span>HANDCRAFTED HERITAGE OF INDIA</span>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+
+<!-- SEARCH MODAL -->
+<div id="searchModal" class="fixed inset-0 z-50 bg-tertiary/70 backdrop-blur-sm hidden items-center justify-center p-4">
+  <div class="bg-surface max-w-xl w-full p-6 shadow-2xl border border-secondary/20 rounded">
+    <div class="flex items-center justify-between pb-3 border-b border-secondary/20">
+      <div class="flex items-center gap-2 text-primary font-mono text-sm">
+        <span class="material-symbols-outlined text-lg">search</span>
+        <span>Search Craft Archive</span>
+      </div>
+      <button id="closeSearchModal" class="text-outline hover:text-primary"><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <input id="searchInput" type="text" placeholder="Search motifs, techniques, materials, or history..." class="w-full mt-4 p-3 bg-surface-container-low border border-secondary/20 text-sm focus:outline-none focus:border-primary"/>
+    <div class="mt-4 max-h-60 overflow-y-auto space-y-2 text-xs" id="searchResults">
+      <a href="about.html#motifs" class="block p-2 hover:bg-surface-container transition-colors">
+        <span class="font-bold text-primary">Traditional Motifs</span>
+        <span class="block text-outline">Peacock, Paisley (Kairi), Floral Rosette, Lotus</span>
+      </a>
+      <a href="process.html" class="block p-2 hover:bg-surface-container transition-colors">
+        <span class="font-bold text-primary">Process &amp; Metallurgy</span>
+        <span class="block text-outline">Adda tensioning, Khakha stencil, Asli vs Lurex, Bijiya</span>
+      </a>
+      <a href="products.html" class="block p-2 hover:bg-surface-container transition-colors">
+        <span class="font-bold text-primary">Product Archive</span>
+        <span class="block text-outline">Sarees, Dupattas, Poshaks, Accessories, Home Décor</span>
+      </a>
+      <a href="resources.html" class="block p-2 hover:bg-surface-container transition-colors">
+        <span class="font-bold text-primary">Bibliography &amp; Literature</span>
+        <span class="block text-outline">John Gillow, NID Encyclopedia, V&amp;A Archive</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- UNIFIED ACADEMIC FOOTER -->
+<footer class="w-full bg-surface-container-low mt-space-xl shadow-[0_-1px_6px_rgba(36,26,22,0.03)] border-t border-[#d4af37]/20">
+  <div class="max-w-[1440px] mx-auto px-6 lg:px-12 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 mb-12">
+      <div class="lg:col-span-5 space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="font-headline-sm uppercase tracking-[0.2em] text-primary">GOTA PATTI</span>
+          <span class="font-label-sm text-[10px] tracking-[0.25em] text-secondary uppercase">Archive &amp; Atelier</span>
+        </div>
+        <p class="font-body-sm text-xs text-on-surface-variant max-w-md leading-relaxed">
+          A Bachelor of Design (Communication Design) research and documentation project dedicated to the systematic preservation, material analysis, and contemporary study of Rajasthani Gota ribbon embroidery.
+        </p>
+        <div class="pt-2 text-xs font-mono text-outline">
+          <span>Jaipur • Shekhawati • Nayla Guilds</span>
+        </div>
+      </div>
+      <div class="lg:col-span-3 space-y-3">
+        <h4 class="font-label-md text-xs tracking-[0.2em] uppercase text-primary font-bold">Curatorial Folios</h4>
+        <ul class="space-y-2 text-xs text-on-surface-variant font-mono">
+          <li><a class="hover:text-primary transition-colors" href="index.html">01. Home &amp; Overview</a></li>
+          <li><a class="hover:text-primary transition-colors" href="about.html">02. About the Craft (12 Sections)</a></li>
+          <li><a class="hover:text-primary transition-colors" href="process.html">03. Process &amp; Materials</a></li>
+          <li><a class="hover:text-primary transition-colors" href="products.html">04. Product Archive</a></li>
+        </ul>
+      </div>
+      <div class="lg:col-span-4 space-y-3">
+        <h4 class="font-label-md text-xs tracking-[0.2em] uppercase text-primary font-bold">Academic Resources</h4>
+        <ul class="space-y-2 text-xs text-on-surface-variant font-mono">
+          <li><a class="hover:text-primary transition-colors" href="resources.html">Bibliography &amp; Literature</a></li>
+          <li><a class="hover:text-primary transition-colors" href="resources.html#museums">Museum Collections &amp; Exhibits</a></li>
+          <li><a class="hover:text-primary transition-colors" href="contact.html">Fieldwork Notes &amp; Contact</a></li>
+          <li><a class="hover:text-primary transition-colors" href="designers.html">Contemporary Designer Profiles</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pt-8 border-t border-secondary/15 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-outline">
+      <p>&copy; 2025–2026 Gota Patti Digital Archive. Bachelor of Design Academic Project.</p>
+      <div class="flex items-center gap-4">
+        <span>Non-Commercial Educational Research</span>
+        <span>&bull;</span>
+        <span>Open Documentation</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Mobile Navigation Toggle
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  if (mobileMenuBtn && mobileMenu) {
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+
+  // Global Search Modal Handling
+  const searchTriggerBtn = document.getElementById('searchTriggerBtn');
+  const searchModal = document.getElementById('searchModal');
+  const closeSearchModal = document.getElementById('closeSearchModal');
+  const searchInput = document.getElementById('searchInput');
+
+  function openSearch() {
+    if (searchModal) {
+      searchModal.classList.remove('hidden');
+      searchModal.classList.add('flex');
+      if (searchInput) searchInput.focus();
+    }
+  }
+
+  function closeSearch() {
+    if (searchModal) {
+      searchModal.classList.add('hidden');
+      searchModal.classList.remove('flex');
+    }
+  }
+
+  if (searchTriggerBtn) searchTriggerBtn.addEventListener('click', openSearch);
+  if (closeSearchModal) closeSearchModal.addEventListener('click', closeSearch);
+
+  window.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      openSearch();
+    }
+    if (e.key === 'Escape') closeSearch();
+  });
+</script>
+<script src="./app.js"></script>
+</body>
+</html>

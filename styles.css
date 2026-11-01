@@ -1,0 +1,230 @@
+/* ==========================================================================
+   GOTA PATTI HERITAGE ARCHIVE — SCROLL ANIMATION SUITE
+   Aesthetics: Royal Rajasthani Luxury, Bodoni Moda & Plus Jakarta Sans
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --color-primary: #3d020d;
+  --color-primary-dark: #200106;
+  --color-gold: #d4af37;
+  --color-gold-light: #f3e5ab;
+  --color-gold-glow: rgba(212, 175, 55, 0.35);
+  --color-surface-dark: #0a0607;
+  --color-cream: #fff9ef;
+  --font-serif: 'Bodoni Moda', serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: auto;
+  background-color: var(--color-surface-dark);
+  color: #ffffff;
+  font-family: var(--font-sans);
+  overscroll-behavior-y: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--color-surface-dark);
+  user-select: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Luxury Serif Typography */
+.font-serif-luxury {
+  font-family: var(--font-serif);
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+}
+
+/* Canvas Display */
+canvas#canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Subtle Cinematic Radial Vignette */
+.cinematic-vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: radial-gradient(
+    circle at center,
+    rgba(10, 6, 7, 0.15) 0%,
+    rgba(10, 6, 7, 0.45) 65%,
+    rgba(10, 6, 7, 0.85) 100%
+  );
+}
+
+/* Glassmorphism Panels */
+.glass-panel {
+  background: rgba(18, 10, 12, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.6), 0 0 20px -5px var(--color-gold-glow);
+}
+
+.glass-pill {
+  background: rgba(22, 12, 14, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-pill:hover {
+  background: rgba(212, 175, 55, 0.18);
+  border-color: rgba(212, 175, 55, 0.6);
+  box-shadow: 0 0 15px var(--color-gold-glow);
+}
+
+/* Story Cards Transitions */
+.story-card {
+  opacity: 0;
+  transform: translateY(28px) scale(0.98);
+  pointer-events: none;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.story-card.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+/* Gold Gradient Accents */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #fcedb0 0%, #d4af37 50%, #aa8016 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-border {
+  border-image: linear-gradient(to right, rgba(212, 175, 55, 0.6), rgba(212, 175, 55, 0.1)) 1;
+}
+
+/* Preloader State */
+#preloader {
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#preloader.preloader-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Interactive Timeline Scrubber */
+.scrubber-track {
+  position: relative;
+  width: 100%;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: height 0.2s ease;
+}
+
+.scrubber-track:hover {
+  height: 6px;
+}
+
+.scrubber-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #aa8016, #d4af37, #fcedb0);
+  border-radius: 9999px;
+  width: 0%;
+  box-shadow: 0 0 8px var(--color-gold-glow);
+  transition: width 0.05s linear;
+}
+
+.scrubber-thumb {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background: #fcedb0;
+  border: 2px solid var(--color-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 10px #d4af37;
+  pointer-events: none;
+  transition: transform 0.15s ease;
+}
+
+.scrubber-track:hover .scrubber-thumb {
+  transform: translate(-50%, -50%) scale(1.3);
+}
+
+/* Chapter Marker Nodes */
+.chapter-node {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.chapter-node.passed {
+  background: #fcedb0;
+  box-shadow: 0 0 6px var(--color-gold-glow);
+}
+
+/* Custom Scrollbar for Luxury Aesthetics */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0607;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.4);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.8);
+}
+
+/* Accessibility: Reduced Motion Support & Static Fallback */
+@media (prefers-reduced-motion: reduce) {
+  #scroll-atelier {
+    display: none !important;
+  }
+  #reduced-motion-hero {
+    display: block !important;
+  }
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
