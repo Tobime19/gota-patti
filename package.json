@@ -4,8 +4,12 @@
   "private": true,
   "description": "GOTA PATTI — Archive & Atelier: Heritage Rajasthani craft archive, designer directory, scroll-controlled process monograph, and curated collection.",
   "scripts": {
+    "dev": "vite",
     "start": "python3 -m http.server 8080",
-    "build": "node build-check.js"
+    "build": "node build-check.js",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^5.4.11"
   }
 }
-
